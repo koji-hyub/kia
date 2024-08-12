@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Navigation from '~/Page/Layout/Navigation/Navigation';
+import { Outlet } from 'react-router-dom';
+import React from 'react';
+import QuickMenu from './Components/QuickMenu/QuickMenu';
+import AppStyle from './AppStyle';
+const AppWrap = AppStyle(APP_SKIN);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrap className="App">
+      <Navigation />
+      <Outlet />
+      {/*<QuickMenu />*/}
+    </AppWrap>
   );
 }
-
 export default App;
