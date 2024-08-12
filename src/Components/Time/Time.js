@@ -6,8 +6,9 @@ const Time = Style(APP_SKIN);
 
 function TimeWrap({ getCurrentTime, align, ...rest }) {
   return (
-    <Time align={align}>
-      <Text size={'small'} color={'color04'} text={getCurrentTime} /> {/* Text 컴포넌트 렌더링 */}
+    <Time>
+      <Text align={align} size={'small'} color={'color04'} text={getCurrentTime} />{' '}
+      {/* Text 컴포넌트 렌더링 */}
     </Time>
   );
 }

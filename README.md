@@ -1,26 +1,24 @@
-# Getting Started with Create React App
+# KIA AI Assistant Chatbot UI, UX Design
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Default Setting info
-- KIA Open Api 퍼블리싱
+- KIA 챗봇 퍼블리싱
 - 리액트 버전 : 18.2.0
 - 노드 버전 : v20.12.2
 - CSS-IN-JS : styled-components
 - Carousel : swiperjs
 - 코드하일라이트 :
-  https://github.com/react-syntax-highlighter/react-syntax-highlighter
+ [https://github.com/react-syntax-highlighter/react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)  
 
 - paths alias 설정 절대경로 지정
-  https://dchkang83.tistory.com/33#google_vignette
+[https://dchkang83.tistory.com/33#google_vignette](https://dchkang83.tistory.com/33#google_vignette) 참고
 
-- React Datepicker
-  https://reactdatepicker.com/
-
-- lottie Animation
-yarn add lottie-react
-
-
+- React Datepicker 
+[https://reactdatepicker.com/](https://reactdatepicker.com/)
+  
+- lottie Animation 
+### `yarn add lottie-react`
 
 
 ## Available Scripts

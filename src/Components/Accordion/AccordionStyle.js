@@ -17,7 +17,7 @@ const BasicSkin = css`
   margin-top: 20rem;
   > .inner {
     border-top: 2rem solid #000;
-    width: 1280rem;
+    //width: 1280rem;
     margin: 0 auto;
     .accordion-item {
       .accordion-title {
@@ -27,7 +27,7 @@ const BasicSkin = css`
         align-items: center;
         color: #000;
         height: 50rem;
-        padding: 0px 24rem;
+        padding: 0 24rem;
         border-bottom: 1px solid #e1e1e1;
         &.isActive {
           & + .accordion-content {
