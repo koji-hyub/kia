@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Style from './InputStyle';
+import Style from './MessageInputStyle';
 import {
   IconClear,
   IconError,
@@ -8,7 +8,7 @@ import {
   IconZoom
 } from '../../assets/images/common/IconSet';
 
-const Input = Style(APP_SKIN);
+const __Input = Style(APP_SKIN);
 
 function InputWrap({ label, id, placeholder, name, type, error, msg, className, ...rest }) {
   const inputRef = useRef(null);
@@ -50,7 +50,7 @@ function InputWrap({ label, id, placeholder, name, type, error, msg, className, 
   };
 
   return (
-    <Input>
+    <__Input>
       {label !== undefined ? <label htmlFor={id}>{label}</label> : ''}
       {!error ? (
         <div className={`input ${className}`} ref={inputRef}>
@@ -118,7 +118,7 @@ function InputWrap({ label, id, placeholder, name, type, error, msg, className, 
           {error == true ? <p className={'error-txt'}>{msg}</p> : 'asdfasdfasfds'}
         </>
       )}
-    </Input>
+    </__Input>
   );
 }
 

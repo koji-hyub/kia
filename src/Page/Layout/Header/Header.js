@@ -21,7 +21,7 @@ function HeaderWrap(props) {
         <div className={'item-set'}>
           <button type={'button'}>
             <span className={'blind'}>로그아웃</span>
-            <IconLogOut />
+            <IconLogOut width={'100%'} height={'100%'} />
           </button>
           <button type={'button'}>
             <span className={'blind'}>채팅창 닫기</span>

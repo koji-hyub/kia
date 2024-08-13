@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Style from './InputStyle';
+import Style from './MessageInputStyle';
 import { IconClear, IconError, IconZoom } from '../../assets/images/common/IconSet';
 // import InputText from './InputText';
 

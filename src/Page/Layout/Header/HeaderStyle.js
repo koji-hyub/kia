@@ -29,10 +29,12 @@ const BasicSkin = css`
     }
     .item-set {
       button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         & + button {
           margin-left: 15rem;
         }
-        padding: 3rem;
         width: 20rem;
         height: 20rem;
         color: #fff;

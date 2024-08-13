@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Header from '~/Page/Layout/Header/Header';
-import Footer from '~/Page/Layout/Footer/Footer';
+import Message from '~/Page/Layout/Message/Message';
 
 import Main from '~/Page/Main/Main';
 import styled from 'styled-components';
@@ -27,7 +27,7 @@ const PageMain = () => {
       <Wrap>
         <Header />
         <Main />
-        <Footer />
+        <Message />
       </Wrap>
     </>
   );

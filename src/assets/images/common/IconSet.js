@@ -1,22 +1,22 @@
 import React from 'react';
 
-export function IconClosed() {
+export function IconClosed({ width, height }) {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="100%"
-      height="100%"
-      viewBox="0 0 14 14"
+      width={`${width ? width : '20'}`}
+      height={`${height ? height : '20'}`}
+      viewBox="0 0 20 20"
       fill="none"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M1.50012 12.2842L12.2844 1.49987"
+        d="M4.5 15.2842L15.2843 4.49987"
         stroke="currentColor"
         strokeWidth="1.55295"
         strokeLinecap="round"
       />
       <path
-        d="M12.5001 12.5L1.71581 1.71569"
+        d="M15.5 15.5L4.71569 4.71569"
         stroke="currentColor"
         strokeWidth="1.55295"
         strokeLinecap="round"
@@ -25,31 +25,96 @@ export function IconClosed() {
   );
 }
 
-export function IconLogOut() {
+export function IconLogOut({ width, height }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="100%"
-      height="100%"
+      width={`${width ? width : '20'}`}
+      height={`${height ? height : '20'}`}
+      viewBox="0 0 20 20"
+      fill="none"
+    >
+      <path
+        d="M9.99893 16.875H3.50586V3.125C6.19072 3.125 7.31407 3.125 9.99893 3.125"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeMiterlimit="3.86874"
+        strokeLinecap="square"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M16.492 9.99931H7.70724M16.492 9.99931L13.0545 6.5618M16.492 9.99931L13.0545 13.4368"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeMiterlimit="3.86874"
+        strokeLinecap="square"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+// 인풋 클리어 아이콘
+export function IconClear({ width, height }) {
+  return (
+    <svg
+      width={`${width ? width : '24'}`}
+      height={`${height ? height : '24'}`}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect rx="12" fill="#CCD0D3" />
+      <path d="M7.5 16.5L16.5 7.50003" stroke="white" strokeWidth="1.44" strokeLinecap="round" />
+      <path
+        d="M16.5 16.5L7.50003 7.50003"
+        stroke="white"
+        strokeWidth="1.44"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+// 인풋 샌드 아이콘
+export function IconSend({ width, height }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={`${width ? width : '16'}`}
+      height={`${height ? height : '16'}`}
       viewBox="0 0 16 16"
       fill="none"
     >
       <path
-        d="M7.99881 14.875H1.50574V1.125C4.1906 1.125 5.31395 1.125 7.99881 1.125"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="square"
+        d="M2.21501 4.56956L14.0573 0.840842C14.7399 0.62704 15.3883 1.28555 15.1494 1.96117L11.1053 13.7973C10.8579 14.5242 9.85962 14.6012 9.50128 13.9256L7.05261 9.32453C6.97583 9.1877 6.86491 9.06797 6.7284 8.98245L2.0273 6.16881C1.37888 5.77541 1.48979 4.80047 2.21501 4.57811V4.56956Z"
+        stroke="white"
+        strokeWidth="1.27816"
         strokeLinejoin="round"
       />
       <path
-        d="M14.4917 7.99931H5.70699M14.4917 7.99931L11.0542 4.5618M14.4917 7.99931L11.0542 11.4368"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="square"
+        d="M7.13782 8.91475L9.6974 6.34912"
+        stroke="white"
+        strokeWidth="1.27816"
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
+    </svg>
+  );
+}
+
+// 더보기 플러스 아이콘
+export function IconPlus({ width, height }) {
+  return (
+    <svg
+      width={`${width ? width : '24'}`}
+      height={`${height ? height : '24'}`}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M4 12H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M12 20L12 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
     </svg>
   );
 }
@@ -94,77 +159,55 @@ export function IconPaused() {
 }
 
 // 인풋 Error 아이콘
-export function IconError() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M19.25 10C19.25 15.1086 15.1086 19.25 10 19.25C4.89137 19.25 0.75 15.1086 0.75 10C0.75 4.89137 4.89137 0.75 10 0.75C15.1086 0.75 19.25 4.89137 19.25 10Z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M9.58467 11.4719L9.29067 6.30595L9.22067 4.34595H11.2927L11.2227 6.30595L10.9287 11.4719H9.58467ZM10.2567 15.1959C9.88333 15.1959 9.57533 15.0653 9.33267 14.8039C9.09933 14.5426 8.98267 14.2253 8.98267 13.8519C8.98267 13.4599 9.09933 13.1379 9.33267 12.8859C9.57533 12.6339 9.88333 12.5079 10.2567 12.5079C10.63 12.5079 10.9333 12.6339 11.1667 12.8859C11.4093 13.1379 11.5307 13.4599 11.5307 13.8519C11.5307 14.2253 11.4093 14.5426 11.1667 14.8039C10.9333 15.0653 10.63 15.1959 10.2567 15.1959Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
-
-// 인풋 클리어 아이콘
-export function IconClear() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clipPath="url(#clip0_526_681)">
-        <path
-          d="M10 19.25C15.1086 19.25 19.25 15.1086 19.25 10C19.25 4.89137 15.1086 0.75 10 0.75C4.89137 0.75 0.75 4.89137 0.75 10C0.75 15.1086 4.89137 19.25 10 19.25Z"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-        <path d="M14 6L6 14" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M6 6L14 14" stroke="currentColor" strokeWidth="1.5" />
-      </g>
-      <defs>
-        <clipPath id="clip0_526_681">
-          <rect width="20" height="20" fill="currentColor" />
-        </clipPath>
-      </defs>
-    </svg>
-  );
-}
+// export function IconError() {
+//   return (
+//     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+//       <path
+//         d="M19.25 10C19.25 15.1086 15.1086 19.25 10 19.25C4.89137 19.25 0.75 15.1086 0.75 10C0.75 4.89137 4.89137 0.75 10 0.75C15.1086 0.75 19.25 4.89137 19.25 10Z"
+//         stroke="currentColor"
+//         strokeWidth="1.5"
+//       />
+//       <path
+//         d="M9.58467 11.4719L9.29067 6.30595L9.22067 4.34595H11.2927L11.2227 6.30595L10.9287 11.4719H9.58467ZM10.2567 15.1959C9.88333 15.1959 9.57533 15.0653 9.33267 14.8039C9.09933 14.5426 8.98267 14.2253 8.98267 13.8519C8.98267 13.4599 9.09933 13.1379 9.33267 12.8859C9.57533 12.6339 9.88333 12.5079 10.2567 12.5079C10.63 12.5079 10.9333 12.6339 11.1667 12.8859C11.4093 13.1379 11.5307 13.4599 11.5307 13.8519C11.5307 14.2253 11.4093 14.5426 11.1667 14.8039C10.9333 15.0653 10.63 15.1959 10.2567 15.1959Z"
+//         fill="currentColor"
+//       />
+//     </svg>
+//   );
+// }
 
 // 인풋 서치 돋보기 아이콘
-export function IconZoom() {
-  return (
-    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M9.76129 11.63C12.6967 11.63 15.0763 9.25039 15.0763 6.315C15.0763 3.37961 12.6967 1 9.76129 1C6.8259 1 4.44629 3.37961 4.44629 6.315C4.44629 9.25039 6.8259 11.63 9.76129 11.63Z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <path d="M6.391 10.3594L1 15.7504" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  );
-}
+// export function IconZoom() {
+//   return (
+//     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+//       <path
+//         d="M9.76129 11.63C12.6967 11.63 15.0763 9.25039 15.0763 6.315C15.0763 3.37961 12.6967 1 9.76129 1C6.8259 1 4.44629 3.37961 4.44629 6.315C4.44629 9.25039 6.8259 11.63 9.76129 11.63Z"
+//         stroke="currentColor"
+//         strokeWidth="1.5"
+//       />
+//       <path d="M6.391 10.3594L1 15.7504" stroke="currentColor" strokeWidth="1.5" />
+//     </svg>
+//   );
+// }
 
 // 서브 페이지 Path 상단 홈 아이콘
-export function IconHome() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M4 8.66695L10 4L16 8.66695V14.667C16 14.842 15.9655 15.0154 15.8985 15.1771C15.8315 15.3388 15.7333 15.4858 15.6096 15.6096C15.4858 15.7333 15.3388 15.8315 15.1771 15.8985C15.0154 15.9655 14.842 16 14.667 16H5.33305C4.9795 16 4.64043 15.8596 4.39044 15.6096C4.14045 15.3596 4 15.0205 4 14.667V8.66695Z"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M8.28564 16.0003V10.8574H11.7142V16.0003"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+// export function IconHome() {
+//   return (
+//     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+//       <path
+//         d="M4 8.66695L10 4L16 8.66695V14.667C16 14.842 15.9655 15.0154 15.8985 15.1771C15.8315 15.3388 15.7333 15.4858 15.6096 15.6096C15.4858 15.7333 15.3388 15.8315 15.1771 15.8985C15.0154 15.9655 14.842 16 14.667 16H5.33305C4.9795 16 4.64043 15.8596 4.39044 15.6096C4.14045 15.3596 4 15.0205 4 14.667V8.66695Z"
+//         stroke="currentColor"
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       />
+//       <path
+//         d="M8.28564 16.0003V10.8574H11.7142V16.0003"
+//         stroke="currentColor"
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       />
+//     </svg>
+//   );
+// }
 
 // 퀵메뉴 아이콘 채팅
 export function IconQuick() {
@@ -279,20 +322,6 @@ export function IconSearch() {
           <rect width="32" height="32" fill="white" />
         </clipPath>
       </defs>
-    </svg>
-  );
-}
-
-// 더보기 플러스 아이콘
-export function IconPlus() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M10.7784 9.22708V3H9.22283V9.22708H3V10.7826H9.22283V17H10.7784V10.7826H17V9.22708H10.7784Z"
-        fill="currentColor"
-      />
     </svg>
   );
 }
