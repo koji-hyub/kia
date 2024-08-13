@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "KiaSignature";
+    font-weight: 400;
+    font-style: normal;
+    src: url('../font/KiaSignatureRegular.ttf') format('truetype'),
+    url('../font/KiaSignatureOTFRegular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "KiaSignature";
+    font-weight: 700;
+    font-style: normal;
+    src: url('../font/KiaSignatureBold.ttf') format('truetype'),
+    url('../font/KiaSignatureOTFBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "KiaSignature";
+    font-weight: 300;
+    font-style: normal;
+    src: url('../font/KiaSignatureLight.ttf') format('truetype'),
+    url('../font/KiaSignatureOTFLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "KiaSignatureFix";
+    font-weight: 400;
+    font-style: normal;
+    src: url('../font/KiaSignatureFixRegular.ttf') format('truetype'),
+    url('../font/KiaSignatureFixOTFRegular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "KiaSignatureFix";
+    font-weight: 700;
+    font-style: normal;
+    src: url('../font/KiaSignatureFixBold.ttf') format('truetype'),
+    url('../font/KiaSignatureFixOTFBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "KiaSignatureFix";
+    font-weight: 300;
+    font-style: normal;
+    src: url('../font/KiaSignatureFixLight.ttf') format('truetype'),
+    url('../font/KiaSignatureFixOTFLight.otf') format('opentype');
+}

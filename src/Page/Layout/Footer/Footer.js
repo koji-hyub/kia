@@ -6,7 +6,7 @@ const Footer = Style(APP_SKIN);
 
 function FooterWrap() {
   return (
-    <Footer className={'footer-wrap'}>
+    <Footer>
       <div className="inner">
         <div>© Kia Corporation</div>
       </div>
