@@ -15,7 +15,7 @@ const CommonSkin = css`
       border: none;
       background: #fff;
       border-radius: 24rem;
-      padding: 14rem 20rem;
+      padding: 14rem 90rem 14rem 20rem;
     }
 
     .send-item {
