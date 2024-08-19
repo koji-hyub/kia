@@ -2,6 +2,11 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const CommonSkin = css`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white; /* 푸터 배경색 */
+  background: var(--Primary-Polar-White);
   .message-item {
     .inner {
       padding: 12rem 20rem;
@@ -23,22 +28,21 @@ const CommonSkin = css`
     }
   }
 
+  /* hidden-item 기본 스타일 */
   .hidden-item {
-    max-height: 0;
     overflow: hidden;
     background: #edf0f2;
-    transition: max-height 2s ease-out;
-    opacity: 0;
-    box-shadow: 0 2rem 8rem 0 rgba(34, 34, 34, 0.05) inset;
-
+    transition: max-height 0.3s ease-out; /* 애니메이션 시간 0.5초로 설정 */
+    max-height: 0; /* 초기에는 높이 0으로 설정 */
     .inner {
-      display: none;
+      display: none; /* 초기에는 숨김 */
     }
+    /* 활성화 상태 */
     &.isActive {
-      max-height: 1000rem; /* 실제 콘텐츠 크기에 따라 적절히 조정 */
-      opacity: 1;
+      max-height: 1000rem; /* 적절한 최대 높이 설정 */
+
       .inner {
-        display: block;
+        display: block; /* 활성화 시 보이기 */
       }
     }
   }

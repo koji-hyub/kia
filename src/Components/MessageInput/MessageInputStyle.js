@@ -35,6 +35,7 @@ const CommonSkin = css`
         margin-right: 10rem;
       }
       .send {
+        color: var(--Primary-Polar-White);
         &.isActive {
           background: #05141f;
         }

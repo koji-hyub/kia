@@ -2,6 +2,16 @@ import styled, { css } from 'styled-components';
 
 // 공통으로 사용되는 스타일
 const CommonSkin = css`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* 헤더가 다른 요소 위에 표시되도록 함 */
+  background-color: var(--Primary-Midnight-Black); /* 헤더 배경 색상 설정 */
+  color: var(--Primary-Polar-White); /* 헤더 텍스트 색상 설정 */
+
+  /* 기타 필요 스타일 */
+
   .inner {
     padding: 16rem 20rem;
     height: 56rem;
@@ -15,7 +25,9 @@ const CommonSkin = css`
 const BasicSkin = css`
   height: 56rem;
   background: #010e18;
-  color: #fff;
+  //background: var(--Primary-Midnight-Black, #05141f);
+  background: ${(props) => `var(${props.color || '--Primary-Midnight-Black, #05141f'})`};
+  //color: var(--Primary-Polar-White);
   .inner {
     h1 {
       color: #fff;
@@ -37,13 +49,15 @@ const BasicSkin = css`
         }
         width: 20rem;
         height: 20rem;
-        color: #fff;
+        color: var(--Primary-Polar-White);
       }
     }
   }
 `;
 
-const ThemeSkin = css``;
+const ThemeSkin = css`
+  background: ${(props) => `var(${props.color || '--Primary-Polar-White'})`};
+`;
 
 // 컴포넌트를 선택하는 함수
 const Style = (type) => {

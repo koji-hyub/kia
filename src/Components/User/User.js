@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react';
-import { css } from 'styled-components';
-
 import Style from './UserStyle';
-import { BotIcon } from '../../assets/images/common/logo';
 import Text from '../Text/Text';
-
 import Time from '../Time/Time';
 import Loading from '../Loading/Loading';
 
@@ -13,12 +9,10 @@ const User = Style(APP_SKIN);
 const textItem = [
   {
     id: 1,
-    size: 'medium',
     text: '그래픽 요소나 시각적 연출을 보여줄 때 젝트 모형의 채움 글로도 이용된다. '
   },
   {
     id: 2,
-    size: 'medium',
     text: '더미 텍스트 입니다.'
   }
 ];
@@ -51,7 +45,7 @@ function AssistantWrap(props) {
         {textItem.map((item) => (
           <div className={'text-box'} key={item.id}>
             <div className="inner">
-              <Text size={item.size} color={'color01'} text={item.text} />
+              <Text size={'--font-size-4'} color={'--Primary-Polar-White'} text={item.text} />
             </div>
           </div>
         ))}

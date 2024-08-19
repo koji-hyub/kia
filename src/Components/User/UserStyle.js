@@ -37,7 +37,7 @@ const BasicSkin = css`
   .message-box {
     .text-box {
       .inner {
-        background: #ddecff;
+        background: var(--Primary-Midnight-Black);
         div {
           div {
           }

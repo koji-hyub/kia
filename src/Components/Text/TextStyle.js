@@ -1,9 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const CommonSkin = css``;
-const BasicSkin = css`
-  letter-spacing: -0.33px;
+const CommonSkin = css`
+  letter-spacing: -0.33rem;
   display: flex;
   align-items: flex-start;
   .left {
@@ -21,42 +20,11 @@ const BasicSkin = css`
         return 'left';
     }
   }};
-  font-size: ${(props) => {
-    switch (props.size) {
-      case 'large':
-        return '16rem';
-      case 'medium':
-        return '14rem';
-      case 'small':
-        return '12rem';
-      default:
-        return '14rem';
-    }
-  }};
-  font-weight: ${(props) => {
-    switch (props.size) {
-      case 'large':
-      case 'medium':
-      case 'small':
-        return 500;
-      default:
-        return;
-    }
-  }};
-  color: ${(props) => {
-    switch (props.color) {
-      case 'color01': // 말풍선 텍스트 컬러
-        return '#05141F';
-      case 'color02':
-        return '#0060E6';
-      case 'color03':
-        return '#707070';
-      case 'color04': // 날자 컬러
-        return '#CCD0D3';
-      default:
-        return '#000';
-    }
-  }};
+`;
+const BasicSkin = css`
+  font-weight: ${(props) => `var(${props.bold || '--font-weight-regular'})`};
+  font-size: ${(props) => `var(${props.size || '--font-size-4'})`};
+  color: ${(props) => `var(${props.color || '--Primary-Midnight-Black'})`};
 `;
 
 const ThemeSkin = css``;

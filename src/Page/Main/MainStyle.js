@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 
 const CommonSkin = css`
   //height: calc(100%);
-  padding: 20rem;
+  padding: 20rem 20rem 20rem;
   overflow-y: auto;
 `;
 const BasicSkin = css`

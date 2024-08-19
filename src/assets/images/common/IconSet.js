@@ -7,19 +7,12 @@ export function IconClosed({ width, height }) {
       height={`${height ? height : '20'}`}
       viewBox="0 0 20 20"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M4.5 15.2842L15.2843 4.49987"
+        d="M16.25 3.75L10 10M3.75 16.25L10 10M3.75 3.75L10 10M16.25 16.25L10 10"
         stroke="currentColor"
-        strokeWidth="1.55295"
-        strokeLinecap="round"
-      />
-      <path
-        d="M15.5 15.5L4.71569 4.71569"
-        stroke="currentColor"
-        strokeWidth="1.55295"
-        strokeLinecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="square"
       />
     </svg>
   );
@@ -28,27 +21,16 @@ export function IconClosed({ width, height }) {
 export function IconLogOut({ width, height }) {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       width={`${width ? width : '20'}`}
       height={`${height ? height : '20'}`}
       viewBox="0 0 20 20"
       fill="none"
     >
       <path
-        d="M9.99893 16.875H3.50586V3.125C6.19072 3.125 7.31407 3.125 9.99893 3.125"
+        d="M10.8333 2.5H17.5V17.5H10.8333M7.5 5L2.84314 10L7.5 15M3.77451 10H10.8333"
         stroke="currentColor"
-        strokeWidth="1.4"
-        strokeMiterlimit="3.86874"
+        strokeWidth="1.5"
         strokeLinecap="square"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M16.492 9.99931H7.70724M16.492 9.99931L13.0545 6.5618M16.492 9.99931L13.0545 13.4368"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="square"
-        strokeLinejoin="round"
       />
     </svg>
   );
@@ -62,7 +44,6 @@ export function IconClear({ width, height }) {
       height={`${height ? height : '24'}`}
       viewBox="0 0 24 24"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
     >
       <rect rx="12" fill="#CCD0D3" />
       <path d="M7.5 16.5L16.5 7.50003" stroke="white" strokeWidth="1.44" strokeLinecap="round" />
@@ -80,24 +61,16 @@ export function IconClear({ width, height }) {
 export function IconSend({ width, height }) {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={`${width ? width : '16'}`}
-      height={`${height ? height : '16'}`}
-      viewBox="0 0 16 16"
+      width={`${width ? width : '20'}`}
+      height={`${height ? height : '20'}`}
+      viewBox="0 0 20 20"
       fill="none"
     >
       <path
-        d="M2.21501 4.56956L14.0573 0.840842C14.7399 0.62704 15.3883 1.28555 15.1494 1.96117L11.1053 13.7973C10.8579 14.5242 9.85962 14.6012 9.50128 13.9256L7.05261 9.32453C6.97583 9.1877 6.86491 9.06797 6.7284 8.98245L2.0273 6.16881C1.37888 5.77541 1.48979 4.80047 2.21501 4.57811V4.56956Z"
-        stroke="white"
-        strokeWidth="1.27816"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M7.13782 8.91475L9.6974 6.34912"
-        stroke="white"
-        strokeWidth="1.27816"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d="M11.1966 8.46146L9.48716 10.1709L3.33331 7.7777L16.6666 3.33325L12.2222 16.6666L10.5128 12.564"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="square"
       />
     </svg>
   );
@@ -111,7 +84,6 @@ export function IconPlus({ width, height }) {
       height={`${height ? height : '24'}`}
       viewBox="0 0 24 24"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
     >
       <path d="M4 12H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M12 20L12 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />

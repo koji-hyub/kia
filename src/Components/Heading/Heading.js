@@ -2,7 +2,7 @@ import React from 'react';
 import Style from '../Heading/HeadingStyle';
 
 const Heading = Style(APP_SKIN);
-function HeadingWrap({ level, title, badge, state, color, iconLeft, ...rest }) {
+function HeadingWrap({ level, title, badge, state, iconLeft, ...rest }) {
   const HeadingTag = `h${level}`;
   return (
     <>

@@ -16,13 +16,8 @@ const CommonSkin = css`
     justify-content: center;
     position: relative;
     text-align: center;
-    .lottie {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 140rem;
-      height: 140rem;
+    img {
+      height: 100%;
     }
   }
   .welcome-text {

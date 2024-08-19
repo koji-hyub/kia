@@ -172,7 +172,6 @@ const Guide = () => {
             iconLeft={
               <div
                 style={{
-                  color: 'blue',
                   width: '90rem',
                   marginRight: '5px',
                   display: 'flex',
@@ -183,6 +182,7 @@ const Guide = () => {
               </div>
             }
             title={'h1~h6 헤딩 각 레벨별 타이틀제공 컴포넌트 '}
+            color={'--Primary-Midnight-Black'}
           />
 
           <SyntaxHighlighter language="jsx" style={prism}>
@@ -207,21 +207,21 @@ const Guide = () => {
           </SyntaxHighlighter>
         </div>
         <div className="section">
-          <HeadingWrap level={3} title={'로딩'} />
+          <HeadingWrap color={'--Primary-Midnight-Black'} level={3} title={'로딩'} />
           <Loading />
           <SyntaxHighlighter language="jsx" style={prism}>
             {`<Loading />`}
           </SyntaxHighlighter>
         </div>{' '}
         <div className="section">
-          <HeadingWrap level={3} title={'햄버거 메뉴'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'햄버거 메뉴'} />
           <HamburgerMenu />
           <SyntaxHighlighter language="jsx" style={prism}>
             {`<HamburgerMenu />`}
           </SyntaxHighlighter>
         </div>
         <div className="section">
-          <HeadingWrap level={3} title={'텍스트 컴포넌트'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'텍스트 컴포넌트'} />
           <div>
             <Text
               iconLeft={
@@ -238,12 +238,12 @@ const Guide = () => {
                 </div>
               }
               size={'large'}
-              color={'color01'}
+              color={'--Primary-Midnight-Black'}
               text={`이 텍스트는 첫 번째 줄입니다. 이 텍스트는 첫 번째 줄입니다. 이 텍스트는 첫 번째 줄입니다. \n이 텍스트는 두 번째 줄입니다.`}
             />
             <Text
               size={'medium'}
-              color={'color02'}
+              color={'--Primary-Midnight-Black'}
               text={
                 '그래픽 요소나 시각적 연출을 보여줄 때 젝트 모형의 채움 글로도 이용된다. 더미 텍스트 입니다. '
               }
@@ -261,7 +261,7 @@ const Guide = () => {
           </SyntaxHighlighter>
         </div>
         <div className="section">
-          <HeadingWrap level={3} title={'테이블'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'테이블'} />
           <Table tableItem={tableItem} scroll={false} />
 
           <SyntaxHighlighter language="jsx" style={prism}>
@@ -294,7 +294,7 @@ const tableItem = [
           </SyntaxHighlighter>
         </div>
         <div className="section">
-          <HeadingWrap level={3} title={'Accordion'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'Accordion'} />
 
           <Accordion setAcc={AccordionDummyData} />
 
@@ -303,7 +303,7 @@ const tableItem = [
           </SyntaxHighlighter>
         </div>
         <div className="section">
-          <HeadingWrap level={3} title={'팝업 컴포넌트'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'팝업 컴포넌트'} />
           <Button size={'small'} name={'팝업 호출 버튼 '} onClick={openPopup} />
           {isOpen && (
             <Popup
@@ -319,7 +319,7 @@ const tableItem = [
           </SyntaxHighlighter>
         </div>
         <div className="section">
-          <HeadingWrap level={3} title={'배지모음'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'배지모음'} />
           <Badge className={'badge01'} text={'배지1'} />
           <Badge className={'badge02'} text={'배지2'} />
           <SyntaxHighlighter language="jsx" style={prism}>
@@ -327,7 +327,7 @@ const tableItem = [
           </SyntaxHighlighter>
         </div>
         <div className="section">
-          <HeadingWrap level={3} title={'해시태그'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'해시태그'} />
           <HashTag tag={'태그명'} />
           <HashTag tag={'태그명'} />
           <HashTag tag={'태그명'} />
@@ -335,7 +335,7 @@ const tableItem = [
         </div>
         <div className="section">
           {/*버튼 */}
-          <HeadingWrap level={3} title={'Button'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'Button'} />
           <div>
             <Button size={'small'} name={'default Small 버튼 '} />
             <Button type={'type01'} size={'small'} name={'type01 Small 버튼'} />
@@ -359,7 +359,7 @@ const tableItem = [
           </SyntaxHighlighter>
         </div>
         <div className="section">
-          <HeadingWrap level={3} title={'CheckBox'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'CheckBox'} />
           <div>
             <Checkbox label={'체크박스'} />
             <Checkbox label={'체크박스'} />
@@ -371,7 +371,7 @@ const tableItem = [
           </SyntaxHighlighter>
         </div>
         <div className="section">
-          <HeadingWrap level={3} title={'RadioButton'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'RadioButton'} />
           <div>
             <Radio label={'라디오버튼'} name={'na1'} />
             <Radio label={'라디오버튼'} name={'na1'} />
@@ -384,7 +384,7 @@ const tableItem = [
           </SyntaxHighlighter>
         </div>
         <div className="section">
-          <HeadingWrap level={3} title={'Input Box'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'Input Box'} />
           <div>
             <Input
               id={'id1'}
@@ -408,7 +408,7 @@ const tableItem = [
           </SyntaxHighlighter>
         </div>
         <div className="section">
-          <HeadingWrap level={3} title={'ComboBox'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'ComboBox'} />
           <div>
             <ComboBox title={'콤보박스 타이틀'} option={comboItem} />
           </div>
@@ -418,7 +418,7 @@ const tableItem = [
           </SyntaxHighlighter>
         </div>
         <div className="section">
-          <HeadingWrap level={3} title={'TabMenu'} />
+          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'TabMenu'} />
           <div>
             <TabMenuWrap tabMenu={tabMenu} initialTab={1} />
           </div>

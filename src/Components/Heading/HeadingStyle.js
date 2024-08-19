@@ -2,18 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const CommonSkin = css`
-  color: #000;
-`;
-const BasicSkin = css`
+  //color: #000;
   display: flex;
-  //align-items: flex;
-  .point {
-    color: #669aff;
-    margin-left: 5rem;
-  }
-
-  line-height: 140%; /* 30.8px */
-  letter-spacing: -0.33px;
   font-size: ${(props) => {
     switch (props.level) {
       case 1: // h1
@@ -44,13 +34,25 @@ const BasicSkin = css`
         return 600;
     }
   }};
+  .point {
+    color: var(--Color-Spectrum-Neon-Green-Neon-Green-60);
+    margin-left: 5rem;
+  }
+  line-height: 140%; /* 30.8px */
+  letter-spacing: -0.33rem;
   .left {
     display: inline-flex;
     margin-left: 8rem;
   }
 `;
+const BasicSkin = css`
+  //align-items: flex;
+  color: ${(props) => `var(${props.color || '--Primary-Polar-White'})`};
+`;
 
-const ThemeSkin = css``;
+const ThemeSkin = css`
+  color: ${(props) => `var(${props.color || '--Primary-Midnight-Black'})`};
+`;
 
 // 컴포넌트를 선택하는 함수
 const Style = (type) => {

@@ -1,5 +1,126 @@
 @charset "utf-8";
 @import url("font.css");
+
+
+:root {
+
+    /* ---------------------------------
+    -------------  폰트 관련  ------------
+    ------------------------------------*/
+    /* 공통 스타일 */
+    --font-family-Kia-Signature: "KiaSignature";
+    --font-weight-bold: 600;
+    --font-weight-regular: 400;
+
+    /* Font Sizes */
+    --font-size-0: 28rem;
+    --font-size-1: 24rem;
+    --font-size-2: 20rem;
+    --font-size-3: 18rem;
+    --font-size-4: 16rem;
+    --font-size-5: 14rem;
+    --font-size-6: 13rem;
+    --font-size-7: 12rem;
+    --font-size-8: 11rem;
+    --font-size-9: 9rem;
+    --font-size-10: 8rem;
+
+    /* Line Heights */
+    --line-height-0: 36rem; /* 128.571% */
+    --line-height-1: 32rem; /* 133.333% */
+    --line-height-2: 28rem; /* 140% */
+    --line-height-3: 24rem; /* 150% */
+    --line-height-4: 20rem; /* 142.857% */
+    --line-height-5: 22rem; /* 157.143% */
+    --line-height-6: 14rem; /* 127.273% */
+    --line-height-7: 12rem; /* 150% */
+    --line-height-8: 18rem; /* 150% */
+    --line-height-9: 16rem; /* 145.455% */
+
+
+    /* ----------------------------------
+     -------------  컬러 관련  ------------
+     ------------------------------------*/
+    /* Primary */
+    --Primary-Midnight-Black: rgba(5, 20, 31, 1); /* #05141F */
+    --Primary-Polar-White: rgba(255, 255, 255, 1); /* #FFFFFF */
+
+    /* Secondary */
+    --Secondary-Neon-Green: rgba(70, 143, 19, 1); /* #468F13 */
+
+    /* Tertiary */
+    --Tertiary-Afternoon-Yellow: rgba(243, 195, 0, 1); /* #F3C300 */
+
+    /* Alert */
+    --Alert-Valid: rgba(51, 102, 255, 1); /* #3366FF */
+    --Alert-Error: rgba(234, 0, 41, 1); /* #EA0029 */
+
+    /* Grey Spectrum */
+    --Grey-Spectrum-Coll-Grey-90: rgba(23, 36, 48, 1); /* #172430 */
+    --Grey-Spectrum-Coll-Grey-80: rgba(48, 60, 71, 1); /* #303C47 */
+    --Grey-Spectrum-Coll-Grey-70: rgba(73, 85, 95, 1); /* #48555F */
+    --Grey-Spectrum-Coll-Grey-60: rgba(99, 107, 116, 1); /* #636B74 */
+    --Grey-Spectrum-Coll-Grey-50: rgba(130, 138, 144, 1); /* #828A90 */
+    --Grey-Spectrum-Coll-Grey-40: rgba(155, 162, 169, 1); /* #9BA2A9 */
+    --Grey-Spectrum-Coll-Grey-30: rgba(178, 184, 189, 1); /* #B2B8BD */
+    --Grey-Spectrum-Coll-Grey-20: rgba(204, 208, 211, 1); /* #CCD0D3 */
+    --Grey-Spectrum-Coll-Grey-10: rgba(231, 233, 236, 1); /* #E7E9EC */
+    --Grey-Spectrum-Coll-Grey-05: rgba(237, 240, 242, 1); /* #EDF0F2 */
+    --Grey-Spectrum-Coll-Grey-02: rgba(242, 244, 246, 1); /* #F2F4F6 */
+    --Grey-Spectrum-Coll-Grey-01: rgba(250, 250, 251, 1); /* #FAFAFB */
+
+    /* Neon Green */
+    --Color-Spectrum-Neon-Green-Neon-Green-100: rgba(15, 32, 9, 1); /* #0F2009 */
+    --Color-Spectrum-Neon-Green-Neon-Green-90: rgba(51, 105, 30, 1); /* #33691E */
+    --Color-Spectrum-Neon-Green-Neon-Green-80: rgba(70, 143, 19, 1); /* #468F13 */
+    --Color-Spectrum-Neon-Green-Neon-Green-70: rgba(95, 169, 30, 1); /* #5FA91E */
+    --Color-Spectrum-Neon-Green-Neon-Green-60: rgba(119, 178, 57, 1); /* #77B23A */
+    --Color-Spectrum-Neon-Green-Neon-Green-50: rgba(139, 195, 74, 1); /* #8BC34A */
+    --Color-Spectrum-Neon-Green-Neon-Green-40: rgba(174, 213, 129, 1); /* #AED581 */
+    --Color-Spectrum-Neon-Green-Neon-Green-30: rgba(197, 225, 165, 1); /* #C5E1A5 */
+    --Color-Spectrum-Neon-Green-Neon-Green-20: rgba(220, 237, 200, 1); /* #DCEFC8 */
+    --Color-Spectrum-Neon-Green-Neon-Green-10: rgba(241, 248, 233, 1); /* #F1F8E9 */
+    --Color-Spectrum-Neon-Green-Neon-Green-05: rgba(248, 252, 244, 1); /* #F8FCF4 */
+
+    /* Red */
+    --Color-Spectrum-Red-90: rgba(62, 0, 10, 1); /* #3E000A */
+    --Color-Spectrum-Red-80: rgba(94, 0, 16, 1); /* #5E0010 */
+    --Color-Spectrum-Red-70: rgba(140, 0, 25, 1); /* #8C0019 */
+    --Color-Spectrum-Red-60: rgba(187, 0, 33, 1); /* #BB0021 */
+    --Color-Spectrum-Red-50-error: rgba(234, 0, 41, 1); /* #EA0029 */
+    --Color-Spectrum-Red-40: rgba(246, 72, 84, 1); /* #F64854 */
+    --Color-Spectrum-Red-30: rgba(245, 133, 139, 1); /* #F5858B */
+    --Color-Spectrum-Red-20: rgba(251, 189, 192, 1); /* #FBBDC0 */
+    --Color-Spectrum-Red-10: rgba(254, 233, 236, 1); /* #FEE9EC */
+    --Color-Spectrum-Red-5: rgba(255, 245, 246, 1); /* #FFF5F6 */
+
+    /* Soft Green */
+    --Color-Spectrum-Sotf-Green-Sotf-Green-90: rgba(59, 90, 28, 1); /* #3B5A1C */
+    --Color-Spectrum-Sotf-Green-Sotf-Green-80: rgba(93, 125, 43, 1); /* #5D7D2B */
+    --Color-Spectrum-Sotf-Green-Sotf-Green-70: rgba(110, 143, 51, 1); /* #6E8F33 */
+    --Color-Spectrum-Sotf-Green-Sotf-Green-60: rgba(130, 162, 61, 1); /* #82A23D */
+    --Color-Spectrum-Sotf-Green-Sotf-Green-50: rgba(145, 177, 68, 1); /* #91B144 */
+    --Color-Spectrum-Sotf-Green-Sotf-Green-40: rgba(160, 188, 95, 1); /* #A0BC5F */
+    --Color-Spectrum-Sotf-Green-Sotf-Green-30: rgba(177, 199, 123, 1); /* #B1C77B */
+    --Color-Spectrum-Sotf-Green-Sotf-Green-20: rgba(221, 231, 196, 1); /* #DDE7C4 */
+    --Color-Spectrum-Sotf-Green-Sotf-Green-10: rgba(241, 248, 233, 1); /* #F1F8E9 */
+    --Color-Spectrum-Sotf-Green-Sotf-Green-05: rgba(248, 250, 244, 1); /* #F8FAF4 */
+
+
+
+
+
+
+
+    --safe-area-inset-bottom: env(safe-area-inset-bottom);
+    --vh: 1vh;
+
+
+
+}
+
+
+
 /* reset css */
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,
@@ -10,22 +131,35 @@ article, aside, details, figcaption, figure, dialog,
 footer, header, hgroup, menu, main, nav, section{display:block;}
 /* html{scroll-behavior: smooth;} */
 
-html{font-size: 1px;}
+html{
+    font-size: 1px;
+    height: 100%;
+    margin: 0;
+}
 
 h1, h2, h3, h4, h5, h6{font-size:100%; font-weight:normal;}
 body{
+    padding-top:  56rem; /* 헤더 높이에 맞게 조정 */
+    margin: 0;
     word-wrap:break-word;
     word-break:keep-all;
-    color: #000;
+    color: var(--Primary-Midnight-Black);
     line-height: normal;
     -webkit-text-size-adjust:none;
-    font-family: "KiaSignature", "KiaSignatureFix", "Noto Sans CJK KR", "Roboto", "Apple SD Gothic Neo", "Malgun Gothic", Tahoma, "Dotum", "sans-serif", "apple color emoji", "segoe ui emoji", "noto color emoji", "android emoji", "emojisymbols", "emojione mozilla", "twemoji mozilla", "segoe ui symbol";
+    font-family: var(--font-family-Kia-Signature), "KiaSignatureFix", "Noto Sans CJK KR", "Roboto", "Apple SD Gothic Neo", "Malgun Gothic", Tahoma, "Dotum", "sans-serif", "apple color emoji", "segoe ui emoji", "noto color emoji", "android emoji", "emojisymbols", "emojione mozilla", "twemoji mozilla", "segoe ui symbol";
     font-size: 14rem;
+    /*overflow: auto;*/
+    padding-bottom: var(--safe-area-inset-bottom);
+    height: calc(var(--vh, 1vh) * 100);
+    /*overflow: hidden;*/
+
+    display: flex;
+    flex-direction: column;
 
 }
 
 body,select,input,textarea,button{
-    font-family: "KiaSignature", "KiaSignatureFix", "Noto Sans CJK KR", "Roboto", "Apple SD Gothic Neo", "Malgun Gothic", Tahoma, "Dotum", "sans-serif", "apple color emoji", "segoe ui emoji", "noto color emoji", "android emoji", "emojisymbols", "emojione mozilla", "twemoji mozilla", "segoe ui symbol";
+    font-family: var(--font-family-Kia-Signature), "KiaSignatureFix", "Noto Sans CJK KR", "Roboto", "Apple SD Gothic Neo", "Malgun Gothic", Tahoma, "Dotum", "sans-serif", "apple color emoji", "segoe ui emoji", "noto color emoji", "android emoji", "emojisymbols", "emojione mozilla", "twemoji mozilla", "segoe ui symbol";
     vertical-align:middle;
     font-weight: 400;
     font-size: 16px;
@@ -47,7 +181,7 @@ strong,b{font-weight:normal;}
 *:focus{outline-color: rgba(0, 114, 255,0.2);outline-width: 3rem !important;outline-style: solid;}
 
 /* html *{max-height:1000rem} Android tablet bug fix */
-a{color:#000; }
+a{color:var(--Primary-Midnight-Black); }
 a:link{text-decoration:none;}
 a:visited{text-decoration:none;}
 a:hover{text-decoration:none;}
@@ -71,10 +205,38 @@ input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 /* Firefox */
 input[type=number] { -moz-appearance: textfield; }
 
-input::-webkit-input-placeholder {color: #c3c6cb; font-weight: normal;}
-input:-ms-input-placeholder {color: #c3c6cb; font-weight: normal;}
-textarea::-webkit-input-placeholder {color: #c3c6cb; font-weight: normal;}
-textarea:-ms-input-placeholder {color: #c3c6cb; font-weight: normal;}
+/* Placeholder 스타일 적용 */
+input::placeholder {
+    color: var(--Grey-Spectrum-Coll-Grey-20);
+    font-weight: normal;
+}
+
+textarea::placeholder {
+    color: var(--Grey-Spectrum-Coll-Grey-20);
+    font-weight: normal;
+}
+
+/* 이전 표준을 지원하는 스타일 (구식 브라우저 지원) */
+input::-webkit-input-placeholder {
+    color: var(--Grey-Spectrum-Coll-Grey-20);
+    font-weight: normal;
+}
+
+input:-ms-input-placeholder {
+    color: var(--Grey-Spectrum-Coll-Grey-20);
+    font-weight: normal;
+}
+
+textarea::-webkit-input-placeholder {
+    color: var(--Grey-Spectrum-Coll-Grey-20);
+    font-weight: normal;
+}
+
+textarea:-ms-input-placeholder {
+    color: var(--Grey-Spectrum-Coll-Grey-20);
+    font-weight: normal;
+}
+
 select::-ms-expand {display:none;}
 
 
@@ -111,34 +273,20 @@ button{cursor:pointer;background: none;border: none;}
 button[disabled]{/* cursor:default */}
 
 pre {
-    font-family: 'KiaSignature', 'Noto Sans KR';
     color: inherit;
     font-size: 14rem;
 }
 code {
     color: inherit;;
     font-size: 14rem;
-    font-family: 'KiaSignature', 'Noto Sans KR';
     display: block;
     overflow-x: auto; /* 텍스트가 넘칠 경우 가로 스크롤이 나타나도록 설정 */
     white-space: pre-wrap; /* 줄바꿈 유지 */
     word-break: break-word; /* 긴 단어가 있는 경우 줄 바꿈 */
 }
 
-/*.container {padding-bottom: 110rem; width: 1280rem; margin: 0 auto}*/
-
-
-
-
-/*@media (max-width: 1279px) {*/
-/*    .container {*/
-/*        padding: 20rem;*/
-/*        padding-bottom: 110rem;*/
-/*        width: auto;*/
-/*    }*/
-
-/*}*/
 /* 미디어 쿼리 */
+@media (max-width: 1279px) {}
 @media screen and ( min-width:1000px ) {}
 @media screen and (min-width: 550px) {}
 @media screen and ( max-width:1024px) {}
@@ -147,3 +295,9 @@ code {
 @media screen and ( max-width:1024px) {}
 @media screen and ( max-width:640px) {}
 @media screen and ( max-width:360px) {}
+
+
+
+
+
+

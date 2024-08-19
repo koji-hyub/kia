@@ -6,7 +6,9 @@ const CommonSkin = css`
   position: relative; /* 부모 요소가 기준이 되도록 설정 */
   width: 24rem;
   height: 24rem; /* 전체 높이 설정 */
+  color: var(--Primary-Midnight-Black);
   /* 공통 스타일 정의 */
+
   svg {
     transition: all 0.3s ease-in-out;
     //transform: rotate(405deg);

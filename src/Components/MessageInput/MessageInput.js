@@ -38,7 +38,7 @@ function InputWrap({ label, id, placeholder, name, type, className }) {
             onClick={(e) => e.stopPropagation()}
           >
             <span className={'blind'}>{value ? '메세지 전송' : ''}</span>
-            <IconSend />
+            <IconSend width={20} height={20} />
           </button>
         </div>
       </div>
