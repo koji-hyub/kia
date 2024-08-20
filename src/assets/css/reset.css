@@ -140,6 +140,8 @@ html{
 h1, h2, h3, h4, h5, h6{font-size:100%; font-weight:normal;}
 body{
     padding-top:  56rem; /* 헤더 높이에 맞게 조정 */
+    /*padding-bottom:  ; !* 헤더 높이에 맞게 조정 *!*/
+    padding-bottom: var(--safe-area-inset-bottom , 56rem) ;
     margin: 0;
     word-wrap:break-word;
     word-break:keep-all;
@@ -148,14 +150,9 @@ body{
     -webkit-text-size-adjust:none;
     font-family: var(--font-family-Kia-Signature), "KiaSignatureFix", "Noto Sans CJK KR", "Roboto", "Apple SD Gothic Neo", "Malgun Gothic", Tahoma, "Dotum", "sans-serif", "apple color emoji", "segoe ui emoji", "noto color emoji", "android emoji", "emojisymbols", "emojione mozilla", "twemoji mozilla", "segoe ui symbol";
     font-size: 14rem;
-    /*overflow: auto;*/
-    padding-bottom: var(--safe-area-inset-bottom);
     height: calc(var(--vh, 1vh) * 100);
-    /*overflow: hidden;*/
-
     display: flex;
     flex-direction: column;
-
 }
 
 body,select,input,textarea,button{
@@ -175,7 +172,12 @@ table{border-collapse:collapse;border-spacing:0;}
 address,em,i{font-style:normal;}
 strong,b{font-weight:normal;}
 
-*,::before,::after{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+*,::before,::after{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
 [tabindex]:focus>.pbd,
 /**:focus{outline-color: rgba(0, 114, 255,0.2);outline-width: 0rem !important;outline-style: solid;}*/
 *:focus{outline-color: rgba(0, 114, 255,0.2);outline-width: 3rem !important;outline-style: solid;}
@@ -274,11 +276,11 @@ button[disabled]{/* cursor:default */}
 
 pre {
     color: inherit;
-    font-size: 14rem;
+    font-size: 14rem !important;
 }
 code {
     color: inherit;;
-    font-size: 14rem;
+    font-size: 14rem !important;
     display: block;
     overflow-x: auto; /* 텍스트가 넘칠 경우 가로 스크롤이 나타나도록 설정 */
     white-space: pre-wrap; /* 줄바꿈 유지 */

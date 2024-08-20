@@ -19,7 +19,7 @@ const CommonSkin = css`
     display: block;
     .inner {
       width: auto;
-      max-width: 300rem;
+      max-width: 80%;
       display: inline-flex;
       border-radius: 0 16rem 16rem 16rem;
       padding: 8rem 16rem;
@@ -28,6 +28,26 @@ const CommonSkin = css`
           // TEXT 컴포넌트
           line-height: 157.143%;
         }
+      }
+    }
+  }
+
+  .quick-replies {
+    width: 100%;
+    padding: 12rem 0 12rem;
+    overflow-x: scroll; /* 가로 스크롤을 활성화 */
+    white-space: nowrap; /* 모든 슬라이드를 한 줄로 표시 */
+    position: relative;
+    scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, and Opera에서 스크롤바 숨기기 */
+    }
+
+    .item-box {
+      display: flex; /* 슬라이드들을 가로로 배치 */
+      .inner {
+        display: inline-block; /* 각 슬라이드를 inline-block으로 배치 */
+        margin-right: 8px; /* 슬라이드 사이 간격 설정 */
       }
     }
   }

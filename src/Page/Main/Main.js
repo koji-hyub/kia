@@ -25,7 +25,7 @@ const PubMain = () => {
 
   return (
     <>
-      <MainWrap className={'main'}>
+      <MainWrap>
         <VideoPlayer />
         <Assistant />
         <User />

@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Style from './HashTagStyle';
+import Style from './QuickRepliesStyle';
 
-const Hashtag = Style(APP_SKIN);
+const QuickReplies = Style(APP_SKIN);
 function HashtagWrap({ tag, ...reset }) {
   return (
-    <Hashtag {...reset}>
+    <QuickReplies {...reset}>
       <span>{tag}</span>
-    </Hashtag>
+    </QuickReplies>
   );
 }
 

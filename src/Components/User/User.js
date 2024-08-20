@@ -45,7 +45,7 @@ function AssistantWrap(props) {
         {textItem.map((item) => (
           <div className={'text-box'} key={item.id}>
             <div className="inner">
-              <Text size={'--font-size-4'} color={'--Primary-Polar-White'} text={item.text} />
+              <Text size={'--font-size-5'} color={'--Primary-Polar-White'} text={item.text} />
             </div>
           </div>
         ))}

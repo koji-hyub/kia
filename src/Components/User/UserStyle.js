@@ -2,16 +2,18 @@ import styled, { css } from 'styled-components';
 
 // 공통으로 사용되는 스타일
 const CommonSkin = css`
-  display: flex;
-  justify-content: flex-end;
+  //display: flex;
+  //justify-content: flex-end;
   .message-box {
+    display: block;
+    width: auto;
     .text-box {
       margin-top: 8rem;
       display: flex;
       justify-content: flex-end;
       .inner {
         width: auto;
-        max-width: 300rem;
+        max-width: 80%;
         display: inline-flex;
         padding: 8rem 16rem;
         align-items: center;

@@ -217,7 +217,6 @@ const BasicSkin = css`
     }
   }
   //데이트 피커 End
-
   @media (max-width: 1279px) {
     .bottom-btn {
       display: flex;

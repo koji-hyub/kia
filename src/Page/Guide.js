@@ -33,29 +33,17 @@ import Popup from '../Components/Popup/Popup';
 import Header from './Layout/Header/Header';
 import Footer from './Layout/Message/Message';
 import Badge from '../Components/Etc/Badge';
-import HashTag from '../Components/HashTag/HashTag';
-import { SwiperSlide } from 'swiper/react';
+import HashTag from '../Components/QuickReplies/QuickReplies';
+// import { SwiperSlide } from 'swiper/react';
 import MainSwiper from '../Components/Swiper/MainSwiper';
 import Table from '../Components/Table/Table';
-import { IconArrowType01 } from '../assets/images/common/IconSet';
-import { LogoImg, LogoImg2 } from '../assets/images/common/logo';
+import { LogoImg } from '../assets/images/common/logo';
 import HamburgerMenu from '../Components/HamburgerMenu/HamburgerMenu';
 import Accordion from '../Components/Accordion/Accordion';
 import Loading from '../Components/Loading/Loading';
 import QuickMenu from '../Components/QuickMenu/QuickMenu';
-
-const MainWrap = styled.div`
-  padding: 15rem;
-  .section {
-    margin-bottom: 40rem;
-    & > div {
-      margin-bottom: 10rem;
-    }
-    pre {
-      font-size: 12rem !important;
-    }
-  }
-`;
+import Style from './Main/MainStyle';
+const MainWrap = Style(APP_SKIN);
 
 // 탭 메뉴 배열
 const tabMenu = [
@@ -212,7 +200,7 @@ const Guide = () => {
           <SyntaxHighlighter language="jsx" style={prism}>
             {`<Loading />`}
           </SyntaxHighlighter>
-        </div>{' '}
+        </div>
         <div className="section">
           <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'햄버거 메뉴'} />
           <HamburgerMenu />
@@ -434,8 +422,8 @@ const tableItem = [
         {/*  <IconCloseType02 />*/}
         {/*</div>*/}
       </MainWrap>
-      <Footer />
       <QuickMenu />
+      <Footer />
     </>
   );
 };
