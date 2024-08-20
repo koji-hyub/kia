@@ -6,12 +6,20 @@ const CommonSkin = css`
     display: flex;
     align-items: flex-end;
     .icon {
-      display: block;
+      display: flex;
+      align-items: center;
+      //display: block;
       box-sizing: border-box;
       border-radius: 6rem;
       padding: 7rem 7rem;
       width: 32rem;
       height: 32rem;
+      &.adviser {
+        border-radius: 16px;
+        border: 1px solid var(--Primary-Midnight-Black, #05141f);
+        background: var(--Primary-Polar-White);
+        color: var(--Primary-Midnight-Black);
+      }
     }
   }
   .text-box {
@@ -59,7 +67,7 @@ const BasicSkin = css`
       color: #fff;
       background: #111;
     }
-    .ai-assistant {
+    .assistant {
       margin-left: 8rem;
       color: #05141f;
       font-size: 12rem;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './EtcStyle';
+import Style from './BadgeStyle';
 
 const Badge = Style(APP_SKIN);
 function BadgeWrap({ className, text }) {

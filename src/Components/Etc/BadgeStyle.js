@@ -2,12 +2,6 @@ import styled, { css } from 'styled-components';
 
 // 공통으로 사용되는 스타일
 const CommonSkin = css`
-  .inner {
-  }
-  /* 미디어 쿼리 정의 */
-`;
-
-const BasicSkin = css`
   display: inline-flex;
   align-items: center;
   font-size: 12rem;
@@ -18,6 +12,9 @@ const BasicSkin = css`
   &:last-of-type {
     margin-right: 0;
   }
+`;
+
+const BasicSkin = css`
   &.large01 {
     display: flex;
     padding: 8rem 16rem;

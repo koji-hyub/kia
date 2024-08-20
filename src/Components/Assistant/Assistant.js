@@ -2,12 +2,13 @@ import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
 import Style from './AssistantStyle';
-import { BotIcon } from '../../assets/images/common/logo';
+import { BotIcon, LogoImg } from '../../assets/images/common/logo';
 import Text from '../Text/Text';
 import Time from '../Time/Time';
 import Loading from '../Loading/Loading';
 import QuickReplies from '../QuickReplies/QuickReplies';
 import 'swiper/css';
+import ChangeText from '../ChangeText/ChangeText';
 
 const Assistant = Style(APP_SKIN);
 
@@ -68,13 +69,27 @@ function AssistantWrap(props) {
     containerRef.current.scrollLeft = scrollLeft - walk;
   };
   // ****** 가로 스크롤 Quick Replies //
+
+  // 상담사 연결 요청시 상태 값 변경
+  const [adviser, setAdviser] = useState(true);
+  const adviserName = '김기아';
+
   return (
     <Assistant>
       <div className={'icon-box'}>
-        <span className={'icon'}>
-          <BotIcon />
-        </span>
-        <div className={'ai-assistant'}>기아 AI 어시스턴트</div>
+        {adviser ? (
+          <span className={`icon`}>
+            <BotIcon />
+          </span>
+        ) : (
+          <span className={'icon adviser'}>
+            <LogoImg width={32} height={32} />
+          </span>
+        )}
+        {/*--Grey-Spectrum-Coll-Grey-50*/}
+        <div className={'assistant'}>
+          {adviser ? '기아 AI 어시스턴트' : `${adviserName} 상담사`}
+        </div>
       </div>
       <div className={'text-box'}>
         <div className={'inner'}>
@@ -88,7 +103,28 @@ function AssistantWrap(props) {
           </div>
         </div>
       ))}
-
+      <ChangeText />
+      <div className={'icon-box'}>
+        {!adviser ? (
+          <span className={`icon`}>
+            <BotIcon />
+          </span>
+        ) : (
+          <span className={'icon adviser'}>
+            <LogoImg width={32} height={32} />
+          </span>
+        )}
+        {/*--Grey-Spectrum-Coll-Grey-50*/}
+        <div className={'assistant'}>
+          {!adviser ? '기아 AI 어시스턴트' : `${adviserName} 상담사`}
+        </div>
+      </div>
+      <div className={'text-box'}>
+        <div className={'inner'}>
+          <Loading />
+        </div>
+      </div>
+      {/*빠른답변*/}
       <div
         className={'quick-replies'}
         ref={containerRef}
@@ -96,7 +132,12 @@ function AssistantWrap(props) {
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
+        role={'group'}
+        aria-labelledby={'user-info-title'}
       >
+        <span className={'blind'} id={"user-info-title'"}>
+          버튼 형식의 빠른 답변을 제공
+        </span>
         <div className="item-box">
           {QuickRepliesItem.map((item) => (
             <div className="inner" key={item.id}>
@@ -105,6 +146,7 @@ function AssistantWrap(props) {
           ))}
         </div>
       </div>
+      {/*빠른답변*/}
       <Time align={'left'} getCurrentTime={getCurrentTime} />
     </Assistant>
   );

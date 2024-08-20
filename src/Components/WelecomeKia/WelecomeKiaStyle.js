@@ -23,8 +23,10 @@ const CommonSkin = css`
   .welcome-text {
     margin-top: 16rem;
     justify-content: center;
-    font-size: 18rem;
     text-align: center;
+    & > div {
+      line-height: var(--line-height-2);
+    }
   }
   .small-text {
     justify-content: center;

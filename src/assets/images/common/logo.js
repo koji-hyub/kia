@@ -1,13 +1,13 @@
 import React from 'react';
 
 // KIA 화이트 심볼
-export function LogoImg() {
+export function LogoImg({ width, height }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 25"
-      width="100%"
-      height="100%"
+      width={`${width ? width : '100%'}`}
+      height={`${height ? height : '100%'}`}
       aria-labelledby="KIA Motors Log"
     >
       <title>KIA Motors Log</title>
@@ -23,13 +23,13 @@ export function LogoImg() {
   );
 }
 
-export function BotIcon() {
+export function BotIcon({ width, height }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 56 30"
-      width="100%"
-      height="100%"
+      width={`${width ? width : '100%'}`}
+      height={`${height ? height : '100%'}`}
       aria-labelledby="KIA Motors Symbol"
     >
       <title>KIA Motors Symbol</title>

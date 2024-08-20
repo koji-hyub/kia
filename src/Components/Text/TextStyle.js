@@ -20,10 +20,11 @@ const CommonSkin = css`
         return 'left';
     }
   }};
-`;
-const BasicSkin = css`
+
   font-weight: ${(props) => `var(${props.bold || '--font-weight-regular'})`};
   font-size: ${(props) => `var(${props.size || '--font-size-4'})`};
+`;
+const BasicSkin = css`
   color: ${(props) => `var(${props.color || '--Primary-Midnight-Black'})`};
 `;
 

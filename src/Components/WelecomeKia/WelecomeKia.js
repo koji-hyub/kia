@@ -22,12 +22,13 @@ function LottieAnimation() {
         <Text
           className={'welcome-text'}
           size={'--font-size-3'}
-          color={'--Grey-Spectrum-Coll-Grey-40'}
+          color={'--Grey-Spectrum-Coll-Grey-0'}
+          bold={'--font-weight-bold'}
           text={`${userName} 님, 안녕하세요. \n 기아 챗봇입니다. `}
         />
         <Text
           className={'small-text'}
-          size={'--font-size-3'}
+          size={'--font-size-5'}
           color={'--Grey-Spectrum-Coll-Grey-40'}
           align={'center'}
           text={'어떤 업무가 궁금하신가요?'}
