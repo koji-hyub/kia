@@ -4,6 +4,7 @@ import Assistant from '~/Components/Assistant/Assistant';
 import User from '../../Components/User/User';
 // import WelecomeKia from '../../Components/WelecomeKia/WelecomeKia';
 import VideoPlayer from '../../Components/WelecomeKia/WelecomeKia';
+import Evaluate from '../../Components/Evaluate/Evaluate';
 
 const MainWrap = Style(APP_SKIN);
 
@@ -29,6 +30,7 @@ const PubMain = () => {
         <VideoPlayer />
         <Assistant />
         <User />
+        <Evaluate />
       </MainWrap>
     </>
   );

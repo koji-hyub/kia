@@ -91,6 +91,24 @@ export function IconPlus({ width, height }) {
   );
 }
 
+export function IconStart({ width, height, fill, stroke }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={`${width ? width : '29'}`}
+      height={`${height ? height : '26'}`}
+      viewBox="0 0 29 26"
+      fill="none"
+    >
+      <path
+        d="M14.5 1.13871L18.2905 8.89449L18.4088 9.13647L18.6759 9.17086L27.3765 10.2906L21.0201 16.182L20.8172 16.37L20.8688 16.6419L22.4674 25.0711L14.7341 20.9731L14.5 20.8491L14.2659 20.9731L6.53261 25.0711L8.13124 16.6419L8.18279 16.37L7.97988 16.182L1.62346 10.2906L10.3241 9.17086L10.5912 9.13647L10.7095 8.89449L14.5 1.13871Z"
+        fill={`${fill ? fill : 'currentColor'}`}
+        stroke={`${stroke ? stroke : '#9BA2A9'}`}
+      />
+    </svg>
+  );
+}
+
 /////////////////////////////////////
 // 하단은 추후 필요 없는 아이콘은 삭제 한다.//
 /////////////////////////////////////
