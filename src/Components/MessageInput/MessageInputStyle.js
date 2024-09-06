@@ -9,6 +9,7 @@ const CommonSkin = css`
     border-radius: 24rem;
     overflow: hidden;
     border: 1px solid #05141f;
+    height: auto;
     input {
       width: 100%;
       height: 100%;

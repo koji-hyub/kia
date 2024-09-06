@@ -4,13 +4,11 @@ import styled, { css } from 'styled-components';
 
 const CommonSkin = css`
   //height: calc(100%);
-  padding: 20rem 20rem 20rem;
-  overflow-y: auto;
+
+  padding: 20rem;
 `;
 const BasicSkin = css`
   /* 미디어 쿼리 정의 */
-  @media (max-width: 1279px) {
-  }
 `;
 const ThemeSkin = css``;
 

@@ -5,8 +5,10 @@ import Style from './NavigationStyle';
 const Menu = Style(APP_SKIN);
 function Navigation(props) {
   const navigation = [
-    { path: 'Main/Guide', menu: '공통가이드' },
-    { path: '/', menu: '메인페이지' }
+    { path: '/Guide', menu: '공통가이드' },
+    { path: '/', menu: '메인페이지' },
+    { path: '/CallPopup', menu: '팝업 호출' },
+    { path: '/Test', menu: '테스트' }
   ];
 
   const [open, isOpen] = useState(false);

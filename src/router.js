@@ -4,6 +4,8 @@ import PageNotFound from './Page/PageNotFound';
 import Main from './Page/Main/Main';
 import Guide from './Page/Guide';
 import PageMain from './Page/PageMain';
+import Test from './Page/Test';
+import CallPopup from './Page/CallPopup';
 
 export const router = createBrowserRouter([
   {
@@ -20,8 +22,16 @@ export const router = createBrowserRouter([
         element: <Main />
       },
       {
-        path: '/Main/Guide',
+        path: '/Guide',
         element: <Guide />
+      },
+      {
+        path: '/Test',
+        element: <Test />
+      },
+      {
+        path: '/CallPopup',
+        element: <CallPopup />
       }
     ]
   },

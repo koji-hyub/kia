@@ -18,14 +18,13 @@ function InputWrap({ label, id, placeholder, name, type, className }) {
         {label}
       </label>
       <div className={`input-wrap ${className || ''}`}>
-        <input
+        <textarea
           placeholder={placeholder}
           id={id}
           name={name}
-          type={type || 'text'}
           value={value}
           onChange={onValueChange}
-        />
+        ></textarea>
         <div className={'send-item'}>
           {value && (
             <button className={'clear'} onClick={clearButton}>

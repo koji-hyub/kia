@@ -2,13 +2,14 @@ import styled, { css } from 'styled-components';
 
 // 공통으로 사용되는 스타일
 const CommonSkin = css`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10; /* 헤더가 다른 요소 위에 표시되도록 함 */
-  background-color: var(--Primary-Midnight-Black); /* 헤더 배경 색상 설정 */
-  color: var(--Primary-Polar-White); /* 헤더 텍스트 색상 설정 */
+  //position: fixed;
+  //top: 0;
+  //left: 0;
+  //right: 0;
+  //z-index: 10; /* 헤더가 다른 요소 위에 표시되도록 함 */
+  //background-color: var(--Primary-Midnight-Black); /* 헤더 배경 색상 설정 */
+  //background: var(--Primary-Polar-White, #fff);
+  //color: var(--Primary-Polar-White); /* 헤더 텍스트 색상 설정 */
 
   /* 기타 필요 스타일 */
 
@@ -26,18 +27,23 @@ const BasicSkin = css`
   height: 56rem;
   background: #010e18;
   //background: var(--Primary-Midnight-Black, #05141f);
-  background: ${(props) => `var(${props.color || '--Primary-Midnight-Black, #05141f'})`};
+  background: var(--Primary-Polar-White, #fff);
+  // background: ${(props) => `var(${props.color || '--Primary-Midnight-Black, #05141f'})`};
   //color: var(--Primary-Polar-White);
   .inner {
     h1 {
-      color: #fff;
-      font-size: 16rem;
-      svg {
-        margin-top: 1rem;
-        margin-right: 8rem;
-        width: 60rem;
-        height: 14rem;
-      }
+      //color: var(--Primary-Midnight-Black, #05141f);
+      ///* Title/T7 */
+      //font-size: var(--font-size-4, 16rem);
+      //font-style: normal;
+      //font-weight: var(--font-weight-bold, 600);
+      //line-height: var(--line-height-3, 24rem); /* 150% */
+      //svg {
+      //  //margin-top: 1rem;
+      //  margin-right: 8rem;
+      //  width: 60rem;
+      //  height: 14rem;
+      //}
     }
     .item-set {
       button {

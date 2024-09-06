@@ -1,29 +1,31 @@
 import React from 'react';
 import Lottie from 'lottie-react';
 // import animationData from '../../assets/lottie/welcomekia.json';
-import Style from './WelecomeKiaStyle';
+import Style from './WelcomeKiaStyle';
 import Text from '../Text/Text';
 
-import WelecomeKiaImg from '../../assets/images/common/WelcomeKia.gif';
+import WelecomeKiaImg from '../../assets/images/common/WelcomeKia2.gif';
 
-const WelecomeKia = Style(APP_SKIN);
+const WelcomeKia = Style(APP_SKIN);
 
 const userName = '김기아';
 
 function LottieAnimation() {
   return (
     <>
-      <WelecomeKia>
+      <WelcomeKia>
         <div className={'lottie-wrap'}>
-          <img src={WelecomeKiaImg} alt="" />
-          <span className={'blind'}>KIA AI Assistant</span>
+          <div className={'img-box'}>
+            <img src={WelecomeKiaImg} alt="" />
+            <span className={'blind'}>KIA AI Assistant</span>
+          </div>
         </div>
 
         <Text
           className={'welcome-text'}
           size={'--font-size-3'}
-          color={'--Grey-Spectrum-Coll-Grey-0'}
-          bold={'--font-weight-bold'}
+          color={'--Primary-Midnight-Black'}
+          bold={'bold'}
           text={`${userName} 님, 안녕하세요. \n 기아 챗봇입니다. `}
         />
         <Text
@@ -33,7 +35,7 @@ function LottieAnimation() {
           align={'center'}
           text={'어떤 업무가 궁금하신가요?'}
         />
-      </WelecomeKia>
+      </WelcomeKia>
     </>
   );
 }

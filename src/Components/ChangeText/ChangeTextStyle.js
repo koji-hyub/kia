@@ -20,7 +20,7 @@ const CommonSkin = css`
     display: inline-block; /* 텍스트가 그 너비만큼 공간을 차지하도록 설정 */
     margin: 25rem 0;
     padding: 0 8rem;
-    background: var(--Primary-Polar-White);
+    background: transparent;
     z-index: 10; /* 텍스트가 라인 위에 위치하도록 z-index 설정 */
     width: auto;
   }

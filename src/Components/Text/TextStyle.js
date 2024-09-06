@@ -21,8 +21,8 @@ const CommonSkin = css`
     }
   }};
 
-  font-weight: ${(props) => `var(${props.bold || '--font-weight-regular'})`};
-  font-size: ${(props) => `var(${props.size || '--font-size-4'})`};
+  font-size: ${(props) => `var(${props.size ? props.size : '--font-size-5'})`};
+  font-weight: ${(props) => `var(${props.bold ? '--font-weight-bold' : '--font-weight-regular'})`};
 `;
 const BasicSkin = css`
   color: ${(props) => `var(${props.color || '--Primary-Midnight-Black'})`};

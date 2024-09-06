@@ -31,7 +31,7 @@ import Input from '../Components/MessageInput/MessageInput';
 import ComboBox from '../Components/ComboBox/ComboBox';
 import Popup from '../Components/Popup/Popup';
 import Header from './Layout/Header/Header';
-import Footer from './Layout/Message/Message';
+// import Footer from './Layout/Message/_Message';
 import Badge from '../Components/Etc/Badge';
 import HashTag from '../Components/QuickReplies/QuickReplies';
 // import { SwiperSlide } from 'swiper/react';
@@ -125,7 +125,7 @@ const AccordionDummyData = [
 const popup = {
   title: '팝업 타이틀',
   size: 'large',
-  // size: 'small',
+  className: 'bottom',
   content:
     '팝업은 기본 large와 samll제ㅐ공 팝업의 높이는 content 클래스의 max-height값을 세팅하고 사이즈와 디자인은 별도의 클래스를 지정해서 작성한다.'
 };
@@ -292,14 +292,14 @@ const tableItem = [
         </div>
         <div className="section">
           <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'팝업 컴포넌트'} />
-          <Button size={'small'} name={'팝업 호출 버튼 '} onClick={openPopup} />
+          <Button size={'small'} text={'팝업 호출 버튼 '} onClick={openPopup} />
           {isOpen && (
             <Popup
-              className={'bottom'}
               onClick={closedPopup}
               title={popup.title}
               content={popup.content}
               size={popup.size}
+              className={isOpen ? `isActive ${popup.className}` : popup.className}
             />
           )}
           <SyntaxHighlighter language="jsx" style={prism}>
@@ -325,25 +325,25 @@ const tableItem = [
           {/*버튼 */}
           <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'Button'} />
           <div>
-            <Button size={'small'} name={'default Small 버튼 '} />
-            <Button type={'type01'} size={'small'} name={'type01 Small 버튼'} />
-            <Button type={'type02'} size={'small'} name={'type02 Small 버튼'} />
-            <Button type={'type02'} size={'small'} disabled={true} name={'disabled'} />
+            <Button size={'small'} text={'default Small 버튼 '} />
+            <Button type={'type01'} size={'small'} text={'type01 Small 버튼'} />
+            <Button type={'type02'} size={'small'} text={'type02 Small 버튼'} />
+            <Button type={'type02'} size={'small'} disabled={true} text={'disabled'} />
           </div>
           <div>
-            <Button size={'medium'} name={'default Medium 버튼'} />
-            <Button type={'type01'} size={'medium'} name={'type01 Medium 버튼'} />
-            <Button type={'type02'} size={'medium'} name={'type02 Medium 버튼'} />
-            <Button type={'type02'} size={'medium'} disabled={true} name={'disabled'} />
+            <Button size={'medium'} text={'default Medium 버튼'} />
+            <Button type={'type01'} size={'medium'} text={'type01 Medium 버튼'} />
+            <Button type={'type02'} size={'medium'} text={'type02 Medium 버튼'} />
+            <Button type={'type02'} size={'medium'} disabled={true} text={'disabled'} />
           </div>
           <div>
-            <Button size={'large'} name={'default Large 버튼 타이틀 입니다.'} />
-            <Button type={'type01'} size={'large'} name={'type01 Large 버튼'} />
-            <Button type={'type02'} size={'large'} name={'type02 Large 버튼'} />
-            <Button type={'type02'} size={'large'} disabled={true} name={'disabled 버튼'} />
+            <Button size={'large'} text={'default Large 버튼 타이틀 입니다.'} />
+            <Button type={'type01'} size={'large'} text={'type01 Large 버튼'} />
+            <Button type={'type02'} size={'large'} text={'type02 Large 버튼'} />
+            <Button type={'type02'} size={'large'} disabled={true} text={'disabled 버튼'} />
           </div>
           <SyntaxHighlighter language="jsx" style={prism}>
-            {`<Button type={'type02'} size={'large'} disabled={true} name={'disabled 버튼'} />`}
+            {`<Button type={'type02'} size={'large'} disabled={true} text={'disabled 버튼'} />`}
           </SyntaxHighlighter>
         </div>
         <div className="section">
@@ -423,7 +423,7 @@ const tableItem = [
         {/*</div>*/}
       </MainWrap>
       <QuickMenu />
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 };
