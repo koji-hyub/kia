@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Header from './Layout/Header/Header';
 import Main from '~/Page/Main/Main';
-import Message from './Layout/Message/_Message';
-import MessageInput from './Layout/Message/Message';
+// import Message from './Layout/Message/_Message';
+import Message from './Layout/Message/Message';
 
 const ChatApp = () => {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
@@ -23,7 +23,7 @@ const ChatApp = () => {
     <div style={{ height: windowHeight, display: 'flex', flexDirection: 'column' }}>
       <Header />
       <Main />
-      <MessageInput />
+      <Message />
     </div>
   );
 };

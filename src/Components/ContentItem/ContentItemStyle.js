@@ -1,25 +1,17 @@
 import styled, { css } from 'styled-components';
 
 const CommonSkin = css`
-  margin-top: 12rem;
-  color: #ccd0d3;
-  text-align: ${(props) => {
-    switch (props.align ? props.align : 'left') {
-      case 'left':
-        return 'left';
-      case 'right':
-        return 'right';
-      case 'center':
-        return 'center';
-      default:
-        return 'left';
-    }
-  }};
-  > div {
-    display: block;
-  }
+  margin: 0;
+  width: 300rem;
+  padding: 16rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12rem;
+  border-radius: 8rem;
+  background: var(--Primary-Polar-White, #fff);
+  box-shadow: 4rem 4rem 10rem 0 rgba(5, 20, 31, 0.08);
 `;
-
 const BasicSkin = css``;
 const ThemeSkin = css``;
 

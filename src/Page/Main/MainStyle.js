@@ -4,8 +4,9 @@ import styled, { css } from 'styled-components';
 
 const CommonSkin = css`
   //height: calc(100%);
-
   padding: 20rem;
+  flex: 1;
+  overflow: auto;
 `;
 const BasicSkin = css`
   /* 미디어 쿼리 정의 */

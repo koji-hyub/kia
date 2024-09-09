@@ -34,28 +34,28 @@ const MainSwiper = () => {
       >
         <SwiperSlide>
           <div className="item">
-            <Heading level={3} title={'Title'} />
+            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
             <Text text={'subTitle'} />
             <Button text={'버튼 텍스트'} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="item">
-            <Heading level={3} title={'Title'} />
+            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
             <Text text={'subTitle'} />
             <Button text={'버튼 텍스트'} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="item">
-            <Heading level={3} title={'Title'} />
+            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
             <Text text={'subTitle'} />
             <Button text={'버튼 텍스트'} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="item">
-            <Heading level={3} title={'Title'} />
+            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
             <Text text={'subTitle'} />
             <Button text={'버튼 텍스트'} />
           </div>

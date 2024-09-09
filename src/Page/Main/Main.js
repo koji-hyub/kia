@@ -8,18 +8,20 @@ import Button from '../../Components/Button/Button';
 import Modal from '../../Components/Popup/Modal';
 import MainSwiper from '../../Components/Swiper/MainSwiper';
 import Time from '../../Components/Time/Time';
+import ContentItem from '../../Components/ContentItem/ContentItem';
 
 const MainWrap = Style(APP_SKIN);
 
 const PubMain = () => {
   return (
-    <MainWrap style={{ flex: 1, overflowY: 'auto', padding: '10px' }}>
+    <MainWrap>
       <WelcomeKia />
       <MainSwiper />
+      <ContentItem />
       <Assistant />
       <User />
       <Evaluate />
-      {/*<Time align={'right'} getCurrentTime={getCurrentTime} />*/}
+      <Time />
 
       {/*모달 팝업 샘플 테스트 */}
     </MainWrap>

@@ -6,7 +6,7 @@ const CommonSkin = css`
   color: #fff;
   position: relative;
   //border: 1px solid red;
-  margin: 0 -10px 0;
+  margin: 0 -20px 0;
 
   .swiper {
     height: 100%;
@@ -15,12 +15,12 @@ const CommonSkin = css`
     .swiper-slide {
       margin: 0;
       width: 300rem;
-      padding: 16px;
+      padding: 16rem;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      gap: 12px;
-      border-radius: 8px;
+      gap: 12rem;
+      border-radius: 8rem;
       background: var(--Primary-Polar-White, #fff);
       box-shadow: 4rem 4rem 10rem 0 rgba(5, 20, 31, 0.08);
     }

@@ -11,7 +11,7 @@ function TimeWrap({ getCurrentTime, align, ...rest }) {
         align={align}
         size={'--font-size-7'}
         color={'--Grey-Spectrum-Coll-Grey-40'}
-        text={getCurrentTime}
+        text={getCurrentTime ? getCurrentTime : '오전 07:18'}
       />
     </Time>
   );

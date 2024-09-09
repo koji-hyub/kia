@@ -10,7 +10,14 @@ const CommonSkin = css`
   color: var(--Primary-Midnight-Black);
   /* 공통 스타일 정의 */
 
+  svg {
+    transition: all 0.3s ease-in-out;
+    //transform: rotate(405deg);
+  }
   &.isActive {
+    svg {
+      transform: rotate(225deg);
+    }
   }
 `;
 

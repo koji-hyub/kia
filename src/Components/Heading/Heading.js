@@ -9,9 +9,10 @@ function HeadingWrap({ level, title, badge, state, iconLeft, ...rest }) {
       {title
         ? title.split('\n').map((line, index) => (
             <React.Fragment key={index}>
-              {index === 0 && <span className={'left-icon'}>{iconLeft}</span> && (
-                <span className={'left-icon'}> {iconLeft}</span>
-              )}
+              {
+                index === 0 && iconLeft ? <span className={'left-icon'}>{iconLeft}</span> : ''
+                // && <span className={'left-icon'}> {iconLeft}</span>
+              }
               {line}
               {index !== title.split('\n').length - 1 && <br />}
               {index === 0 && state && <span className={'state'}>{state}</span>}

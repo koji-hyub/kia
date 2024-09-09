@@ -1,5 +1,6 @@
+// _ActionButton.js
 import React, { useState } from 'react';
-import Style from './ActionButtonStyle';
+import Style from './_ActionButtonStyle';
 import { IconDotMenu } from '../../assets/images/common/IconSet';
 
 const ActionButton = Style(APP_SKIN); // 스타일 컴포넌트 생성
@@ -13,16 +14,9 @@ const ActionButtonMenu = () => {
   };
 
   return (
-    <>
-      <ActionButton onClick={toggleMenu} className={isOpen ? 'isActive' : ''}>
-        <IconDotMenu width={24} height={24} />
-      </ActionButton>
-      {/*<div className={'menu-box'}>*/}
-      {/*  <div className={'item'}>1</div>*/}
-      {/*  <div className={'item'}>2</div>*/}
-      {/*  <div className={'item'}>3</div>*/}
-      {/*</div>*/}
-    </>
+    <ActionButton onClick={toggleMenu} className={isOpen ? 'isActive' : ''}>
+      <IconDotMenu width={24} height={24} />
+    </ActionButton>
   );
 };
 

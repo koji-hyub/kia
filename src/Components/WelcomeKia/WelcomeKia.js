@@ -1,6 +1,4 @@
 import React from 'react';
-import Lottie from 'lottie-react';
-// import animationData from '../../assets/lottie/welcomekia.json';
 import Style from './WelcomeKiaStyle';
 import Text from '../Text/Text';
 
@@ -26,15 +24,16 @@ function LottieAnimation() {
           size={'--font-size-3'}
           color={'--Primary-Midnight-Black'}
           bold={'bold'}
-          text={`${userName} 님, 안녕하세요. \n 기아 챗봇입니다. `}
+          // text={`${userName} 님, 안녕하세요. \n 기아 챗봇입니다. `}
+          text={`안녕하세요, \n 무엇을 도와드릴까요?`}
         />
-        <Text
-          className={'small-text'}
-          size={'--font-size-5'}
-          color={'--Grey-Spectrum-Coll-Grey-40'}
-          align={'center'}
-          text={'어떤 업무가 궁금하신가요?'}
-        />
+        {/*<Text*/}
+        {/*  className={'small-text'}*/}
+        {/*  size={'--font-size-5'}*/}
+        {/*  color={'--Grey-Spectrum-Coll-Grey-40'}*/}
+        {/*  align={'center'}*/}
+        {/*  text={'어떤 업무가 궁금하신가요?'}*/}
+        {/*/>*/}
       </WelcomeKia>
     </>
   );
