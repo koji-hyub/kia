@@ -2,33 +2,19 @@ import styled, { css } from 'styled-components';
 
 // 공통으로 사용되는 스타일
 const CommonSkin = css`
-  text-align: center;
+  //text-align: center;
   margin-bottom: 40rem;
 
-  .lottie-wrap {
+  .img-box {
     margin: 0 auto;
     border-radius: 10rem;
     overflow: hidden;
     background: #000;
     width: 100rem;
     height: 100rem;
-    //display: flex;
-    //align-items: center;
-    //justify-content: center;
-    position: relative;
     text-align: center;
-    position: relative;
-    .img-box {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 146rem;
-      height: 82rem;
-      img {
-        height: 100%;
-      }
+    img {
+      height: 100%;
     }
   }
   .welcome-text {

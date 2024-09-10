@@ -4,29 +4,21 @@ import styled, { css } from 'styled-components';
 const CommonSkin = css`
   display: inline-flex;
   justify-content: center;
-  align-items: center;
-`;
-
-// 버튼 타입 스킨 1
-const BasicSkin = css`
-  &.round {
-    &.confirm {
-      background: #000;
-      color: #fff;
+  align-items: ${(props) => {
+    switch (props.align) {
+      case 'center':
+        return 'center';
+      case 'left':
+        return 'flex-start';
+      case 'right':
+        return 'right';
+      default:
+        return 'flex-end';
     }
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    text-align: center;
-    border-radius: 30px;
-    border: 1px solid #e8e8e8;
-    background: #fff;
-    font-size: 14rem;
-    font-style: normal;
-    font-weight: 400;
-  }
+  }};
+
+  font-size: ${(props) => `var(${props.size ? props.size : '--font-size-5'})`};
+  font-weight: ${(props) => `var(${props.bold ? '--font-weight-bold' : '--font-weight-regular'})`};
   svg {
     //margin-right: rem;
     margin-left: 5rem;
@@ -35,8 +27,10 @@ const BasicSkin = css`
     color: #9c9c9c;
     background: #e8e8e8;
   }
-  margin-left: ${(props) => (props.size === 'large' ? '0' : '5rem')};
-  margin-bottom: ${(props) => (props.size === 'large' ? '5rem' : '')};
+`;
+
+// 버튼 타입 스킨 1
+const BasicSkin = css`
   padding: ${(props) =>
     props.size === 'large'
       ? '12rem 24rem'

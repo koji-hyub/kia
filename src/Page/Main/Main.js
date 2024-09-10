@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Style from './MainStyle';
-import Assistant from '~/Components/Assistant/Assistant';
 import User from '../../Components/User/User';
 import WelcomeKia from '../../Components/WelcomeKia/WelcomeKia';
 import Evaluate from '../../Components/Evaluate/Evaluate';
-import Button from '../../Components/Button/Button';
-import Modal from '../../Components/Popup/Modal';
 import MainSwiper from '../../Components/Swiper/MainSwiper';
 import Time from '../../Components/Time/Time';
-import ContentItem from '../../Components/ContentItem/ContentItem';
+import Agent from '../../Components/Agent/Agent';
+import Text from '../../Components/Text/Text';
+import ChangeText from '../../Components/ChangeText/ChangeText';
+import ChatBot from '../../Components/ChatBot/ChatBot';
 
 const MainWrap = Style(APP_SKIN);
 
@@ -16,12 +16,16 @@ const PubMain = () => {
   return (
     <MainWrap>
       <WelcomeKia />
-      <MainSwiper />
-      <ContentItem />
-      <Assistant />
+      <ChatBot />
+      <Agent>
+        <Text />
+        <MainSwiper />
+        <Time />
+        <ChangeText />
+      </Agent>
+
       <User />
       <Evaluate />
-      <Time />
 
       {/*모달 팝업 샘플 테스트 */}
     </MainWrap>

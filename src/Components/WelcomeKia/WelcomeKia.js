@@ -2,7 +2,7 @@ import React from 'react';
 import Style from './WelcomeKiaStyle';
 import Text from '../Text/Text';
 
-import WelecomeKiaImg from '../../assets/images/common/WelcomeKia2.gif';
+import WelecomeKiaImg from '../../assets/images/common/WelcomeKia.gif';
 
 const WelcomeKia = Style(APP_SKIN);
 
@@ -12,11 +12,9 @@ function LottieAnimation() {
   return (
     <>
       <WelcomeKia>
-        <div className={'lottie-wrap'}>
-          <div className={'img-box'}>
-            <img src={WelecomeKiaImg} alt="" />
-            <span className={'blind'}>KIA AI Assistant</span>
-          </div>
+        <div className={'img-box'}>
+          <img src={WelecomeKiaImg} alt="" />
+          <span className={'blind'}>KIA AI Assistant</span>
         </div>
 
         <Text

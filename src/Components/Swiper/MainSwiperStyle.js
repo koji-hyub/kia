@@ -23,6 +23,11 @@ const CommonSkin = css`
       border-radius: 8rem;
       background: var(--Primary-Polar-White, #fff);
       box-shadow: 4rem 4rem 10rem 0 rgba(5, 20, 31, 0.08);
+      .item {
+        h3 {
+          margin-bottom: 8rem;
+        }
+      }
     }
   }
 

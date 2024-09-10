@@ -9,7 +9,7 @@ function TimeWrap({ getCurrentTime, align, ...rest }) {
     <Time>
       <Text
         align={align}
-        size={'--font-size-7'}
+        size={'--font-size-11'}
         color={'--Grey-Spectrum-Coll-Grey-40'}
         text={getCurrentTime ? getCurrentTime : '오전 07:18'}
       />

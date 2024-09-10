@@ -17,11 +17,6 @@ const ActionButtonMenu = () => {
       <ActionButton onClick={toggleMenu} className={isOpen ? 'isActive' : ''}>
         <IconDotMenu width={24} height={24} />
       </ActionButton>
-      {/*<div className={'menu-box'}>*/}
-      {/*  <div className={'item'}>1</div>*/}
-      {/*  <div className={'item'}>2</div>*/}
-      {/*  <div className={'item'}>3</div>*/}
-      {/*</div>*/}
     </>
   );
 };
