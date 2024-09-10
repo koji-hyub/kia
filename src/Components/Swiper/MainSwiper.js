@@ -43,6 +43,50 @@ const MainSwiper = () => {
             <Button text={'버튼 텍스트'} />
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div className="item">
+            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
+            <Text
+              text={'subTitle (선택)'}
+              size={'--font-size-7, 12px'}
+              color={'--Grey-Spectrum-Coll-Grey-40, #9BA2A9'}
+            />
+            <Button text={'버튼 텍스트'} />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="item">
+            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
+            <Text
+              text={'subTitle (선택)'}
+              size={'--font-size-7, 12px'}
+              color={'--Grey-Spectrum-Coll-Grey-40, #9BA2A9'}
+            />
+            <Button text={'버튼 텍스트'} />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="item">
+            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
+            <Text
+              text={'subTitle (선택)'}
+              size={'--font-size-7, 12px'}
+              color={'--Grey-Spectrum-Coll-Grey-40, #9BA2A9'}
+            />
+            <Button text={'버튼 텍스트'} />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="item">
+            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
+            <Text
+              text={'subTitle (선택)'}
+              size={'--font-size-7, 12px'}
+              color={'--Grey-Spectrum-Coll-Grey-40, #9BA2A9'}
+            />
+            <Button text={'버튼 텍스트'} />
+          </div>
+        </SwiperSlide>
       </Swiper>
     </SwiperWrap>
   );
