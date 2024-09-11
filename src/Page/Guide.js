@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 // 코드하이라이트
@@ -43,6 +43,7 @@ import Accordion from '../Components/Accordion/Accordion';
 import Loading from '../Components/Loading/Loading';
 import QuickMenu from '../Components/QuickMenu/QuickMenu';
 import Style from './Main/MainStyle';
+import Message from './Layout/Message/Message';
 const MainWrap = Style(APP_SKIN);
 
 // 탭 메뉴 배열
@@ -142,14 +143,27 @@ const Guide = () => {
     setIsOpen(!isOpen);
   };
 
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  // 키패드가 올라올 때 window height 조정
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
-    <>
+    <div style={{ height: windowHeight, display: 'flex', flexDirection: 'column' }}>
       <Header />
       <MainWrap>
         <div className="section">
           {/*<HeadingWrap level={3} title={'스와이퍼'} />*/}
           <MainSwiper />
-          <SyntaxHighlighter language="jsx" style={prism}>
+          <SyntaxHighlighter language="jsx" style={tomorrow}>
             {`<MainSwiper />`}
           </SyntaxHighlighter>
         </div>
@@ -293,15 +307,15 @@ const tableItem = [
         <div className="section">
           <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'팝업 컴포넌트'} />
           <Button size={'small'} text={'팝업 호출 버튼 '} onClick={openPopup} />
-          {isOpen && (
-            <Popup
-              onClick={closedPopup}
-              title={popup.title}
-              content={popup.content}
-              size={popup.size}
-              className={isOpen ? `isActive ${popup.className}` : popup.className}
-            />
-          )}
+          {/*{isOpen && (*/}
+          {/*  <Popup*/}
+          {/*    onClick={closedPopup}*/}
+          {/*    title={popup.title}*/}
+          {/*    content={popup.content}*/}
+          {/*    size={popup.size}*/}
+          {/*    className={isOpen ? `isActive ${popup.className}` : popup.className}*/}
+          {/*  />*/}
+          {/*)}*/}
           <SyntaxHighlighter language="jsx" style={prism}>
             {`팝업 컴포넌트를 만들어 보자`}
           </SyntaxHighlighter>
@@ -325,25 +339,48 @@ const tableItem = [
           {/*버튼 */}
           <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'Button'} />
           <div>
-            <Button size={'small'} text={'default Small 버튼 '} />
-            <Button type={'type01'} size={'small'} text={'type01 Small 버튼'} />
-            <Button type={'type02'} size={'small'} text={'type02 Small 버튼'} />
-            <Button type={'type02'} size={'small'} disabled={true} text={'disabled'} />
+            <Button className={'secondary'} size={'large'} text={'Button'} />
+            <Button className={'tertiary'} size={'large'} text={'Button'} />
+            <Button className={'text'} size={'large'} text={'Button'} />
           </div>
           <div>
-            <Button size={'medium'} text={'default Medium 버튼'} />
-            <Button type={'type01'} size={'medium'} text={'type01 Medium 버튼'} />
-            <Button type={'type02'} size={'medium'} text={'type02 Medium 버튼'} />
-            <Button type={'type02'} size={'medium'} disabled={true} text={'disabled'} />
+            <Button className={'secondary'} size={'small'} text={'Button'} />
+            <Button className={'tertiary'} size={'small'} text={'Button'} />
+            <Button className={'text'} size={'small'} text={'Button'} />
           </div>
           <div>
-            <Button size={'large'} text={'default Large 버튼 타이틀 입니다.'} />
-            <Button type={'type01'} size={'large'} text={'type01 Large 버튼'} />
-            <Button type={'type02'} size={'large'} text={'type02 Large 버튼'} />
-            <Button type={'type02'} size={'large'} disabled={true} text={'disabled 버튼'} />
+            <Button
+              className={'secondary'}
+              size={'small'}
+              disabled={true}
+              text={'Button Disabled'}
+            />
+            <Button
+              className={'tertiary'}
+              size={'small'}
+              disabled={true}
+              text={'Button Disabled'}
+            />
+            <Button className={'text'} size={'small'} disabled={true} text={'Button Disabled'} />
           </div>
+
           <SyntaxHighlighter language="jsx" style={prism}>
-            {`<Button type={'type02'} size={'large'} disabled={true} text={'disabled 버튼'} />`}
+            {`/**
+ * - text: String
+ * - onClick: function
+ * - iconLeft, iconRight: Element  
+ * - className: 'primary', 'secondary', 'tertiary', 'text'  // Button Style
+ * - size: 'small', 'large' // Button Size 
+ * - disabled: Boolean  
+ **/
+ 
+  <Button
+    className={'primary'}
+    size={'small'}
+    disabled={false}
+    text={'Button Disabled'}
+  />
+ `}
           </SyntaxHighlighter>
         </div>
         <div className="section">
@@ -371,30 +408,7 @@ const tableItem = [
 <Radio name={'na1'} label={'라디오버튼'} defaultChecked={true} disabled={true} />`}
           </SyntaxHighlighter>
         </div>
-        <div className="section">
-          <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'Input Box'} />
-          <div>
-            <Input
-              id={'id1'}
-              placeholder={'아이디(이메일)를 입력해 주십시오'}
-              name={'name1'}
-              type={'text'}
-              msg={'*이메일 주소를 입력해 주십시오.'}
-            />
-            {/*<Input*/}
-            {/*  placeholder={'비밀번호를 입력해 주십시오'}*/}
-            {/*  id={'id2'}*/}
-            {/*  name={'name2'}*/}
-            {/*  type={'password'}*/}
-            {/*  msg={'*패스워드를 확인해 주세요'}*/}
-            {/*  error={isError}*/}
-            {/*/>*/}
-          </div>
-          <SyntaxHighlighter language="jsx" style={prism}>
-            {`// 인풋 컴포넌트 
-<Input placeholder={'비밀번호를 입력해 주십시오'} id={'id2'} name={'name2'} type={'password'} msg={'*패스워드를 확인해 주세요'} error={isError} /> `}
-          </SyntaxHighlighter>
-        </div>
+
         <div className="section">
           <HeadingWrap level={3} color={'--Primary-Midnight-Black'} title={'ComboBox'} />
           <div>
@@ -423,8 +437,8 @@ const tableItem = [
         {/*</div>*/}
       </MainWrap>
       <QuickMenu />
-      {/*<Footer />*/}
-    </>
+      <Message />
+    </div>
   );
 };
 

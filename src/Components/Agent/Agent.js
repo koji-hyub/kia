@@ -28,7 +28,7 @@ function AgentWrap({ children }) {
         color={'Grey Spectrum/Coll Grey 40'}
       />
 
-      {children}
+      {children && children}
     </Agent>
   );
 }

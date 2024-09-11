@@ -4,97 +4,106 @@ import styled, { css } from 'styled-components';
 const CommonSkin = css`
   display: inline-flex;
   justify-content: center;
-  align-items: ${(props) => {
-    switch (props.align) {
-      case 'center':
-        return 'center';
-      case 'left':
-        return 'flex-start';
-      case 'right':
-        return 'right';
-      default:
-        return 'flex-end';
-    }
-  }};
-
-  font-size: ${(props) => `var(${props.size ? props.size : '--font-size-5'})`};
-  font-weight: ${(props) => `var(${props.bold ? '--font-weight-bold' : '--font-weight-regular'})`};
-  svg {
-    //margin-right: rem;
-    margin-left: 5rem;
+  align-items: center;
+  min-width: 120rem;
+  padding: 12rem;
+  border-radius: 4rem;
+  &:first-of-type {
+    margin-left: 0;
   }
+  & + button {
+    margin-left: 8rem;
+  }
+  .text {
+    font-size: var(--font-size-5, 14rem);
+    font-style: normal;
+    font-weight: var(--font-weight-bold, 600);
+    line-height: var(--line-height-4, 20rem); /* 142.857% */
+  }
+  &.large {
+    padding: 12rem;
+  }
+
+  &.small {
+    padding: 6rem 12rem;
+    .text {
+      font-size: var(--font-size-7, 12rem);
+      font-weight: var(--font-weight-regular, 400);
+      line-height: var(--line-height-4, 20px); /* 166.667% */
+    }
+  }
+
+  &.primary {
+    background: var(--Primary-Midnight-Black, #05141f);
+    &:hover {
+      background: var(--Grey-Spectrum-Coll-Grey-80, #303c47);
+    }
+    .text {
+      color: var(--Primary-Polar-White, #fff);
+    }
+    &[disabled] {
+      span {
+        color: var(--Grey-Spectrum-Coll-Grey-30, #b2b8bd);
+      }
+      background: var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
+    }
+  }
+
+  &.secondary {
+    border: 1rem solid var(--Primary-Midnight-Black, #05141f);
+    background: var(--Primary-Polar-White, #fff);
+    &:hover {
+      border: 1rem solid var(--Primary-Midnight-Black, #05141f);
+      background: var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
+    }
+    .text {
+      color: var(--Primary-Midnight-Black, #05141f);
+    }
+    &[disabled] {
+      .text {
+        color: var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
+      }
+      border: 1px solid var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
+      background: var(--Primary-Polar-White, #fff);
+    }
+  }
+
+  &.tertiary {
+    background: var(--Primary-Polar-White, #fff);
+    &:hover {
+      background: var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
+    }
+    .text {
+      color: var(--Primary-Midnight-Black, #05141f);
+    }
+    &[disabled] {
+      .text {
+        color: var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
+      }
+      background: var(--Primary-Polar-White, #fff);
+    }
+  }
+  &.text {
+    &:hover {
+      background: var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
+    }
+    .text {
+      color: var(--Grey-Spectrum-Coll-Grey-50, #828a90);
+    }
+    &[disabled] {
+      .text {
+        color: var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
+      }
+    }
+  }
+
   &[disabled] {
-    color: #9c9c9c;
-    background: #e8e8e8;
+    cursor: not-allowed;
   }
 `;
 
 // 버튼 타입 스킨 1
-const BasicSkin = css`
-  padding: ${(props) =>
-    props.size === 'large'
-      ? '12rem 24rem'
-      : props.size === 'medium'
-      ? '12rem 20rem'
-      : '10rem 20rem'};
-  width: ${(props) =>
-    props.size === 'large' ? '100%' : props.size === 'medium' ? 'auto' : 'auto'};
-  height: ${(props) =>
-    props.size === 'large' ? '52rem' : props.size === 'medium' ? '44rem' : 'auto'};
-  background-color: ${(props) =>
-    props.type === 'type01' ? '#003580' : props.type === 'type02' ? '#669AFF' : '#fff'};
-  color: ${(props) =>
-    props.type === 'type01' ? '#fff' : props.type === 'type02' ? '#fff' : '#000'};
-  border: 1rem solid
-    ${(props) =>
-      props.type === 'type01' ? '#003580' : props.type === 'type02' ? '#669AFF' : '#E8E8E8'};
-  border-radius: 4px;
-  cursor: pointer;
-  &:first-of-type {
-    margin-left: 0;
-  }
-  &:hover {
-    border: 1rem solid
-      ${(props) =>
-        props.type === 'type01' ? '#669AFF' : props.type === 'type02' ? '#0060E6' : '#9C9C9C'};
-    background-color: ${(props) =>
-      props.type === 'type01' ? '#669AFF' : props.type === 'type02' ? '#0060E6' : '#fff'};
-    transition: border-color 0.3s ease, background 0.3s ease;
-  }
-  &:active {
-    border: 1rem solid
-      ${(props) =>
-        props.type === 'type01' ? '#003580' : props.type === 'type02' ? '#669AFF' : '#000'};
-    background-color: ${(props) =>
-      props.type === 'type01' ? '#003580' : props.type === 'type02' ? '#669AFF' : '#fff'};
-  }
-
-  span {
-    font-size: ${(props) =>
-      props.size === 'large' ? '20rem' : props.size === 'medium' ? '14rem' : '14rem'};
-  }
-
-  ${(props) =>
-    props.type !== 'type01' &&
-    props.type !== 'type02' &&
-    props.disabled &&
-    css`
-      color: #e8e8e8;
-      pointer-events: none;
-      border: 1rem solid #e8e8e8;
-      background: #f8f8f8;
-    `}
-
-  ${(props) =>
-    (props.type === 'type01' || props.type === 'type02') &&
-    props.disabled &&
-    css`
-      background: #e8e8e8;
-      border-color: #e8e8e8;
-      color: #fff;
-      pointer-events: none;
-    `}
-`;
+const BasicSkin = css``;
 
 // 버튼 타입 스킨 2
 const ThemeSkin = css``;
