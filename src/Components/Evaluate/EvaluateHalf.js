@@ -6,37 +6,64 @@ const EvaluateHalf = Style(APP_SKIN);
 
 function EvaluateWrap(props) {
   const [selectedRating, setSelectedRating] = useState(0); // 현재 선택된 별점 (0부터 5까지)
-  // const [clickCount, setClickCount] = useState(0); // 클릭 카운트
+  const [isDragging, setIsDragging] = useState(false); // 드래그 상태 확인
 
-  function handleEvaluate(index, isLeft) {
-    // 클릭 카운트 증가
-    // setClickCount((prevCount) => prevCount + 1);
+  // 별점을 설정하는 함수
+  function handleEvaluate(rating) {
+    setSelectedRating(rating);
+  }
 
-    // 선택된 별점을 설정 (0.5 단위로 설정)
+  // 드래그 시작 시 호출
+  function handleMouseDown(event, index, isLeft) {
+    setIsDragging(true);
     if (isLeft) {
-      // 좌측 버튼 클릭
-      setSelectedRating(index + 0.5);
+      handleEvaluate(index + 0.5); // 반별 선택
     } else {
-      // 우측 버튼 클릭
-      setSelectedRating(index + 1);
+      handleEvaluate(index + 1); // 전체 별 선택
     }
+  }
 
-    // // 클릭 카운트가 3 이상이면 리셋
-    // if (clickCount >= 2) {
-    //   setSelectedRating(0);
-    //   setClickCount(0);
-    // }
+  // 드래그 중일 때 호출
+  function handleMouseMove(event) {
+    if (!isDragging) return; // 드래그 중일 때만 동작
+    const ulElement = event.currentTarget;
+    const rect = ulElement.getBoundingClientRect();
+    const x = event.clientX - rect.left; // 마우스의 x 좌표
+    const totalWidth = rect.width; // ul의 전체 너비
+    const perStarWidth = totalWidth / 5; // 각 별의 너비
+    const index = Math.floor(x / perStarWidth); // 마우스 위치에 따른 별의 인덱스 계산
+    const offset = (x % perStarWidth) / perStarWidth; // 현재 별 내에서의 위치 (0~1)
+
+    if (offset <= 0.5) {
+      handleEvaluate(index + 0.5); // 반별 선택
+    } else {
+      handleEvaluate(index + 1); // 전체 별 선택
+    }
+  }
+
+  // 드래그 종료 시 호출
+  function handleMouseUp() {
+    setIsDragging(false); // 드래그 종료
   }
 
   return (
     <EvaluateHalf>
       <div className={'start-set'}>
-        <ul>
+        <ul
+          onMouseMove={handleMouseMove} // ul에 드래그 이벤트 바인딩
+          onMouseDown={() => setIsDragging(true)} // 드래그 시작
+          onMouseUp={handleMouseUp} // 드래그 종료
+          onMouseLeave={handleMouseUp} // ul 밖으로 나가면 드래그 종료
+        >
           {[0, 1, 2, 3, 4].map((index) => (
-            <li key={index} className={index + 1 <= selectedRating ? 'isActive' : ''}>
+            <li
+              key={index}
+              className={index + 1 <= selectedRating ? 'isActive' : ''}
+              onMouseDown={(event) => handleMouseDown(event, index, true)} // 좌측 버튼 드래그 시작
+            >
               {/* 좌측 반쪽 별 버튼 */}
               <button
-                onClick={() => handleEvaluate(index, true)}
+                onClick={() => handleEvaluate(index + 0.5)}
                 aria-label={`Rate ${index + 0.5} stars`}
                 className="half"
               >
@@ -55,7 +82,7 @@ function EvaluateWrap(props) {
               </button>
               {/* 우측 전체 별 버튼 */}
               <button
-                onClick={() => handleEvaluate(index, false)}
+                onClick={() => handleEvaluate(index + 1)}
                 aria-label={`Rate ${index + 1} stars`}
                 className="full"
               >
