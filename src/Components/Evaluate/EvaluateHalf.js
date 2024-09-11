@@ -6,11 +6,11 @@ const EvaluateHalf = Style(APP_SKIN);
 
 function EvaluateWrap(props) {
   const [selectedRating, setSelectedRating] = useState(0); // 현재 선택된 별점 (0부터 5까지)
-  const [clickCount, setClickCount] = useState(0); // 클릭 카운트
+  // const [clickCount, setClickCount] = useState(0); // 클릭 카운트
 
   function handleEvaluate(index, isLeft) {
     // 클릭 카운트 증가
-    setClickCount((prevCount) => prevCount + 1);
+    // setClickCount((prevCount) => prevCount + 1);
 
     // 선택된 별점을 설정 (0.5 단위로 설정)
     if (isLeft) {
@@ -21,11 +21,11 @@ function EvaluateWrap(props) {
       setSelectedRating(index + 1);
     }
 
-    // 클릭 카운트가 3 이상이면 리셋
-    if (clickCount >= 2) {
-      setSelectedRating(0);
-      setClickCount(0);
-    }
+    // // 클릭 카운트가 3 이상이면 리셋
+    // if (clickCount >= 2) {
+    //   setSelectedRating(0);
+    //   setClickCount(0);
+    // }
   }
 
   return (
