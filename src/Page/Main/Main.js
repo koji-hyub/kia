@@ -11,6 +11,7 @@ import ChangeText from '../../Components/ChangeText/ChangeText';
 import ChatBot from '../../Components/ChatBot/ChatBot';
 import Button from '../../Components/Button/Button';
 import EvaluateHalf from '../../Components/Evaluate/EvaluateHalf';
+import LoadingText from '../../Components/Loading/LoadingText';
 
 const MainWrap = Style(APP_SKIN);
 
@@ -18,6 +19,7 @@ const PubMain = () => {
   return (
     <MainWrap>
       <WelcomeKia />
+      <MainSwiper />
       <ChatBot />
 
       <EvaluateHalf />
@@ -56,6 +58,8 @@ const PubMain = () => {
       {/*<Evaluate />*/}
 
       {/*모달 팝업 샘플 테스트 */}
+
+      <LoadingText />
     </MainWrap>
   );
 };

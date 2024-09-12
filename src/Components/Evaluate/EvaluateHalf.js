@@ -14,7 +14,7 @@ function EvaluateWrap(props) {
   }
 
   // 드래그 시작 시 호출
-  function handleMouseDown(event, index, isLeft) {
+  function handleStart(event, index, isLeft) {
     setIsDragging(true);
     if (isLeft) {
       handleEvaluate(index + 0.5); // 반별 선택
@@ -23,12 +23,23 @@ function EvaluateWrap(props) {
     }
   }
 
-  // 드래그 중일 때 호출
-  function handleMouseMove(event) {
+  // 마우스 또는 터치 위치를 기반으로 별점을 설정하는 함수
+  function handleMove(event) {
     if (!isDragging) return; // 드래그 중일 때만 동작
+
     const ulElement = event.currentTarget;
     const rect = ulElement.getBoundingClientRect();
-    const x = event.clientX - rect.left; // 마우스의 x 좌표
+    let clientX;
+
+    // 터치 이벤트 처리
+    if (event.type === 'touchmove') {
+      clientX = event.touches[0].clientX;
+    } else {
+      // 마우스 이벤트 처리
+      clientX = event.clientX;
+    }
+
+    const x = clientX - rect.left; // 마우스 또는 터치의 x 좌표
     const totalWidth = rect.width; // ul의 전체 너비
     const perStarWidth = totalWidth / 5; // 각 별의 너비
     const index = Math.floor(x / perStarWidth); // 마우스 위치에 따른 별의 인덱스 계산
@@ -42,7 +53,7 @@ function EvaluateWrap(props) {
   }
 
   // 드래그 종료 시 호출
-  function handleMouseUp() {
+  function handleEnd() {
     setIsDragging(false); // 드래그 종료
   }
 
@@ -50,16 +61,20 @@ function EvaluateWrap(props) {
     <EvaluateHalf>
       <div className={'start-set'}>
         <ul
-          onMouseMove={handleMouseMove} // ul에 드래그 이벤트 바인딩
-          onMouseDown={() => setIsDragging(true)} // 드래그 시작
-          onMouseUp={handleMouseUp} // 드래그 종료
-          onMouseLeave={handleMouseUp} // ul 밖으로 나가면 드래그 종료
+          onMouseMove={handleMove} // 마우스 드래그 이벤트
+          onMouseDown={() => setIsDragging(true)} // 마우스 드래그 시작
+          onMouseUp={handleEnd} // 마우스 드래그 종료
+          onMouseLeave={handleEnd} // 마우스가 영역 밖으로 나가면 드래그 종료
+          onTouchMove={handleMove} // 터치 드래그 이벤트
+          onTouchStart={() => setIsDragging(true)} // 터치 드래그 시작
+          onTouchEnd={handleEnd} // 터치 드래그 종료
         >
           {[0, 1, 2, 3, 4].map((index) => (
             <li
               key={index}
               className={index + 1 <= selectedRating ? 'isActive' : ''}
-              onMouseDown={(event) => handleMouseDown(event, index, true)} // 좌측 버튼 드래그 시작
+              onMouseDown={(event) => handleStart(event, index, true)} // 좌측 반별 클릭
+              onTouchStart={(event) => handleStart(event, index, true)} // 터치 시작 처리
             >
               {/* 좌측 반쪽 별 버튼 */}
               <button
