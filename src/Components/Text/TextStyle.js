@@ -24,6 +24,8 @@ const CommonSkin = css`
 
   font-size: ${(props) => `var(${props.size ? props.size : '--font-size-5'})`};
   font-weight: ${(props) => `var(${props.bold ? '--font-weight-bold' : '--font-weight-regular'})`};
+  word-break: break-all; /* 단어가 너무 길면 어디서든 줄을 바꿔서 표시 */
+  //word-break: break-word; /* 단어가 줄을 넘어갈 때 자연스럽게 줄바꿈 */
 `;
 const BasicSkin = css`
   color: ${(props) => `var(${props.color || '--Primary-Midnight-Black'})`};

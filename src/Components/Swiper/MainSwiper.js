@@ -17,6 +17,44 @@ import Button from '../Button/Button';
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const SwiperWrap = Style(APP_SKIN);
+
+const swiperItem = [
+  {
+    id: 1,
+    title: 'Title',
+    text: 'subTitle (선택)',
+    button: <Button className={'secondary'} text={'Button'} />
+  },
+  {
+    id: 2,
+    title: 'Title2',
+    text: 'subTitle (선택)',
+    button: (
+      <>
+        <Button className={'secondary'} text={'Button'} />
+        <Button className={'secondary'} text={'Button'} />
+      </>
+    )
+  },
+  {
+    id: 3,
+    title: 'Title',
+    text: 'subTitle (선택)',
+    button: <Button className={'secondary'} text={'Button'} />
+  },
+  {
+    id: 4,
+    title: 'Title2',
+    text: 'subTitle (선택)',
+    button: (
+      <>
+        <Button className={'secondary'} text={'Button'} />
+        <Button className={'secondary'} text={'Button'} />
+      </>
+    )
+  }
+];
+
 const MainSwiper = () => {
   const swiperRef = useRef(null); // Swiper 컴포넌트에 접근하기 위한 ref
 
@@ -32,61 +70,22 @@ const MainSwiper = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="item">
-            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
-            <Text
-              text={'subTitle (선택)'}
-              size={'--font-size-7, 12px'}
-              color={'--Grey-Spectrum-Coll-Grey-40, #9BA2A9'}
-            />
-            <Button text={'버튼 텍스트'} />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="item">
-            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
-            <Text
-              text={'subTitle (선택)'}
-              size={'--font-size-7, 12px'}
-              color={'--Grey-Spectrum-Coll-Grey-40, #9BA2A9'}
-            />
-            <Button text={'버튼 텍스트'} />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="item">
-            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
-            <Text
-              text={'subTitle (선택)'}
-              size={'--font-size-7, 12px'}
-              color={'--Grey-Spectrum-Coll-Grey-40, #9BA2A9'}
-            />
-            <Button text={'버튼 텍스트'} />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="item">
-            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
-            <Text
-              text={'subTitle (선택)'}
-              size={'--font-size-7, 12px'}
-              color={'--Grey-Spectrum-Coll-Grey-40, #9BA2A9'}
-            />
-            <Button text={'버튼 텍스트'} />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="item">
-            <Heading level={3} title={'Title'} size={'--font-size-3'} bold={'bold'} />
-            <Text
-              text={'subTitle (선택)'}
-              size={'--font-size-7, 12px'}
-              color={'--Grey-Spectrum-Coll-Grey-40, #9BA2A9'}
-            />
-            <Button text={'버튼 텍스트'} />
-          </div>
-        </SwiperSlide>
+        {swiperItem &&
+          swiperItem.map((item, index) => (
+            <SwiperSlide key={item.id}>
+              <div className={'top'}>
+                <Heading level={3} title={item.title} size={'--font-size-3'} bold={'bold'} />
+              </div>
+              <div className={'item'}>
+                <Text
+                  text={item.text}
+                  size={'--font-size-7, 12px'}
+                  color={'--Grey-Spectrum-Coll-Grey-40, #9BA2A9'}
+                />
+              </div>
+              <div className={'btn-area'}>{item.button}</div>
+            </SwiperSlide>
+          ))}
       </Swiper>
     </SwiperWrap>
   );

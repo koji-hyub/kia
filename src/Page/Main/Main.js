@@ -16,36 +16,16 @@ import LoadingText from '../../Components/Loading/LoadingText';
 const MainWrap = Style(APP_SKIN);
 
 const PubMain = () => {
+  // 최초 튤팁 실행
+  const [userTooltip, setUserTooltip] = useState(true);
+
   return (
     <MainWrap>
       <WelcomeKia />
       <MainSwiper />
       <ChatBot />
-
-      <EvaluateHalf />
-      <Button
-      // disabled={true}
-      // className={'small'}
-      // text={'버튼'}
-      />
-      <Button
-        className={'secondary'}
-        size={'small'}
-        // disabled={true}
-        // text={'버튼'}
-      />
-      <Button
-        className={'tertiary'}
-        size={'small'}
-        // disabled={true}
-        // text={'버튼'}
-      />
-      <Button
-        className={'text'}
-        // size={'small'}
-        // disabled={true}
-        // text={'버튼'}
-      />
+      <User userTooltip={userTooltip} setUserTooltip={setUserTooltip} text={'텍스트입니다.'} />
+      <User text={'메세지 텍스트 입니다.'} />
 
       {/*<Agent>*/}
       {/*  <Text />*/}
