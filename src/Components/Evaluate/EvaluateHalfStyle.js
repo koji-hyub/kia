@@ -31,7 +31,7 @@ const CommonSkin = css`
           z-index: 1; // 버튼이 클릭 가능하도록 z-index를 조정
 
           &.half {
-            width: 14.5rem;
+            width: 14rem;
             height: 27rem;
             overflow: hidden;
             z-index: 2; // 반별 버튼이 전체 버튼 위에 표시되도록

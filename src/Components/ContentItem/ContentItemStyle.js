@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 const CommonSkin = css`
   margin: 0;
-  width: 300rem;
+  width: 280rem;
   padding: 16rem;
   flex-direction: column;
   justify-content: center;

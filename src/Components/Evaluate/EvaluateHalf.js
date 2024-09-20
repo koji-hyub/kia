@@ -86,12 +86,7 @@ function EvaluateWrap(props) {
                   fill={
                     index + 0.5 <= selectedRating
                       ? 'var(--Tertiary-Afternoon-Yellow)'
-                      : 'var(--Primary-Polar-White)'
-                  }
-                  stroke={
-                    index + 0.5 <= selectedRating
-                      ? 'var(--Tertiary-Afternoon-Yellow)'
-                      : 'var(--Grey-Spectrum-Coll-Grey-40)'
+                      : 'var(--Grey-Spectrum-Coll-Grey-20)'
                   }
                 />
               </button>
@@ -105,12 +100,7 @@ function EvaluateWrap(props) {
                   fill={
                     index + 1 <= selectedRating
                       ? 'var(--Tertiary-Afternoon-Yellow)'
-                      : 'var(--Primary-Polar-White)'
-                  }
-                  stroke={
-                    index + 1 <= selectedRating
-                      ? 'var(--Tertiary-Afternoon-Yellow)'
-                      : 'var(--Grey-Spectrum-Coll-Grey-40)'
+                      : 'var(--Grey-Spectrum-Coll-Grey-20)'
                   }
                 />
               </button>

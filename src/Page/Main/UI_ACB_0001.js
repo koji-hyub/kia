@@ -26,28 +26,30 @@ const PubMain = () => {
       <WelcomeKia />
       <MainSwiper />
       <ChatBot>
-        <Text text={'어어어어엉'} />
+        <Text className={'text'} text={'궁금하신 사항을 상단의 메뉴에서 선택하세요.'} />
       </ChatBot>
       <ChatBot>
-        <ContentItem />
+        <Text className={'text'} text={'상담 종료 1분 전 입니다.'} />
       </ChatBot>
+      <ChatBot>
+        <Text className={'text'} text={'답변이 없으실 경우 상담이 종료됩니다.'} />
+      </ChatBot>
+
+      <ChatBot>
+        <ContentItem className={'content-item'}>
+          <Text text={'어어어어엉'} />
+        </ContentItem>
+      </ChatBot>
+
+      <ChangeText text={'챗봇 상담이 종료되었습니다.'} />
       <Agent />
-      <User userTooltip={userTooltip} setUserTooltip={setUserTooltip} text={'텍스트입니다.'} />
+      <User
+        userTooltip={userTooltip}
+        setUserTooltip={setUserTooltip}
+        text={'챗봇 답변 메세지가 들어갑니다.'}
+      />
       <User text={'메세지 텍스트 입니다.'} />
-      {/*<Agent>*/}
-      {/*  <Text />*/}
-      {/*  <MainSwiper />*/}
-      {/*  <Time />*/}
-      {/*  */}
-      {/*</Agent>*/}
-      <ChangeText />
-      <ContentItem>
-        <EvaluateHalf />
-      </ContentItem>
-      <ContentItem>
-        <Heading level={3} size={'--font-size-4'} title={'Title'} />
-        <EvaluateHalf />
-      </ContentItem>
+
       {/*<User />*/}
       {/*모달 팝업 샘플 테스트 */}
     </MainWrap>

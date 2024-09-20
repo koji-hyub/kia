@@ -7,7 +7,7 @@ const CommonSkin = css`
 
   .img-box {
     margin: 0 auto;
-    border-radius: 10rem;
+    border-radius: 24rem;
     overflow: hidden;
     background: #000;
     width: 100rem;

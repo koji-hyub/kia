@@ -12,7 +12,7 @@ const CommonSkin = css`
     left: 0;
     right: 0;
     height: 1px;
-    background: var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
+    background: var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
     transform: translateY(-50%);
   }
   .text {
@@ -21,6 +21,7 @@ const CommonSkin = css`
     margin: 25rem 0;
     padding: 0 8rem;
     background: var(--Grey-Spectrum-Coll-Grey-05);
+
     z-index: 10; /* 텍스트가 라인 위에 위치하도록 z-index 설정 */
     width: auto;
   }

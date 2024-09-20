@@ -17,6 +17,7 @@ const CommonSkin = css`
         margin-bottom: 6rem;
         position: relative;
         .text {
+          z-index: 100;
           padding: 2rem 8rem;
           position: absolute;
           top: 32rem;
@@ -24,8 +25,6 @@ const CommonSkin = css`
           background: var(--Grey-Spectrum-Coll-Grey-80, #303c47);
           color: var(--Primary-Polar-White, #fff);
           font-size: var(--font-size-7, 12px);
-          font-style: normal;
-          font-weight: var(--font-weight-regular, 400);
           line-height: var(--line-height-8, 18rem); /* 150% */
           white-space: nowrap;
           &:before {

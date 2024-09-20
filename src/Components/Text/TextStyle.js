@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const CommonSkin = css`
-  margin-bottom: 12rem;
+  //margin-bottom: 12rem;
   letter-spacing: -0.33rem;
   display: flex;
   align-items: flex-start;

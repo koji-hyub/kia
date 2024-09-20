@@ -6,7 +6,7 @@ const CommonSkin = css`
   color: #fff;
   position: relative;
   //border: 1px solid red;
-  margin: 0 -20px 0;
+  margin: 14rem -20px 24rem;
 
   .swiper {
     height: 100%;
