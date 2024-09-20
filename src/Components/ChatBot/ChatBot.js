@@ -8,16 +8,12 @@ function AgentWrap({ children }) {
   const [agent, setAgent] = useState(true);
 
   return (
-    <>
-      <ChatBot>
-        <div className={'icon-box'}>
-          <div className={'icon agent'}>
-            <IconAgent />
-          </div>
-        </div>
-        {children}
-      </ChatBot>
-    </>
+    <ChatBot>
+      <div className={'icon'}>
+        <IconAgent />
+      </div>
+      <div className={'item'}>{children && children}</div>
+    </ChatBot>
   );
 }
 

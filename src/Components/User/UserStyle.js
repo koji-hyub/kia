@@ -11,9 +11,10 @@ const CommonSkin = css`
       margin-top: 4rem;
       display: flex;
       justify-content: flex-end;
-      align-items: center;
+      align-items: flex-end;
 
       .tooltip {
+        margin-bottom: 6rem;
         position: relative;
         .text {
           padding: 2rem 8rem;

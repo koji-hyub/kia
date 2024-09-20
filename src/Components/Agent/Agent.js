@@ -18,12 +18,6 @@ function AgentWrap({ children }) {
           </div>
         </div>
       </div>
-      <div className={'icon-box'}>
-        <div className={`icon bot`}>
-          <div className={'img'}>{/*<img src={WelecomeKiaImg2} alt="Kia ChatBot" />*/}</div>
-        </div>
-      </div>
-      <LoadingText />
 
       {children && children}
     </Agent>

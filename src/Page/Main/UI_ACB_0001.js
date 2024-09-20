@@ -25,7 +25,12 @@ const PubMain = () => {
     <MainWrap>
       <WelcomeKia />
       <MainSwiper />
-      <ChatBot />
+      <ChatBot>
+        <Text text={'어어어어엉'} />
+      </ChatBot>
+      <ChatBot>
+        <ContentItem />
+      </ChatBot>
       <Agent />
       <User userTooltip={userTooltip} setUserTooltip={setUserTooltip} text={'텍스트입니다.'} />
       <User text={'메세지 텍스트 입니다.'} />

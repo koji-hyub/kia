@@ -37,27 +37,25 @@ function Navigation(props) {
   };
 
   return (
-    <>
-      <Menu ref={openRef}>
-        <div className={`aside-menu ${open ? 'isActive' : ''}`}>
-          <button className={`open ${open ? 'closed' : ''} `} onClick={handleOpen}>
-            <span className={'blind'}>버튼</span>
-          </button>
+    <Menu ref={openRef}>
+      <div className={`aside-menu ${open ? 'isActive' : ''}`}>
+        <button className={`open ${open ? 'closed' : ''} `} onClick={handleOpen}>
+          <span className={'blind'}>버튼</span>
+        </button>
 
-          <div className={'inner'}>
-            <ul>
-              {navigation.map((item, index) => (
-                <li key={index} className={index === activeIndex ? 'isActive' : ''}>
-                  <Link to={`${item.path}`} onClick={() => handleClick(index)}>
-                    {item.menu}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className={'inner'}>
+          <ul>
+            {navigation.map((item, index) => (
+              <li key={index} className={index === activeIndex ? 'isActive' : ''}>
+                <Link to={`${item.path}`} onClick={() => handleClick(index)}>
+                  {item.menu}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      </Menu>
-    </>
+      </div>
+    </Menu>
   );
 }
 
