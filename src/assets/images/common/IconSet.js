@@ -17,7 +17,7 @@ export function IconLogo({ width, height }) {
   );
 }
 
-export function IconClosed({ width, height }) {
+export function IconClosed({ width, height, currentColor }) {
   return (
     <svg
       width={`${width ? width : '20'}`}
@@ -27,7 +27,7 @@ export function IconClosed({ width, height }) {
     >
       <path
         d="M16.25 3.75L10 10M3.75 16.25L10 10M3.75 3.75L10 10M16.25 16.25L10 10"
-        stroke="currentColor"
+        stroke={`${currentColor ? currentColor : '#000'}`}
         strokeWidth="1.5"
         strokeLinecap="square"
       />
@@ -92,6 +92,20 @@ export function IconSend({ width, height }) {
     </svg>
   );
 }
+// 서치 중일때 아이콘
+export function IconSendSearch({ width, height }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={`${width ? width : '20'}`}
+      height={`${height ? height : '20'}`}
+      viewBox="0 0 20 20"
+      fill="none"
+    >
+      <rect x="4.99805" y="4.99951" width="10" height="10" rx="1.42857" fill="white" />
+    </svg>
+  );
+}
 
 // 더보기 플러스 아이콘
 export function IconPlus({ width, height }) {
@@ -104,6 +118,28 @@ export function IconPlus({ width, height }) {
     >
       <path d="M4 12H20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M12 20L12 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 상담 상태 아이콘
+export function IconState({ width, height }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={`${width ? width : '14'}`}
+      height={`${height ? height : '14'}`}
+      viewBox="0 0 14 14"
+      fill="none"
+    >
+      <rect width="14" height="14" rx="5" fill="#468F13" />
+      <path
+        d="M9.99963 5L6.42737 8.97197L3.99963 6.5"
+        stroke="white"
+        strokeWidth="1.44"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }

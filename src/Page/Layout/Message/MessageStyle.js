@@ -1,10 +1,9 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
 
 const CommonSkin = css`
   //position: fixed;
   //bottom: 0;
-  padding: 16rem 20rem 24rem;
+  padding: 16rem 20rem;
   background: white; /* 푸터 배경색 */
   background: var(--Primary-Polar-White);
   display: flex;
@@ -17,7 +16,7 @@ const CommonSkin = css`
     border-radius: 24px;
     border: 1rem solid var(--Primary-Midnight-Black, #05141f);
     background: var(--Primary-Polar-White, #fff);
-    margin-left: 12rem;
+    //margin-left: 12rem;
     .textarea {
       outline: none;
       padding-top: 8rem;
@@ -50,9 +49,13 @@ const CommonSkin = css`
         margin-right: 10rem;
         margin-left: 10rem;
       }
+
       .send {
         color: var(--Primary-Polar-White);
         &.isActive {
+          background: #05141f;
+        }
+        &.isSearch {
           background: #05141f;
         }
         display: flex;

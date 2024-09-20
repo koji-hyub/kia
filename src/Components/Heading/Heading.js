@@ -7,13 +7,10 @@ function HeadingWrap({ level, title, badge, state, iconLeft, ...rest }) {
   return (
     <Heading as={HeadingTag} level={level} {...rest}>
       {title
-        ? title.split('\n').map((line, index) => (
+        ? title.split('\n').map((item, index) => (
             <React.Fragment key={index}>
-              {
-                index === 0 && iconLeft ? <span className={'left-icon'}>{iconLeft}</span> : ''
-                // && <span className={'left-icon'}> {iconLeft}</span>
-              }
-              {line}
+              {index === 0 && iconLeft ? <span className={'left-icon'}>{iconLeft}</span> : ''}
+              <span className={'title'}>{item}</span>
               {index !== title.split('\n').length - 1 && <br />}
               {index === 0 && state && <span className={'state'}>{state}</span>}
               {/* 마지막 줄이 아닌 경우에만 <br> 추가 */}

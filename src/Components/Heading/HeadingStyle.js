@@ -7,10 +7,16 @@ const CommonSkin = css`
   font-size: ${(props) => `var(${props.size ? props.size : '--font-size-1'})`};
   font-weight: ${(props) => `var(${props.bold ? '--font-weight-bold' : '--font-weight-regular'})`};
   letter-spacing: -0.33rem;
+  span {
+    display: flex;
+    align-items: center;
+  }
+  .title {
+  }
   .state {
     color: ${(props) =>
       `var(${props.color ? props.color : '--Color-Spectrum-Neon-Green-Neon-Green-60'})`};
-    margin-left: 5rem;
+    margin-left: 6rem;
   }
   .left-icon {
     display: inline-flex;

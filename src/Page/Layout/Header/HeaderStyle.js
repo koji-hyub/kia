@@ -10,9 +10,10 @@ const CommonSkin = css`
   //background-color: var(--Primary-Midnight-Black); /* 헤더 배경 색상 설정 */
   //background: var(--Primary-Polar-White, #fff);
   //color: var(--Primary-Polar-White); /* 헤더 텍스트 색상 설정 */
-
+  background: #010e18;
+  background: var(--Primary-Polar-White, #fff);
+  height: 56rem;
   /* 기타 필요 스타일 */
-
   .inner {
     padding: 16rem 20rem;
     height: 56rem;
@@ -20,46 +21,56 @@ const CommonSkin = css`
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-`;
 
-const BasicSkin = css`
-  height: 56rem;
-  background: #010e18;
-  //background: var(--Primary-Midnight-Black, #05141f);
-  background: var(--Primary-Polar-White, #fff);
-  // background: ${(props) => `var(${props.color || '--Primary-Midnight-Black, #05141f'})`};
-  //color: var(--Primary-Polar-White);
-  .inner {
-    h1 {
-      //color: var(--Primary-Midnight-Black, #05141f);
-      ///* Title/T7 */
-      //font-size: var(--font-size-4, 16rem);
-      //font-style: normal;
-      //font-weight: var(--font-weight-bold, 600);
-      //line-height: var(--line-height-3, 24rem); /* 150% */
-      //svg {
-      //  //margin-top: 1rem;
-      //  margin-right: 8rem;
-      //  width: 60rem;
-      //  height: 14rem;
-      //}
-    }
     .item-set {
-      button {
+      > button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         & + button {
-          margin-left: 15rem;
+          margin-left: 20rem;
         }
         width: 20rem;
         height: 20rem;
         color: var(--Primary-Polar-White);
       }
+
+      .toggle-popup {
+        display: flex;
+        width: 102rem;
+        z-index: 100;
+        align-items: center;
+        position: fixed;
+        right: 8rem;
+        top: 46rem;
+        border-radius: 4rem;
+        background: var(--Primary-Polar-White, #fff);
+        border: 1rem solid var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
+        li {
+          &:first-of-type {
+            border-bottom: 1rem solid var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
+          }
+
+          button {
+            &:hover {
+              font-weight: var(--font-weight-bold, 600);
+              background: var(--Grey-Spectrum-Coll-Grey-02, #f2f4f6);
+            }
+            width: 100%;
+            text-align: left;
+            color: var(--Primary-Midnight-Black, #05141f);
+            font-size: var(--font-size-5, 14rem);
+            padding: 12rem 16rem;
+            line-height: var(--line-height-4, 20rem); /* 142.857% */
+            white-space: nowrap;
+          }
+        }
+      }
     }
   }
 `;
+
+const BasicSkin = css``;
 
 const ThemeSkin = css`
   background: ${(props) => `var(${props.color || '--Primary-Polar-White'})`};

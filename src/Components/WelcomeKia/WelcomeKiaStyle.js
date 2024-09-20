@@ -21,6 +21,12 @@ const CommonSkin = css`
     margin-top: 16rem;
     justify-content: center;
     text-align: center;
+    strong {
+      font-size: var(--font-size-3);
+      font-weight: var(--font-weight-bold);
+      color: var(--Primary-Midnight-Black);
+      line-height: var(--line-height-2, 28rem); /* 155.556% */
+    }
     & > div {
       line-height: var(--line-height-2);
     }

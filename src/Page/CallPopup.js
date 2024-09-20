@@ -56,7 +56,7 @@ const ChatApp = () => {
   }, [isModalOpen]);
 
   return (
-    <div>
+    <>
       {modalItems.map((item, index) => (
         <Button key={item.id} onClick={(e) => openModal(e, index)} text={item.title} />
       ))}
@@ -70,7 +70,7 @@ const ChatApp = () => {
           closeModal={closeModal}
         />
       )}
-    </div>
+    </>
   );
 };
 

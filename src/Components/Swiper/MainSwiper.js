@@ -63,6 +63,7 @@ const MainSwiper = () => {
       <Swiper
         ref={swiperRef} // ref 속성 설정
         slidesPerView={'auto'}
+        centeredSlides={true}
         spaceBetween={20}
         pagination={{
           clickable: true

@@ -1,7 +1,15 @@
 import styled, { css, keyframes } from 'styled-components';
 
 // 공통 스타일
-const CommonSkin = css``;
+const CommonSkin = css`
+  color: var(--Grey-Spectrum-Coll-Grey-40, #9ba2a9);
+
+  /* Body/B5 */
+  font-size: var(--font-size-5, 14rem);
+  font-style: normal;
+  font-weight: var(--font-weight-regular, 400);
+  line-height: var(--line-height-4, 20rem); /* 142.857% */
+`;
 
 // 기본 스킨 스타일 정의
 const BasicSkin = css``;

@@ -1,8 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Style from './MessageStyle';
 import MessageInput from '../../../Components/MessageInput/MessageInput';
-import { IconClear, IconSend } from '../../../assets/images/common/IconSet';
-import ActionButton from '../../../Components/ActionButton/ActionButton';
+import { IconClear, IconSend, IconSendSearch } from '../../../assets/images/common/IconSet';
 
 const Message = Style(APP_SKIN);
 
@@ -19,6 +18,8 @@ const MessageWrap = () => {
   const handleInputChange = (e) => {
     setMessage(e.target.value);
 
+    // const text = e.target.value.length > 0;
+
     // 입력창 높이 조절 (최대 3줄까지)
     const textareaLineHeight = 36; // 줄당 높이
     const maxRows = 3; // 최대 줄 수
@@ -29,7 +30,7 @@ const MessageWrap = () => {
 
   return (
     <Message>
-      <ActionButton />
+      {/*<ActionButton />*/}
       <div className={'message-input'}>
         <textarea
           ref={inputRef}
@@ -42,7 +43,7 @@ const MessageWrap = () => {
             overflow: 'hidden'
           }}
           rows={1}
-          placeholder="메세지를 입력하세요..."
+          placeholder="메세지를 입력하세요."
         />
 
         <div className={'send-item'}>
@@ -56,8 +57,15 @@ const MessageWrap = () => {
             className={`send ${message ? 'isActive' : ''}`}
             onClick={(e) => e.stopPropagation()}
           >
-            <span className={'blind'}>{message ? '메세지 전송' : ''}</span>
             <IconSend width={20} height={20} />
+            <span className={'blind'}>{message ? '메세지 전송' : ''}</span>
+          </button>
+
+          {/*사용자가 메세지를 보내고나서*/}
+          {/*챗봇의 답변이 Searching 중 일때 활성화 */}
+          <button className={'send isSearch'}>
+            <IconSendSearch />
+            <span className={'blind'}>{message ? '검색 중 입니다.' : ''}</span>
           </button>
         </div>
       </div>

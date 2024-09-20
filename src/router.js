@@ -6,6 +6,7 @@ import Guide from './Page/Guide';
 import PageMain from './Page/PageMain';
 import Test from './Page/Test';
 import CallPopup from './Page/CallPopup';
+import UI_ACB_0001 from './Page/Main/UI_ACB_0001';
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: '/CallPopup',
         element: <CallPopup />
+      },
+      {
+        path: '/Main/UI_ACB_0001',
+        element: <UI_ACB_0001 />
       }
     ]
   },
