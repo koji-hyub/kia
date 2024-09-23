@@ -8,6 +8,9 @@ const CommonSkin = css`
   border-radius: 50%;
   overflow: hidden;
   background: var(--Primary-Polar-White);
+  &.refresh {
+    background: var(--Primary-Polar-White);
+  }
   .icon {
     display: flex;
     align-items: center;

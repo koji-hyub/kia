@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Style from './_MessageStyle';
-import MessageInput from '~/Components/MessageInput/MessageInput';
+// import MessageInput from '~/Components/MessageInput/MessageInput';
 import HamburgerMenu from '~/Components/HamburgerMenu/HamburgerMenu';
 import ActionButton from '~/Components/ActionButton/ActionButton';
 

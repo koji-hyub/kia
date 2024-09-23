@@ -14,7 +14,7 @@ const CommonSkin = css`
     box-sizing: border-box;
     .swiper-slide {
       margin: 0;
-      width: 300rem;
+      width: 280rem;
       padding: 16rem;
       flex-direction: column;
       justify-content: center;

@@ -255,6 +255,31 @@ export function IconModifyCancel({ width, height, fill }) {
     </svg>
   );
 }
+// 새로고침 아이콘
+export function IconRefresh({ width, height, fill }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={`${width ? width : '16'}`}
+      height={`${height ? height : '16'}`}
+      viewBox="0 0 16 16"
+      fill="none"
+    >
+      <path
+        d="M12.6667 9C12.6667 11.7614 10.4282 14 7.66675 14C4.90532 14 2.66675 11.7614 2.66675 9C2.66675 6.23858 4.90532 4 7.66675 4C8.00921 4 8.34364 4.03443 8.66675 4.10002"
+        stroke="#05141F"
+        strokeWidth="1.2"
+        strokeLinecap="square"
+      />
+      <path
+        d="M7.58923 1.69629L10.0741 4.18114C9.10369 5.15153 8.55963 5.69559 7.58923 6.66599"
+        stroke="#05141F"
+        strokeWidth="1.2"
+        strokeLinecap="square"
+      />
+    </svg>
+  );
+}
 
 /////////////////////////////////////
 // 하단은 추후 필요 없는 아이콘은 삭제 한다.//

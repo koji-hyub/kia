@@ -76,10 +76,8 @@ const CommonSkin = css`
         height: 100%;
         width: 100%;
         resize: none;
-
         color: var(--Primary-Polar-White, #fff);
         font-size: var(--font-size-5, 14rem);
-        font-style: normal;
         font-weight: var(--font-weight-regular, 400);
         line-height: var(--line-height-4, 20rem); /* 142.857% */
       }

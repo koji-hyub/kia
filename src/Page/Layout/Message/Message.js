@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Style from './MessageStyle';
-import MessageInput from '../../../Components/MessageInput/MessageInput';
+// import MessageInput from '../../../Components/MessageInput/MessageInput';
 import { IconClear, IconSend, IconSendSearch } from '../../../assets/images/common/IconSet';
 
 const Message = Style(APP_SKIN);
@@ -17,8 +17,6 @@ const MessageWrap = () => {
 
   const handleInputChange = (e) => {
     setMessage(e.target.value);
-
-    // const text = e.target.value.length > 0;
 
     // 입력창 높이 조절 (최대 3줄까지)
     const textareaLineHeight = 36; // 줄당 높이

@@ -27,7 +27,7 @@ import Checkbox from '~/Components/Checkbox/Checkbox';
 import Radio from '~/Components/Radio/Radio';
 import Text from '~/Components/Text/Text';
 import TabMenuWrap from '../Components/TabMenu/TabMenu';
-import Input from '../Components/MessageInput/MessageInput';
+// import Input from '../Components/MessageInput/MessageInput';
 import ComboBox from '../Components/ComboBox/ComboBox';
 import Popup from '../Components/Popup/Popup';
 import Header from './Layout/Header/Header';

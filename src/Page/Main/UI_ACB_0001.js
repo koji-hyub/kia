@@ -14,33 +14,35 @@ import EvaluateHalf from '../../Components/Evaluate/EvaluateHalf';
 import LoadingText from '../../Components/Loading/LoadingText';
 import ContentItem from '../../Components/ContentItem/ContentItem';
 import Heading from '../../Components/Heading/Heading';
+import ButtonIcon from '../../Components/Button/ButtonIcon';
+import { IconRefresh } from '../../assets/images/common/IconSet';
+// import MessageInput from '../../Components/MessageInput/MessageInput';
 
 const MainWrap = Style(APP_SKIN);
 
 const PubMain = () => {
   // 최초 튤팁 실행
   const [userTooltip, setUserTooltip] = useState(true);
+  const [agentTooltip, setAgentTooltip] = useState(true);
 
   return (
     <MainWrap>
       <WelcomeKia />
       <MainSwiper />
-      <ChatBot>
-        <Text className={'text'} text={'궁금하신 사항을 상단의 메뉴에서 선택하세요.'} />
-      </ChatBot>
-      <ChatBot>
-        <Text className={'text'} text={'상담 종료 1분 전 입니다.'} />
-      </ChatBot>
-      <ChatBot>
-        <Text className={'text'} text={'답변이 없으실 경우 상담이 종료됩니다.'} />
-      </ChatBot>
-
+      <ChatBot
+        agentTooltip={agentTooltip}
+        setAgentTooltip={setAgentTooltip}
+        text={'약관에 동의하지 않았습니다.<br />진행 중인 대화는 여기서 마치겠습니다.'}
+      />
+      <ChatBot text={'약관에 동의하지 않았습니다.'} />
+      <ChatBot text={'약관에 동의하지 않았습니다.<br />진행 중인 대화는 여기서 마치겠습니다.'} />
+      <MainSwiper />
       <ChatBot>
         <ContentItem className={'content-item'}>
           <Text text={'어어어어엉'} />
         </ContentItem>
       </ChatBot>
-
+      <LoadingText />
       <ChangeText text={'챗봇 상담이 종료되었습니다.'} />
       <Agent />
       <User

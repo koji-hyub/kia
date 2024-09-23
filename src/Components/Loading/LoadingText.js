@@ -35,7 +35,7 @@ function LoadingWrap(props) {
     return () => cancelAnimationFrame(requestRef.current);
   }, []);
 
-  return <LoadingText ref={loadingRef}>Searching...</LoadingText>;
+  return <LoadingText ref={loadingRef}>Search...</LoadingText>;
 }
 
 export default LoadingWrap;
