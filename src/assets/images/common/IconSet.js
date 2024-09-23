@@ -281,22 +281,50 @@ export function IconRefresh({ width, height, fill }) {
   );
 }
 
-/////////////////////////////////////
-// 하단은 추후 필요 없는 아이콘은 삭제 한다.//
-/////////////////////////////////////
-
-// 화살표 아이콘 01
-export function IconArrowType01() {
+export function IconSymbol({ width, height, currentColor }) {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={`${width ? width : '18'}`}
+      height={`${height ? height : '10'}`}
+      viewBox="0 0 18 10"
+      fill="none"
+    >
       <path
-        d="M7.92651 14.1475L12.0735 10.0005L7.92651 5.85345"
-        stroke="currentColor"
-        strokeWidth="1.5"
+        d="M4.43484 9.79098C4.22786 9.79098 4.1477 9.52132 4.32115 9.40763L14.5141 2.79016C14.6861 2.67793 14.8435 2.61816 15.0796 2.61816H17.1932C17.5226 2.61816 17.7893 2.8849 17.7893 3.21432V7.28829C17.7893 7.78533 17.6785 8.07393 17.2369 8.33922L15.1627 9.58546C14.9383 9.72101 14.6817 9.79098 14.4194 9.79098H4.43338H4.43484Z"
+        fill="white"
+      />
+      <path
+        d="M13.5652 0.208984C13.7721 0.208984 13.8523 0.478639 13.6789 0.592331L3.48591 7.2098C3.31391 7.32204 3.15649 7.3818 2.92036 7.3818H0.806849C0.477433 7.3818 0.210693 7.11506 0.210693 6.78564V2.71167C0.210693 2.21463 0.32147 1.92603 0.763121 1.66075L2.83728 0.414504C3.06175 0.278948 3.31828 0.208984 3.58065 0.208984H13.5666H13.5652Z"
+        fill="white"
       />
     </svg>
   );
 }
+
+// 화살표 아이콘
+export function IconArrow({ width, height, currentColor }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={`${width ? width : '16'}`}
+      height={`${height ? height : '16'}`}
+      viewBox="0 0 16 16"
+      fill="none"
+    >
+      <path
+        d="M5.33335 13.333L10.6667 7.99967L5.33335 2.66634"
+        stroke={`${currentColor ? currentColor : '#05141F'}`}
+        strokeWidth="1.2"
+        strokeLinecap="square"
+      />
+    </svg>
+  );
+}
+
+/////////////////////////////////////
+// 하단은 추후 필요 없는 아이콘은 삭제 한다.//
+/////////////////////////////////////
 
 // 퀵메뉴 아이콘 채팅
 export function IconQuick() {

@@ -1,12 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Style from './ChatBotStyle';
-import { IconAgent, IconRefresh, IconUserModify } from '../../assets/images/common/IconSet';
-
-import WelecomeKiaImg2 from '../../assets/images/common/WelcomeKia2.gif';
-import User from '../User/User';
+import { IconRefresh, IconSymbol } from '../../assets/images/common/IconSet';
 import ButtonIcon from '../Button/ButtonIcon';
 import Text from '../Text/Text';
-import ContentItem from '../ContentItem/ContentItem';
 
 const ChatBot = Style(APP_SKIN);
 
@@ -26,7 +22,7 @@ function AgentWrap({ text, children, agentTooltip, setAgentTooltip }) {
     <ChatBot className={'chat-bot'}>
       <div className={'icon'}>
         <div className={'img'}>
-          <img src={WelecomeKiaImg2} alt="Kia ChatBot" />
+          <IconSymbol />
         </div>
       </div>
       <div className={'item'}>

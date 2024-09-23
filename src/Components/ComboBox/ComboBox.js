@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Style from './ComboBoxStyle';
-import { IconArrowType01 } from '~/assets/images/common/IconSet';
+import { IconArrow } from '~/assets/images/common/IconSet';
 
 const ComboBox = Style(APP_SKIN);
 function ComboBoxWrap({ title, option, className }) {
@@ -51,7 +51,7 @@ function ComboBoxWrap({ title, option, className }) {
         <div className={'combo-title'} onClick={handleCombo}>
           <div className={'title'}>{title}</div>
           <div className={'icon-arrow'}>
-            <IconArrowType01 />
+            <IconArrow />
           </div>
         </div>
         {isActive && (

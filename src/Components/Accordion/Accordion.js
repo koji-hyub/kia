@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import Style from './AccordionStyle';
-import { IconArrowType01 } from '../../assets/images/common/IconSet';
+import { IconArrow } from '../../assets/images/common/IconSet';
 
 const Accordion = Style(APP_SKIN);
 
@@ -42,7 +42,7 @@ function AccordionItem({ title, content }) {
     <div className="accordion-item">
       <div className={`accordion-title ${isOpen ? 'isActive' : ''}`} onClick={accordionHandler}>
         <p className={'tit'}>{title}</p>
-        <IconArrowType01 />
+        <IconArrow />
       </div>
       {isOpen && (
         <div className="accordion-content">

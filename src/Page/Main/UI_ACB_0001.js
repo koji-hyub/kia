@@ -4,7 +4,7 @@ import User from '../../Components/User/User';
 import WelcomeKia from '../../Components/WelcomeKia/WelcomeKia';
 import Evaluate from '../../Components/Evaluate/Evaluate';
 import MainSwiper from '../../Components/Swiper/MainSwiper';
-import Time from '../../Components/Time/Time';
+import Time from '../../Components/DateTime/DateTime';
 import Agent from '../../Components/Agent/Agent';
 import Text from '../../Components/Text/Text';
 import ChangeText from '../../Components/ChangeText/ChangeText';
@@ -16,6 +16,7 @@ import ContentItem from '../../Components/ContentItem/ContentItem';
 import Heading from '../../Components/Heading/Heading';
 import ButtonIcon from '../../Components/Button/ButtonIcon';
 import { IconRefresh } from '../../assets/images/common/IconSet';
+import DateTime from '../../Components/DateTime/DateTime';
 // import MessageInput from '../../Components/MessageInput/MessageInput';
 
 const MainWrap = Style(APP_SKIN);
@@ -38,11 +39,18 @@ const PubMain = () => {
       <ChatBot text={'약관에 동의하지 않았습니다.<br />진행 중인 대화는 여기서 마치겠습니다.'} />
       <MainSwiper />
       <ChatBot>
-        <ContentItem className={'content-item'}>
-          <Text text={'어어어어엉'} />
+        <ContentItem>
+          <Text
+            size={'--font-size-7'}
+            color={'--Grey-Spectrum-Coll-Grey-40'}
+            text={
+              '세션이 종료되었습니다. <br /> 다시 로그인 하시어 챗봇 서비스를 이용하시기 바랍니다.'
+            }
+          />
         </ContentItem>
       </ChatBot>
       <LoadingText />
+      <DateTime />
       <ChangeText text={'챗봇 상담이 종료되었습니다.'} />
       <Agent />
       <User
@@ -51,7 +59,6 @@ const PubMain = () => {
         text={'챗봇 답변 메세지가 들어갑니다.'}
       />
       <User text={'메세지 텍스트 입니다.'} />
-
       {/*<User />*/}
       {/*모달 팝업 샘플 테스트 */}
     </MainWrap>

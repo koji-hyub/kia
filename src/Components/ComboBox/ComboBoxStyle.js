@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-// import { IconArrowType01 } from '~/assets/images/common/IconSet';
+// import { IconArrow } from '~/assets/images/common/IconSet';
 const CommonSkin = css``;
 const BasicSkin = css`
   width: 100%;

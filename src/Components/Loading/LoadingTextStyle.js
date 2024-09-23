@@ -7,20 +7,38 @@ const CommonSkin = css`
   align-items: center;
 
   color: var(--Grey-Spectrum-Coll-Grey-40, #9ba2a9);
-
-  /* Body/B5 */
-  font-size: var(--font-size-5, 14rem);
-  font-style: normal;
+  font-size: var(--font-size-5, 14px);
   font-weight: var(--font-weight-regular, 400);
-  line-height: var(--line-height-4, 20rem); /* 142.857% */
-  &:before {
-    content: '';
-    display: block;
+  line-height: var(--line-height-4, 20px); /* 142.857% */
+  .icon-box {
     margin-right: 8rem;
-    width: 32rem;
-    height: 32rem;
-    border-radius: 50%;
-    background: var(--Primary-Midnight-Black);
+    .icon {
+      display: flex;
+      align-items: center;
+      //display: block;
+      box-sizing: border-box;
+      border-radius: 50%;
+      padding: 7rem 7rem;
+      width: 32rem;
+      height: 32rem;
+      overflow: hidden;
+      &.bot {
+        position: relative;
+        background: var(--Primary-Midnight-Black);
+        .img {
+          width: 56rem;
+          height: 56rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          img {
+            width: 56rem;
+            height: auto;
+          }
+        }
+      }
+    }
   }
 `;
 

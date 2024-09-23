@@ -6,7 +6,6 @@ const CommonSkin = css`
   justify-content: center;
   align-items: center;
   min-width: 120rem;
-  padding: 12rem;
   border-radius: 4rem;
   &:first-of-type {
     margin-left: 0;
@@ -16,16 +15,18 @@ const CommonSkin = css`
   }
   .text {
     font-size: var(--font-size-5, 14rem);
-    font-style: normal;
     font-weight: var(--font-weight-bold, 600);
     line-height: var(--line-height-4, 20rem); /* 142.857% */
   }
   &.large {
     padding: 12rem;
+    height: 44rem;
   }
 
   &.small {
     padding: 6rem 12rem;
+    border: 1px solid red;
+    height: 32rem;
     .text {
       font-size: var(--font-size-7, 12rem);
       font-weight: var(--font-weight-regular, 400);

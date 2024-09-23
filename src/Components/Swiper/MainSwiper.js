@@ -23,7 +23,7 @@ const swiperItem = [
     id: 1,
     title: 'Title',
     text: 'subTitle (선택)',
-    button: <Button className={'secondary'} text={'Button'} />
+    button: <Button className={'secondary'} size={'small'} text={'Button'} />
   },
   {
     id: 2,
@@ -31,8 +31,8 @@ const swiperItem = [
     text: 'subTitle (선택)',
     button: (
       <>
-        <Button className={'secondary'} text={'Button'} />
-        <Button className={'secondary'} text={'Button'} />
+        <Button className={'secondary'} size={'small'} text={'Button'} />
+        <Button className={'secondary'} size={'small'} text={'Button'} />
       </>
     )
   },
@@ -40,7 +40,7 @@ const swiperItem = [
     id: 3,
     title: 'Title',
     text: 'subTitle (선택)',
-    button: <Button className={'secondary'} text={'Button'} />
+    button: <Button className={'secondary'} size={'small'} text={'Button'} />
   },
   {
     id: 4,
@@ -48,8 +48,8 @@ const swiperItem = [
     text: 'subTitle (선택)',
     button: (
       <>
-        <Button className={'secondary'} text={'Button'} />
-        <Button className={'secondary'} text={'Button'} />
+        <Button className={'secondary'} size={'small'} text={'Button'} />
+        <Button className={'secondary'} size={'small'} text={'Button'} />
       </>
     )
   }
@@ -61,10 +61,11 @@ const MainSwiper = () => {
   return (
     <SwiperWrap>
       <Swiper
+        navigation={true}
         ref={swiperRef} // ref 속성 설정
         slidesPerView={'auto'}
         centeredSlides={true}
-        spaceBetween={20}
+        spaceBetween={8}
         pagination={{
           clickable: true
         }}

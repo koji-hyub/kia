@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Style from './SidebarMenuStyle';
 import { Link } from 'react-router-dom';
 import Heading from '../Heading/Heading';
-import { IconArrowType01 } from '../../assets/images/common/IconSet';
+import { IconArrow } from '../../assets/images/common/IconSet';
 
 const SideMenu = Style(APP_SKIN);
 
@@ -80,7 +80,7 @@ function SidebarMenu({}) {
         <Heading level={3} title={'KIA'} />
         {windowWidth < 1280 && (
           <span className={isMobileMenuOpen ? 'open' : 'closed'}>
-            <IconArrowType01 />
+            <IconArrow />
           </span>
         )}
       </div>
@@ -95,7 +95,7 @@ function SidebarMenu({}) {
                   onClick={() => handleToggleMenu(item.id)}
                 >
                   {item.menu.oneDepth}
-                  {item.menu.twoDepth == null ? '' : <IconArrowType01 />}
+                  {item.menu.twoDepth == null ? '' : <IconArrow />}
                 </Link>
                 {openMenuId === item.id && ( // 현재 열린 메뉴인 경우에만 하위 메뉴 렌더링
                   <ul className={'twoDepth'}>

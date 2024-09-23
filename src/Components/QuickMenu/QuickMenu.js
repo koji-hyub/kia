@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Style from './QuickMenuStyle';
-import { IconArrowType01, IconQuick } from '../../assets/images/common/IconSet';
+import { IconArrow, IconQuick } from '../../assets/images/common/IconSet';
 import { Link } from 'react-router-dom';
 
 const QuickMenu = Style(APP_SKIN);
@@ -42,7 +42,7 @@ function QuickMenuWrap(props) {
         <ul>
           <li>
             <button onClick={handleTop}>
-              <IconArrowType01 />
+              <IconArrow />
               <span className="blind">페이지상단으로</span>
             </button>
           </li>

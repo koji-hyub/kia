@@ -18,17 +18,14 @@ const CommonSkin = css`
     height: 32rem;
     overflow: hidden;
     position: relative;
+    background: var(--Primary-Midnight-Black);
     .img {
-      width: 56rem;
-      height: 56rem;
+      //width: 56rem;
+      //height: 56rem;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      img {
-        width: 56rem;
-        height: auto;
-      }
     }
   }
 
@@ -68,9 +65,7 @@ const CommonSkin = css`
           }
         }
       }
-      .refresh {
-        margin-bottom: 6rem;
-      }
+
       .text {
         margin: 7rem 0 6rem;
         color: var(--Primary-Midnight-Black, #05141f);

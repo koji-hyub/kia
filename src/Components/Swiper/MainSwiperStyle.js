@@ -28,6 +28,7 @@ const CommonSkin = css`
         margin-bottom: 8rem;
       }
       .item {
+        margin-bottom: 12rem;
       }
       .btn-area {
         display: flex;
@@ -53,6 +54,36 @@ const CommonSkin = css`
         border-radius: 5.333rem;
       }
     }
+  }
+
+  //
+  .swiper-button-disabled {
+    opacity: 0;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 45%;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    padding: 8px 7px 8px 9px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 1px solid var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
+    background: var(--Primary-Polar-White, #fff);
+    &.swiper-button-prev:after,
+    &.swiper-button-next:after {
+      font-size: 12rem;
+      color: var(--Primary-Midnight-Black);
+    }
+
+    /* Below Low */
+    box-shadow: 4px 4px 10px 0px rgba(5, 20, 31, 0.08);
+  }
+  .swiper-button-prev {
+    padding-left: 5rem;
   }
 `;
 

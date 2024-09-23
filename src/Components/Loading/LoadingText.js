@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Style from './LoadingTextStyle';
-
+import WelecomeKiaImg2 from '../../assets/images/common/WelcomeKia2.gif';
 const LoadingText = Style(APP_SKIN);
 
 const text = 'Search...';
@@ -25,17 +25,26 @@ function LoadingWrap(props) {
         }
         lastUpdateTime = currentTime; // 마지막 업데이트 시간을 현재로 설정
       }
-
       requestRef.current = requestAnimationFrame(animateText); // 다음 프레임 호출
     }
-
     requestRef.current = requestAnimationFrame(animateText); // 애니메이션 시작
 
     // 클린업: 컴포넌트가 언마운트될 때 애니메이션 정지
     return () => cancelAnimationFrame(requestRef.current);
   }, []);
 
-  return <LoadingText ref={loadingRef}>Search...</LoadingText>;
+  return (
+    <LoadingText>
+      <div className={'icon-box'}>
+        <div className={`icon bot`}>
+          <div className={'img'}>
+            <img src={WelecomeKiaImg2} alt="Kia ChatBot" />
+          </div>
+        </div>
+      </div>
+      <div ref={loadingRef}>Search...</div>
+    </LoadingText>
+  );
 }
 
 export default LoadingWrap;

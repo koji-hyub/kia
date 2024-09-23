@@ -4,7 +4,7 @@ import User from '../../Components/User/User';
 import WelcomeKia from '../../Components/WelcomeKia/WelcomeKia';
 import Evaluate from '../../Components/Evaluate/Evaluate';
 import MainSwiper from '../../Components/Swiper/MainSwiper';
-import Time from '../../Components/Time/Time';
+import Time from '../../Components/DateTime/DateTime';
 import Agent from '../../Components/Agent/Agent';
 import Text from '../../Components/Text/Text';
 import ChangeText from '../../Components/ChangeText/ChangeText';

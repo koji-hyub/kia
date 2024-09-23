@@ -1,23 +1,14 @@
 import styled, { css } from 'styled-components';
 
 const CommonSkin = css`
-  margin-top: 12rem;
-  color: #ccd0d3;
-  text-align: ${(props) => {
-    switch (props.align ? props.align : 'left') {
-      case 'left':
-        return 'left';
-      case 'right':
-        return 'right';
-      case 'center':
-        return 'center';
-      default:
-        return 'left';
-    }
-  }};
-  > div {
-    display: block;
-  }
+  width: 126rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16rem;
+  margin: 0 auto 24rem;
+  background: var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
+  padding: 2rem 12rem;
 `;
 
 const BasicSkin = css``;
