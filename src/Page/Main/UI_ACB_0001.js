@@ -15,8 +15,9 @@ import LoadingText from '../../Components/Loading/LoadingText';
 import ContentItem from '../../Components/ContentItem/ContentItem';
 import Heading from '../../Components/Heading/Heading';
 import ButtonIcon from '../../Components/Button/ButtonIcon';
-import { IconRefresh } from '../../assets/images/common/IconSet';
+import { IconArrow, IconLink, IconRefresh } from '../../assets/images/common/IconSet';
 import DateTime from '../../Components/DateTime/DateTime';
+import ButtonLink from '../../Components/Button/ButtonLink';
 // import MessageInput from '../../Components/MessageInput/MessageInput';
 
 const MainWrap = Style(APP_SKIN);
@@ -40,6 +41,7 @@ const PubMain = () => {
       <MainSwiper />
       <ChatBot>
         <ContentItem>
+          <Heading level={3} title={'약관 동의'} size={'--font-size-4'} bold={'bold'} />
           <Text
             size={'--font-size-7'}
             color={'--Grey-Spectrum-Coll-Grey-40'}
@@ -47,20 +49,30 @@ const PubMain = () => {
               '세션이 종료되었습니다. <br /> 다시 로그인 하시어 챗봇 서비스를 이용하시기 바랍니다.'
             }
           />
+          <div className={'btn-area'}>
+            <Button text={'취소'} className={'btn secondary'} size={'small'} />
+            <ButtonLink
+              className={'btn primary'}
+              text={'로그인 하기'}
+              iconRight={<IconLink currentColor={'#fff'} />}
+              size={'small'}
+              link={'/'}
+            />
+          </div>
         </ContentItem>
       </ChatBot>
       <LoadingText />
-      <DateTime />
+      {/*<DateTime />*/}
       <ChangeText text={'챗봇 상담이 종료되었습니다.'} />
-      <Agent />
-      <User
-        userTooltip={userTooltip}
-        setUserTooltip={setUserTooltip}
-        text={'챗봇 답변 메세지가 들어갑니다.'}
-      />
-      <User text={'메세지 텍스트 입니다.'} />
-      {/*<User />*/}
-      {/*모달 팝업 샘플 테스트 */}
+      {/*<Agent />*/}
+      {/*<User*/}
+      {/*  userTooltip={userTooltip}*/}
+      {/*  setUserTooltip={setUserTooltip}*/}
+      {/*  text={'챗봇 답변 메세지가 들어갑니다.'}*/}
+      {/*/>*/}
+      {/*<User text={'메세지 텍스트 입니다.'} />*/}
+      {/*/!*<User />*!/*/}
+      {/*/!*모달 팝업 샘플 테스트 *!/*/}
     </MainWrap>
   );
 };

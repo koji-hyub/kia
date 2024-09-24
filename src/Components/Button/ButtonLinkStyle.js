@@ -10,10 +10,13 @@ const CommonSkin = css`
   &:first-of-type {
     margin-left: 0;
   }
-  & + button {
+  & + a {
     margin-left: 8rem;
   }
-  .text {
+
+  .link {
+    display: flex;
+    align-items: center;
     font-size: var(--font-size-5, 14rem);
     font-weight: var(--font-weight-bold, 600);
     line-height: var(--line-height-4, 20rem); /* 142.857% */
@@ -25,9 +28,8 @@ const CommonSkin = css`
 
   &.small {
     padding: 6rem 12rem;
-
     height: 32rem;
-    .text {
+    .link {
       font-size: var(--font-size-7, 12rem);
       font-weight: var(--font-weight-regular, 400);
       line-height: var(--line-height-4, 20px); /* 166.667% */
@@ -39,7 +41,7 @@ const CommonSkin = css`
     &:hover {
       background: var(--Grey-Spectrum-Coll-Grey-80, #303c47);
     }
-    .text {
+    .link {
       color: var(--Primary-Polar-White, #fff);
     }
     &[disabled] {
@@ -57,11 +59,11 @@ const CommonSkin = css`
       border: 1rem solid var(--Primary-Midnight-Black, #05141f);
       background: var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
     }
-    .text {
+    .link {
       color: var(--Primary-Midnight-Black, #05141f);
     }
     &[disabled] {
-      .text {
+      .link {
         color: var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
       }
       border: 1px solid var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
@@ -74,11 +76,11 @@ const CommonSkin = css`
     &:hover {
       background: var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
     }
-    .text {
+    .link {
       color: var(--Primary-Midnight-Black, #05141f);
     }
     &[disabled] {
-      .text {
+      .link {
         color: var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
       }
       background: var(--Primary-Polar-White, #fff);
@@ -88,11 +90,11 @@ const CommonSkin = css`
     &:hover {
       background: var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
     }
-    .text {
+    .link {
       color: var(--Grey-Spectrum-Coll-Grey-50, #828a90);
     }
     &[disabled] {
-      .text {
+      .link {
         color: var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
       }
     }
@@ -100,6 +102,18 @@ const CommonSkin = css`
 
   &[disabled] {
     cursor: not-allowed;
+  }
+
+  .icon-right {
+    margin-left: 4rem;
+  }
+  .icon-left {
+    margin-right: 4rem;
+  }
+  .icon-right,
+  .icon-left {
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -113,15 +127,15 @@ const ThemeSkin = css``;
 const Style = (type) => {
   switch (type) {
     case 'BasicSkin':
-      return styled.button`
+      return styled.a`
         ${CommonSkin} ${BasicSkin}
       `;
     case 'ThemeSkin':
-      return styled.button`
+      return styled.a`
         ${CommonSkin} ${ThemeSkin}
       `;
     default:
-      return styled.button`
+      return styled.a`
         ${CommonSkin} ${BasicSkin}
       `;
   }

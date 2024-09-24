@@ -6,7 +6,7 @@ const CommonSkin = css`
   justify-content: center;
   align-items: center;
   border-radius: 16rem;
-  margin: 0 auto 24rem;
+  margin: 24rem auto 24rem;
   background: var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
   padding: 2rem 12rem;
 `;
