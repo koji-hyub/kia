@@ -14,6 +14,15 @@ const CommonSkin = css`
   h3 {
     margin-bottom: 4rem;
   }
+
+  .btn {
+    &.text {
+      width: 100%;
+    }
+  }
+  .btn.text + .btn-area {
+    margin-top: 0;
+  }
   .btn-area {
     margin-top: 12rem;
     display: flex;

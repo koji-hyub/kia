@@ -26,12 +26,14 @@ const PubMain = () => {
   // 최초 튤팁 실행
   const [userTooltip, setUserTooltip] = useState(true);
   const [agentTooltip, setAgentTooltip] = useState(true);
+  const [refresh, setRefresh] = useState(true);
 
   return (
     <MainWrap>
       <WelcomeKia />
       <MainSwiper />
       <ChatBot
+        refresh={refresh}
         agentTooltip={agentTooltip}
         setAgentTooltip={setAgentTooltip}
         text={'약관에 동의하지 않았습니다.<br />진행 중인 대화는 여기서 마치겠습니다.'}
@@ -48,6 +50,13 @@ const PubMain = () => {
             text={
               '세션이 종료되었습니다. <br /> 다시 로그인 하시어 챗봇 서비스를 이용하시기 바랍니다.'
             }
+          />
+          <ButtonLink
+            className={'btn text'}
+            text={'약관 보기'}
+            iconRight={<IconLink currentColor={'#05141F'} />}
+            size={'small'}
+            link={'/'}
           />
           <div className={'btn-area'}>
             <Button text={'취소'} className={'btn secondary'} size={'small'} />

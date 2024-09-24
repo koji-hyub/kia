@@ -6,7 +6,7 @@ import Text from '../Text/Text';
 
 const ChatBot = Style(APP_SKIN);
 
-function AgentWrap({ text, children, agentTooltip, setAgentTooltip }) {
+function AgentWrap({ text, children, agentTooltip, setAgentTooltip, refresh }) {
   const [agent, setAgent] = useState(true);
   const toolTipRef = useRef(null);
   useEffect(() => {
@@ -32,7 +32,11 @@ function AgentWrap({ text, children, agentTooltip, setAgentTooltip }) {
           <div className={'text-box'}>
             <Text className={'text'} text={text && text} />
             <div className={'tooltip'}>
-              <ButtonIcon icon={<IconRefresh />} blindText={'새로고침'} className={'refresh'} />
+              {refresh ? (
+                <ButtonIcon icon={<IconRefresh />} blindText={'새로고침'} className={'refresh'} />
+              ) : (
+                ' '
+              )}
 
               {agentTooltip && (
                 <div className={'text'} ref={toolTipRef}>

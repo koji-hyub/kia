@@ -1,11 +1,28 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Style from './ModalStyle'; // CSS 모듈을 임포트합니다.
-import { IconClosed } from '../../assets/images/common/IconSet';
+import Style from './ModalStyle';
+import { IconClosed, IconLink } from '../../assets/images/common/IconSet';
 import Heading from '../Heading/Heading';
+import Button from '../Button/Button';
+import ButtonLink from '../Button/ButtonLink';
 
 const Modal = Style('BasicSkin'); // 스킨 타입에 맞게 스타일 적용
 
-const ModalWrap = ({ title, content, className, modalOpen, closeModal }) => {
+const ModalWrap = (props) => {
+  const {
+    title,
+    content,
+    buttons,
+    footer,
+    className,
+    modalOpen,
+    closeModal,
+    btnName1,
+    btnName2,
+    link,
+    linkText
+  } = props;
+
+  console.log(link, '');
   const popupRef = useRef(null);
   const [isClosing, setIsClosing] = useState(false); // 모달 닫기 상태를 관리
 
@@ -93,11 +110,11 @@ const ModalWrap = ({ title, content, className, modalOpen, closeModal }) => {
         setTimeout(() => {
           closeModal(); // 전달받은 closeModal을 닫는다.
           setIsClosing(false); // 닫히는 상태를 다시 false로 설정
-        }, 300); // 트랜지션 시간과 일치시킵니다 (0.3초)
+        }, 200); // 트랜지션 시간과 일치시킵니다 (0.3초)
         console.log('센터 팝업 닫힐때');
       } else {
         // 탑, 바톰 팝업이 닫힐때
-        setIsClosing(true); // 닫히는 상태를 true로 설정합니다.
+        setIsClosing(true);
         // const inner = popupRef.current.querySelector('.inner');
         if (inner) {
           inner.style.height = '0px'; // 높이를 0으로 설정하여 닫히는 애니메이션 실행
@@ -106,7 +123,7 @@ const ModalWrap = ({ title, content, className, modalOpen, closeModal }) => {
         setTimeout(() => {
           closeModal(); // 전달받은 closeModal을 닫는다.
           setIsClosing(false); // 닫히는 상태를 다시 false로 설정
-        }, 300); // 트랜지션 시간과 일치시킵니다 (0.3초)
+        }, 200); // 트랜지션 시간과 일치시킵니다 (0.3초)
       }
     }
   };
@@ -133,12 +150,41 @@ const ModalWrap = ({ title, content, className, modalOpen, closeModal }) => {
             <span className={'blind'}>닫기</span>
           </button>
         </header>
-        <main id="modal-content">{content || '팝업 컨텐츠를 넣어주세요.'}</main>
-        <footer>
-          <button className="close" onClick={handleClose}>
-            close
-          </button>
-        </footer>
+        <main id="modal-content">{content ? content : '팝업 컨텐츠를 넣어주세요.'}</main>
+
+        {footer ? (
+          <footer>
+            {link ? (
+              <ButtonLink
+                className={'btn text'}
+                text={linkText ? linkText : '링크'}
+                iconRight={<IconLink currentColor={'#05141F'} />}
+                size={'small'}
+                link={link}
+              />
+            ) : (
+              ''
+            )}
+            {!buttons ? (
+              <Button
+                text={btnName1 ? btnName1 : '버튼명'}
+                className={'btn primary'}
+                onClick={handleClose}
+              />
+            ) : (
+              <div className={'btn-area'}>
+                <Button text={btnName1 ? btnName1 : '버튼명'} className={'btn secondary'} />
+                <Button
+                  text={btnName2 ? btnName2 : '버튼명'}
+                  className={'btn primary'}
+                  onClick={handleClose}
+                />
+              </div>
+            )}
+          </footer>
+        ) : (
+          ''
+        )}
       </div>
     </Modal>
   );

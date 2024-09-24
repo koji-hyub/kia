@@ -21,7 +21,55 @@ const CommonSkin = css`
     overflow: hidden;
     transition: transform 0.3s ease-in-out, height 0.3s ease-in-out; /* 트랜지션 애니메이션 settimeout의 일치시킨다. */
 
+    border-radius: 8rem;
+
+    /* Below Low */
+    box-shadow: 4rem 4rem 10rem 0 rgba(5, 20, 31, 0.08);
     //센터 팝업 초기 위치
+    padding: 24rem;
+    > header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24rem;
+      h2 {
+        color: var(--Primary-Midnight-Black, #05141f);
+
+        font-size: var(--font-size-4);
+        font-weight: var(--font-weight-bold, 600);
+        line-height: var(--line-height-3, 24rem); /* 150% */
+      }
+    }
+    > main {
+    }
+    > footer {
+      margin-top: 24rem;
+      .link {
+        font-size: var(--font-size-7, 12px);
+        color: var(--Primary-Midnight-Black, #05141f);
+      }
+      .btn {
+        width: 100%;
+      }
+      .btn-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > .btn {
+          &:nth-child(1) {
+            //flex: 0 0 80rem; /* 첫 번째 버튼 고정 크기 */
+            min-width: auto;
+            width: 100rem;
+          }
+
+          &:nth-child(2) {
+            //flex: 1; /* 두 번째 버튼은 남은 공간을 차지 */
+            //min-width: 0; /* 최소 너비는 0으로 설정 */
+            width: calc(100% - 108rem);
+          }
+        }
+      }
+    }
   }
 
   &.isActive {
@@ -41,7 +89,7 @@ const CommonSkin = css`
   &.popup-center {
     justify-content: center;
     > .inner {
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
       transform: translateY(-10px); /* 초기 위치를 화면 위로 설정 */
     }
@@ -52,6 +100,23 @@ const CommonSkin = css`
 
   &.popup-pull {
     justify-content: flex-end;
+
+    .inner {
+      display: flex;
+      flex-direction: column; /* 세로 방향으로 쌓기 */
+
+      overflow: hidden;
+      header {
+        flex: 0 0 auto;
+      }
+      main {
+        flex: 1;
+        overflow-y: auto;
+      }
+      footer {
+        flex: 0 0 auto;
+      }
+    }
   }
 `;
 

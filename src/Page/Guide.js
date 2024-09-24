@@ -29,7 +29,7 @@ import Text from '~/Components/Text/Text';
 import TabMenuWrap from '../Components/TabMenu/TabMenu';
 // import Input from '../Components/MessageInput/MessageInput';
 import ComboBox from '../Components/ComboBox/ComboBox';
-import Popup from '../Components/Popup/Popup';
+//import Popup from '../Components/Popup/Popup';
 import Header from './Layout/Header/Header';
 // import Footer from './Layout/Message/_Message';
 import Badge from '../Components/Etc/Badge';
