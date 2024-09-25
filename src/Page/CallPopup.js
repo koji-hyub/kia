@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import Button from '../Components/Button/Button';
 import Modal from '../Components/Popup/Modal';
 import Text from '../Components/Text/Text';
+import Heading from '../Components/Heading/Heading';
+import EvaluateHalf from '../Components/Evaluate/EvaluateHalf';
+import InputText from '../Components/Input/InputText';
 const ChatApp = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedModal, setSelectedModal] = useState(null); // 선택된 모달 항목 저장
@@ -49,6 +52,35 @@ const ChatApp = () => {
       btnName1: '확인',
       btnName2: null,
       className: 'popup-pull'
+    },
+    {
+      // 약관 상세 보기
+      id: 3,
+      title: '상담사 채팅 만족도 조사',
+      content: (
+        <div className={'satisfied'}>
+          <Heading level={3} size={'--font-size-5'} title={'채팅 상담은 어떠셨나요?'} />
+          <div className={'evaluate'}>
+            <EvaluateHalf />
+            <Text
+              color={'--Grey-Spectrum-Coll-Grey-40'}
+              size={'--font-size-11'}
+              text={'좌우로 드래그 하세요.'}
+            />
+          </div>
+          <Heading level={3} size={'--font-size-5'} title={'추가의견이 있으면 입력해주세요.'} />
+          <InputText placeholder={'내용을 입력해 주세요.'} />
+          {/*<textarea placeholder={'내용을 입력해 주세요.'} />*/}
+          {/*<textarea value={'내용을 입력해 주세요.'} />*/}
+        </div>
+      ),
+      footer: true,
+      buttons: true,
+      link: null,
+      linkText: null,
+      btnName1: '다음에 하기',
+      btnName2: '완료',
+      className: 'popup-center'
     }
   ];
 

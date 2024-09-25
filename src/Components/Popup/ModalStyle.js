@@ -118,6 +118,40 @@ const CommonSkin = css`
       }
     }
   }
+
+  //textarea {
+  //  font-size: var(--font-size-5, 14px);
+  //  resize: none;
+  //  width: 100%;
+  //  height: 118rem;
+  //  padding: 12rem 16rem;
+  //  border-radius: 4rem;
+  //  border: 1px solid var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
+  //  background: var(--Primary-Polar-White, #fff);
+  //}
+
+  // 컨텐츠 영역
+  .satisfied {
+    h3 {
+      margin-bottom: 8rem;
+    }
+    .evaluate {
+      margin: 8rem 0 24rem;
+      display: flex;
+      padding: 12rem 0;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      border-radius: 4px;
+      border: 1rem solid var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
+      background: var(--Grey-Spectrum-Coll-Grey-02, #f2f4f6);
+
+      .start-set {
+        margin-bottom: 8rem;
+      }
+    }
+  }
 `;
 
 const BasicSkin = css`

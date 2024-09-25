@@ -18,6 +18,7 @@ import ButtonIcon from '../../Components/Button/ButtonIcon';
 import { IconArrow, IconLink, IconRefresh } from '../../assets/images/common/IconSet';
 import DateTime from '../../Components/DateTime/DateTime';
 import ButtonLink from '../../Components/Button/ButtonLink';
+import Input from '../../Components/Input/Input';
 // import MessageInput from '../../Components/MessageInput/MessageInput';
 
 const MainWrap = Style(APP_SKIN);
@@ -37,6 +38,16 @@ const PubMain = () => {
         agentTooltip={agentTooltip}
         setAgentTooltip={setAgentTooltip}
         text={'약관에 동의하지 않았습니다.<br />진행 중인 대화는 여기서 마치겠습니다.'}
+      />
+      <Input
+        label="Search"
+        id="search"
+        name="search"
+        type="text"
+        required={true}
+        className="search"
+        placeholder="Search something..."
+        iconSearchText="🔍"
       />
       <ChatBot text={'약관에 동의하지 않았습니다.'} />
       <ChatBot text={'약관에 동의하지 않았습니다.<br />진행 중인 대화는 여기서 마치겠습니다.'} />
