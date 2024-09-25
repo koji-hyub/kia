@@ -1,72 +1,90 @@
 import styled, { css } from 'styled-components';
 
 const CommonSkin = css`
-  //position: fixed;
-  //bottom: 0;
-  padding: 16rem 20rem;
-  background: white; /* 푸터 배경색 */
-  background: var(--Primary-Polar-White);
-  display: flex;
-  align-items: flex-end;
-  .message-input {
+  .message-area {
+    padding: 16rem 20rem;
+    background: white; /* 푸터 배경색 */
+    background: var(--Primary-Polar-White);
     display: flex;
     align-items: flex-end;
-    width: 100%;
-    padding: 6rem 6rem 6rem 20rem;
-    border-radius: 24px;
-    border: 1rem solid var(--Primary-Midnight-Black, #05141f);
-    background: var(--Primary-Polar-White, #fff);
-    //margin-left: 12rem;
-    .textarea {
-      outline: none;
-      padding-top: 8rem;
-      border: none;
-      width: calc(100% - 80rem);
-
-      color: var(--Primary-Midnight-Black, #05141f);
-      /* Body/B5 */
-      font-size: var(--font-size-5, 14rem);
-      font-weight: var(--font-weight-regular, 400);
-      line-height: var(--line-height-4, 20rem); /* 142.857% */
-
-      height: 36rem;
-      max-height: 60rem;
-    }
-    .send-item {
-      flex: 1;
+    .message-input {
       display: flex;
-      align-items: center;
-      justify-content: flex-end; //top: 6rem;
-      //right: 6rem;
-      .clear {
-        //display: none;
-        justify-content: center;
-        align-items: center;
-        background: #ccd0d3;
-        width: 24rem;
-        height: 24rem;
-        border-radius: 50%;
-        margin-right: 10rem;
-        margin-left: 10rem;
-      }
+      align-items: flex-end;
+      width: 100%;
+      padding: 6rem 6rem 6rem 20rem;
+      border-radius: 24px;
+      border: 1rem solid var(--Primary-Midnight-Black, #05141f);
+      background: var(--Primary-Polar-White, #fff);
+      //margin-left: 12rem;
+      .textarea {
+        outline: none;
+        padding-top: 8rem;
+        border: none;
+        width: calc(100% - 80rem);
 
-      .send {
-        color: var(--Primary-Polar-White);
-        &.isActive {
-          background: #05141f;
-        }
-        &.isSearch {
-          background: #05141f;
-        }
-        display: flex;
-        width: 36rem;
+        color: var(--Primary-Midnight-Black, #05141f);
+        /* Body/B5 */
+        font-size: var(--font-size-5, 14rem);
+        font-weight: var(--font-weight-regular, 400);
+        line-height: var(--line-height-4, 20rem); /* 142.857% */
+
         height: 36rem;
-        justify-content: center;
-        align-items: center;
-        background: #e7e9ec;
-        padding: 8rem;
-        border-radius: 50%;
+        max-height: 60rem;
       }
+      .send-item {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; //top: 6rem;
+        //right: 6rem;
+        .clear {
+          //display: none;
+          justify-content: center;
+          align-items: center;
+          background: #ccd0d3;
+          width: 24rem;
+          height: 24rem;
+          border-radius: 50%;
+          margin-right: 10rem;
+          margin-left: 10rem;
+        }
+
+        .send {
+          color: var(--Primary-Polar-White);
+          &.isActive {
+            background: #05141f;
+          }
+          &.isSearch {
+            background: #05141f;
+          }
+          display: flex;
+          width: 36rem;
+          height: 36rem;
+          justify-content: center;
+          align-items: center;
+          background: #e7e9ec;
+          padding: 8rem;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .bottom-sheet {
+    padding: 24rem 24rem 0;
+    border-radius: 16rem 16rem 0 0;
+    background: var(--Primary-Polar-White, #fff);
+    overflow: hidden;
+    //transition: height 0.4s;
+    transition: height 0.4s ease, opacity 0.5s ease, visibility 0.5s ease;
+    height: 0; /* 초기 높이 0 */
+    opacity: 0; /* 초기 투명도 0 */
+    visibility: hidden; /* 초기 비가시화 */
+    > .inner {
+      transition: height 0.3s ease-in-out; /* 트랜지션 애니메이션 settimeout의 일치시킨다. */
+
+      overflow-y: scroll;
+      //overflow: hidden;
     }
   }
 
