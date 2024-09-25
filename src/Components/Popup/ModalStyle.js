@@ -152,6 +152,15 @@ const CommonSkin = css`
       }
     }
   }
+
+  // 정보 입력
+  .member-information {
+    ul {
+      li {
+        margin-bottom: 12rem;
+      }
+    }
+  }
 `;
 
 const BasicSkin = css`

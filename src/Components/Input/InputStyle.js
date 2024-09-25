@@ -4,10 +4,53 @@ import styled, { css } from 'styled-components';
 /* 인풋 리셋 */
 const CommonSkin = css`
   label {
-    font-size: var(--font-size-7, 12px);
+    color: var(--Primary-Midnight-Black, #05141f);
+    font-size: var(--font-size-7, 12rem);
+    font-weight: var(--font-weight-bold, 600);
+    line-height: var(--line-height-4, 20rem); /* 166.667% */
+    margin-bottom: 4rem;
+    &.required {
+      &:after {
+        margin-left: 4rem;
+        display: inline-flex;
+        content: '*';
+        color: var(--Alert-Error, #ea0029);
+      }
+    }
   }
   .input {
     position: relative;
+
+    //border: 1px solid red;
+
+    input[type='password'],
+    input[type='number'],
+    input[type='text'] {
+      width: 100%;
+      height: 40px;
+      padding: 10rem 16rem;
+
+      border-radius: 4rem;
+      border: 1rem solid var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
+
+      background: var(--Primary-Polar-White, #fff);
+      font-size: var(--font-size-5, 14rem);
+      background: #fff;
+      transition: all 0.3s;
+      &:focus {
+        border-color: #000;
+      }
+      &.error {
+        border-color: #de1818;
+        background: #fff;
+        color: #de1818;
+      }
+      &.isTrue {
+        border-color: transparent;
+        color: blue;
+      }
+    }
+
     .remote-item {
       position: absolute;
       top: 50%;
@@ -54,39 +97,11 @@ const CommonSkin = css`
         line-height: 150%; /* 19.6px */
       }
     }
-    input[type='password'],
-    input[type='number'],
-    input[type='text'] {
-      width: 100%;
-      height: 40px;
-      padding: 10rem 16rem;
-
-      border-radius: 4rem;
-      border: 1rem solid var(--Grey-Spectrum-Coll-Grey-20, #ccd0d3);
-      background: var(--Primary-Polar-White, #fff);
-      font-size: var(--font-size-5, 14rem);
-      background: #fff;
-      transition: all 0.3s;
-      &:focus {
-        border-color: #000;
-      }
-      &.error {
-        border-color: #de1818;
-        background: #fff;
-        color: #de1818;
-      }
-      &.isTrue {
-        border-color: transparent;
-        color: blue;
-      }
-    }
   }
-  .error-txt {
-    color: #de1818;
+
+  .msg-txt {
     margin-top: 4rem;
-    font-size: 12rem;
-    font-style: normal;
-    font-weight: 700;
+    font-size: var(--font-size-7);
     line-height: 140%; /* 16.8px */
   }
 

@@ -5,10 +5,51 @@ import Text from '../Components/Text/Text';
 import Heading from '../Components/Heading/Heading';
 import EvaluateHalf from '../Components/Evaluate/EvaluateHalf';
 import InputText from '../Components/Input/InputText';
+import Input from '../Components/Input/Input';
 const ChatApp = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedModal, setSelectedModal] = useState(null); // 선택된 모달 항목 저장
   const triggerButtonRef = useRef(null); // 버튼의 참조를 저장하기 위한 ref
+
+  // 회원정보 입력
+  const infoItem = [
+    {
+      id: 1,
+      label: '성명',
+      placeholder: '성명을 입력하세요.',
+      required: true,
+      error: true,
+      msg: '',
+      errorMsg: '성명이 입력되지 않았습니다.'
+    },
+    {
+      id: 2,
+      label: '휴대폰번호',
+      placeholder: '휴대폰번호를 입력하세요.',
+      required: true,
+      error: false,
+      msg: '공백 특수기호 없이 숫자만 입력하세요.',
+      errorMsg: '휴대폰번호가 입력되지 않았습니다.'
+    },
+    {
+      id: 3,
+      label: '생년월일',
+      placeholder: '생년월일을 입력하세요.',
+      required: true,
+      error: false,
+      msg: '예) 19801212',
+      errorMsg: '생년월일이 입력되지 않았습니다.'
+    },
+    {
+      id: 4,
+      label: '차량번호',
+      placeholder: '차량번호를 입력하세요',
+      required: false,
+      error: false,
+      msg: '',
+      errorMsg: ''
+    }
+  ];
 
   const modalItems = [
     {
@@ -70,8 +111,6 @@ const ChatApp = () => {
           </div>
           <Heading level={3} size={'--font-size-5'} title={'추가의견이 있으면 입력해주세요.'} />
           <InputText placeholder={'내용을 입력해 주세요.'} />
-          {/*<textarea placeholder={'내용을 입력해 주세요.'} />*/}
-          {/*<textarea value={'내용을 입력해 주세요.'} />*/}
         </div>
       ),
       footer: true,
@@ -80,6 +119,41 @@ const ChatApp = () => {
       linkText: null,
       btnName1: '다음에 하기',
       btnName2: '완료',
+      className: 'popup-center'
+    },
+    {
+      // 약관 상세 보기
+      id: 4,
+      title: '개인 회원 정보 입력',
+      content: (
+        <div className={'member-information'}>
+          <ul>
+            {infoItem.map((item) => (
+              <li key={item.id}>
+                <Input
+                  label={item.label}
+                  placeholder={item.placeholder}
+                  required={item.required}
+                  error={item.error}
+                  msg={item.msg}
+                  errorMsg={item.errorMsg}
+                />
+              </li>
+            ))}
+          </ul>
+          <Text
+            color={'--Alert-Error'}
+            size={'--font-size-7'}
+            text={'* 표시 항목은 필수 입력입니다.'}
+          />
+        </div>
+      ),
+      footer: true,
+      buttons: false,
+      link: null,
+      linkText: null,
+      btnName1: '확인',
+      btnName2: null,
       className: 'popup-center'
     }
   ];
