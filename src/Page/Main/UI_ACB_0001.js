@@ -38,8 +38,11 @@ const PubMain = () => {
         text={'약관에 동의하지 않았습니다.<br />진행 중인 대화는 여기서 마치겠습니다.'}
       />
 
-      <ChatBot text={'약관에 동의하지 않았습니다.'} />
-      <ChatBot text={'약관에 동의하지 않았습니다.<br />진행 중인 대화는 여기서 마치겠습니다.'} />
+      <ChatBot text={'약관에 동의하지 않았습니다.'} refresh={refresh} />
+      <ChatBot
+        text={'약관에 동의하지 않았습니다.<br />진행 중인 대화는 여기서 마치겠습니다.'}
+        refresh={refresh}
+      />
       <MainSwiper />
       <ChatBot>
         <ContentItem>
