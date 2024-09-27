@@ -3,6 +3,8 @@ import Style from './MessageStyle';
 // import MessageInput from '../../../Components/MessageInput/MessageInput';
 import { IconClear, IconSend, IconSendSearch } from '../../../assets/images/common/IconSet';
 import Text from '../../../Components/Text/Text';
+import Button from '../../../Components/Button/Button';
+import { Link } from 'react-router-dom';
 
 const Message = Style(APP_SKIN);
 
@@ -41,14 +43,18 @@ const MessageWrap = () => {
     if (bottomOpen && bottomSheetRef.current) {
       const bottomSheet = bottomSheetRef.current;
       const innerElement = bottomSheet.querySelector('.inner');
-      const h = innerElement.clientHeight;
 
-      setTimeout(() => {
-        setSheetHeight(h); // 애니메이션을 위해 높이 적용
-      }, 10); // 트랜지션과 일치시키기 위해 약간의 딜레이 설정
+      const h = innerElement.scrollHeight; // scrollHeight 사용
+      setSheetHeight(h); // 동적으로 높이 설정
+
+      console.log('Bottom Sheet 열림:', h);
+    } else {
+      setSheetHeight(0); // 닫힐 때 높이를 0으로
+      console.log('Bottom Sheet 닫힘');
     }
   }, [bottomOpen]);
 
+  // 닫을 때
   const handleCloseBottomSheet = () => {
     // 애니메이션을 위해 height를 0으로 변경
     setSheetHeight(0);
@@ -58,6 +64,30 @@ const MessageWrap = () => {
       setBottomOpen(false);
     }, 500); // 트랜지션 시간과 맞춰 500ms 후에 bottomOpen을 false로 설정
   };
+
+  const itemList = [
+    { id: 1, text: `<span className={'point'}>구매</span>상담 받고 싶어` },
+    { id: 2, text: '내 차 부품 <span>구매</span>하려면 어떻게 해야 해?' },
+    { id: 3, text: '이번 달 <span>구매</span> 혜택 알려줘' },
+    { id: 4, text: '자동차 리스로 차를 <span>구매</span>하고 싶어요' }
+  ];
+
+  const BottomItem = () => {
+    return (
+      <div className={'bottom-item'}>
+        <ul>
+          {itemList.map((item) => (
+            <li key={item.id}>
+              <button
+                onClick={handleCloseBottomSheet}
+                dangerouslySetInnerHTML={{ __html: item.text }} // 이 부분에 적용
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
   return (
     <Message>
       {bottomOpen && (
@@ -65,23 +95,18 @@ const MessageWrap = () => {
           className={'bottom-sheet'}
           ref={bottomSheetRef}
           style={{
-            height: `${sheetHeight}px`, // height를 동적으로 설정
             opacity: bottomOpen ? 1 : 0,
-            visibility: bottomOpen ? 'visible' : 'hidden'
+            visibility: bottomOpen ? 'visible' : 'hidden',
+            height: 'auto'
           }}
         >
-          <div className="inner">
-            <Text text={'어'} onClick={handleCloseBottomSheet} />
-            <Text text={'어'} />
-            <Text text={'어'} />
-            <Text text={'어'} />
-            <Text text={'어'} />
-            <Text text={'어'} />
-            <Text text={'어'} />
-            <Text text={'어'} />
-            <Text text={'어'} />
-            <Text text={'어'} />
-            <Text text={'어'} />
+          <div
+            className="inner"
+            style={{
+              height: `${sheetHeight}px` // height를 동적으로 설정
+            }}
+          >
+            <BottomItem />
           </div>
         </div>
       )}

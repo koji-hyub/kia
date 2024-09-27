@@ -26,14 +26,14 @@ const CommonSkin = css`
         position: relative;
         background: var(--Primary-Midnight-Black);
         .img {
-          width: 56rem;
-          height: 56rem;
+          width: 34rem;
+          height: 34rem;
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
           img {
-            width: 56rem;
+            width: 34rem;
             height: auto;
           }
         }

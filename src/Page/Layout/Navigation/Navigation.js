@@ -8,6 +8,7 @@ function Navigation(props) {
     { path: '/Guide', menu: '공통가이드' },
     { path: '/', menu: '메인페이지' },
     { path: 'Main/UI_ACB_0001', menu: 'UI_ACB_0001' },
+    { path: 'Main/UI_ACB_0002', menu: 'UI_ACB_0002' },
     { path: '/CallPopup', menu: 'UI 팝업' },
     { path: '/Test', menu: '테스트' }
   ];

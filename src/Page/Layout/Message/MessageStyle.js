@@ -82,12 +82,35 @@ const CommonSkin = css`
     visibility: hidden; /* 초기 비가시화 */
     > .inner {
       transition: height 0.3s ease-in-out; /* 트랜지션 애니메이션 settimeout의 일치시킨다. */
-
       overflow-y: scroll;
       //overflow: hidden;
+      max-height: 136rem;
     }
   }
 
+  .bottom-item {
+    li {
+      &:hover {
+        border-radius: 4px;
+        background: var(--Color-Spectrum-Neon-Green-Neon-Green-10, #f1f8e9);
+      }
+      button {
+        text-align: left;
+        padding: 8rem;
+        width: 100%;
+        display: block;
+
+        color: var(--Color-Spectrum-Neon-Green-Neon-Green-100, #0f2009);
+        /* Body/B7 */
+        font-size: var(--font-size-7, 12rem);
+        font-weight: var(--font-weight-regular, 400);
+        line-height: var(--line-height-8, 18rem); /* 150% */
+        span {
+          color: var(--Secondary-Neon-Green, #468f13);
+        }
+      }
+    }
+  }
   //.message-item {
   //  .inner {
   //    padding: 12rem 20rem;

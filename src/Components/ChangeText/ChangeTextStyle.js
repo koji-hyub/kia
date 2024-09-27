@@ -5,6 +5,7 @@ const CommonSkin = css`
   position: relative;
   display: flex;
   justify-content: center;
+  margin: 24rem 0;
   &:before {
     position: absolute;
     content: '';
@@ -18,7 +19,7 @@ const CommonSkin = css`
   .text {
     position: relative; /* 부모 컨테이너에서 상대적인 위치 설정 */
     display: inline-block; /* 텍스트가 그 너비만큼 공간을 차지하도록 설정 */
-    margin: 25rem 0;
+
     padding: 0 8rem;
     background: var(--Grey-Spectrum-Coll-Grey-05);
 
