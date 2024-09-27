@@ -7,7 +7,7 @@ import { IconModifyCancel, IconSend, IconUserModify } from '../../assets/images/
 const User = Style(APP_SKIN);
 
 function UserWrap(props) {
-  const { children, text, userTooltip, setUserTooltip } = props;
+  const { children, text, userTooltip, setUserTooltip, modifyBtn } = props;
 
   const toolTipRef = useRef(null);
   const textareaRef = useRef(null); // textarea에 대한 참조 생성
@@ -53,7 +53,7 @@ function UserWrap(props) {
       <div className={'message-box'}>
         <div className={'text-box'}>
           <div className={'tooltip'}>
-            {!modify ? (
+            {modifyBtn ? (
               <ButtonIcon icon={<IconUserModify />} blindText={'수정하기'} onClick={handleModify} />
             ) : null}
             {userTooltip && (

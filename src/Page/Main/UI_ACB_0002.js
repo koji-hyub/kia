@@ -28,10 +28,16 @@ const PubMain = () => {
   const [refresh, setRefresh] = useState(true);
 
   const [agentName, setAgentName] = useState('김기아');
+  const [modifyBtn, setModifyBtn] = useState(true);
 
   return (
     <MainWrap>
-      <User userTooltip={userTooltip} setUserTooltip={setUserTooltip} text={'상담사 채팅'} />
+      <User
+        userTooltip={userTooltip}
+        setUserTooltip={setUserTooltip}
+        text={'상담사 채팅'}
+        modifyBtn={modifyBtn}
+      />
       <ChatBot>
         <ContentItem>
           <Heading level={3} title={'약관 동의'} size={'--font-size-4'} bold={'bold'} />
@@ -94,7 +100,7 @@ const PubMain = () => {
       <ChatBot text={'로그인을 취소합니다.'} refresh={refresh} />
       <ChatBot text={'로그인 되었습니다.'} refresh={refresh} />
       <DateTime />
-      <ChangeText text={'챗봇 상담을 시작합니다.'} />
+      <ChangeText text={'상담사 채팅을 시작합니다.'} />
       <LoadingText />
       <Agent
         text={`새로운 생각의 시작 기아상담사 ${agentName}입니다. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요?`}
@@ -104,12 +110,12 @@ const PubMain = () => {
       />
       <User text={'시승 문의 하려고 합니다.'} />
       <User text={'시승 문의 하려고 합니다.'} />
-      <LoadingText />
-      <Agent text={`무엇을 도와드릴까요?`} />
-      <ChatBot text={'로그인 되었습니다.'} refresh={refresh} />
-      <User text={'시승 문의 하려고 합니다.'} />
-      <LoadingText />
-      <ChatBot text={'로그인 되었습니다.'} refresh={refresh} />
+      {/*<LoadingText />*/}
+      {/*<Agent text={`무엇을 도와드릴까요?`} />*/}
+      {/*<ChatBot text={'로그인 되었습니다.'} />*/}
+      {/*<User text={'시승 문의 하려고 합니다.'} />*/}
+      {/*<LoadingText />*/}
+      {/*<ChatBot text={'로그인 되었습니다.'} />*/}
       {/*/!*<User />*!/*/}
       {/*/!*모달 팝업 샘플 테스트 *!/*/}
     </MainWrap>
