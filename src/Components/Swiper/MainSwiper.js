@@ -12,6 +12,7 @@ import Style from './MainSwiperStyle';
 import Text from '../Text/Text';
 import Heading from '../Heading/Heading';
 import Button from '../Button/Button';
+import { IconArrow } from '../../assets/images/common/IconSet';
 
 // SwiperCore에 필요한 모듈 등록
 SwiperCore.use([Autoplay, Pagination, Navigation]);
@@ -23,7 +24,15 @@ const swiperItem = [
     id: 1,
     title: 'Title',
     text: 'subTitle (선택)',
-    button: <Button className={'secondary'} size={'small'} text={'Button'} />
+    button: (
+      <Button
+        className={'secondary'}
+        size={'small'}
+        iconRight={<IconArrow width={12} height={12} />}
+        iconLeft={<IconArrow width={12} height={12} />}
+        text={'Button'}
+      />
+    )
   },
   {
     id: 2,

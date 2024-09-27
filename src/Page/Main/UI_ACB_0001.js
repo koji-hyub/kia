@@ -72,7 +72,8 @@ const PubMain = () => {
       </ChatBot>
       <LoadingText />
       {/*<DateTime />*/}
-      <ChangeText text={'챗봇 상담이 종료되었습니다.'} />
+      <ChangeText text={'챗봇 상담을 종료합니다.'} />
+      <DateTime />
       {/*<Agent />*/}
       <User
         userTooltip={userTooltip}

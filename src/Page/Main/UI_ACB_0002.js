@@ -95,7 +95,7 @@ const PubMain = () => {
       <ChatBot text={'로그인을 취소합니다.'} refresh={refresh} />
       <ChatBot text={'로그인 되었습니다.'} refresh={refresh} />
       <DateTime />
-      <ChangeText text={'상담 채팅을 시작합니다.'} />
+      <ChangeText text={'챗봇 상담을 시작합니다.'} />
 
       <LoadingText />
 

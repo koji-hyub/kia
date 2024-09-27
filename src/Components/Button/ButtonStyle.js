@@ -7,6 +7,17 @@ const CommonSkin = css`
   align-items: center;
   min-width: 120rem;
   border-radius: 4rem;
+
+  .icon-left {
+    margin-right: 4rem;
+  }
+  .icon-left,
+  .icon-right {
+    margin-left: 4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
   &:first-of-type {
     margin-left: 0;
   }
