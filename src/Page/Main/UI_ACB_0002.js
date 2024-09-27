@@ -62,7 +62,6 @@ const PubMain = () => {
           </div>
         </ContentItem>
       </ChatBot>
-
       <ChatBot
         refresh={refresh}
         // agentTooltip={agentTooltip}
@@ -96,14 +95,21 @@ const PubMain = () => {
       <ChatBot text={'로그인 되었습니다.'} refresh={refresh} />
       <DateTime />
       <ChangeText text={'챗봇 상담을 시작합니다.'} />
-
       <LoadingText />
-
       <Agent
         text={`새로운 생각의 시작 기아상담사 ${agentName}입니다. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요?`}
       />
-
+      <Agent
+        text={`새로운 생각의 시작 기아상담사 ${agentName}입니다. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요. 무엇을 도와드릴까요?`}
+      />
       <User text={'시승 문의 하려고 합니다.'} />
+      <User text={'시승 문의 하려고 합니다.'} />
+      <LoadingText />
+      <Agent text={`무엇을 도와드릴까요?`} />
+      <ChatBot text={'로그인 되었습니다.'} refresh={refresh} />
+      <User text={'시승 문의 하려고 합니다.'} />
+      <LoadingText />
+      <ChatBot text={'로그인 되었습니다.'} refresh={refresh} />
       {/*/!*<User />*!/*/}
       {/*/!*모달 팝업 샘플 테스트 *!/*/}
     </MainWrap>

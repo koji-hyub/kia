@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 const CommonSkin = css`
   display: flex;
   //max-width: 80%;
+  & + .user,
   & + .chat-bot {
     margin-top: 24rem;
   }

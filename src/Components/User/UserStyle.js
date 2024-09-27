@@ -4,6 +4,10 @@ import styled, { css } from 'styled-components';
 const CommonSkin = css`
   display: flex;
   justify-content: flex-end;
+  &.user + .agent,
+  &.user + .chat-bot {
+    margin-top: 24rem;
+  }
   .message-box {
     display: block;
     width: 100%;

@@ -9,7 +9,7 @@ function AgentWrap({ children, text }) {
   const [agent, setAgent] = useState(true);
 
   return (
-    <Agent>
+    <Agent className={'agent'}>
       <div className={'icon'}>
         <IconAgent />
       </div>

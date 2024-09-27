@@ -49,7 +49,7 @@ function UserWrap(props) {
   }, [userTooltip, setUserTooltip]);
 
   return (
-    <User>
+    <User className={'user'}>
       <div className={'message-box'}>
         <div className={'text-box'}>
           <div className={'tooltip'}>
