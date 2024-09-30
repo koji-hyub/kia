@@ -9,6 +9,9 @@ function Navigation(props) {
     { path: '/', menu: '메인페이지' },
     { path: 'Main/UI_ACB_0001', menu: 'UI_ACB_0001' },
     { path: 'Main/UI_ACB_0002', menu: 'UI_ACB_0002' },
+    { path: 'Main/UI_ACB_0004', menu: 'UI_ACB_0004' },
+    { path: 'Main/UI_ACB_0005', menu: 'UI_ACB_0005' },
+    { path: 'Main/UI_ACB_000101', menu: 'UI_ACB_000101' },
     { path: '/CallPopup', menu: 'UI 팝업' },
     { path: '/Test', menu: '테스트' }
   ];

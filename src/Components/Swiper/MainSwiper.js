@@ -1,11 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 import SwiperCore from 'swiper';
 
 import Style from './MainSwiperStyle';
@@ -15,7 +13,7 @@ import Button from '../Button/Button';
 import { IconArrow } from '../../assets/images/common/IconSet';
 
 // SwiperCore에 필요한 모듈 등록
-SwiperCore.use([Autoplay, Pagination, Navigation]);
+SwiperCore.use([Pagination, Navigation]);
 
 const SwiperWrap = Style(APP_SKIN);
 
@@ -64,8 +62,9 @@ const swiperItem = [
   }
 ];
 
-const MainSwiper = () => {
+const MainSwiper = (props) => {
   const swiperRef = useRef(null); // Swiper 컴포넌트에 접근하기 위한 ref
+  const { children } = props;
 
   return (
     <SwiperWrap>
@@ -81,22 +80,23 @@ const MainSwiper = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {swiperItem &&
-          swiperItem.map((item, index) => (
-            <SwiperSlide key={item.id}>
-              <div className={'top'}>
-                <Heading level={3} title={item.title} size={'--font-size-3'} bold={'bold'} />
-              </div>
-              <div className={'item'}>
-                <Text
-                  text={item.text}
-                  size={'--font-size-7, 12px'}
-                  color={'--Grey-Spectrum-Coll-Grey-40, #9BA2A9'}
-                />
-              </div>
-              <div className={'btn-area'}>{item.button}</div>
-            </SwiperSlide>
-          ))}
+        {children
+          ? children
+          : swiperItem.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div className={'top'}>
+                  <Heading level={3} title={item.title} size={'--font-size-3'} bold={'bold'} />
+                </div>
+                <div className={'item'}>
+                  <Text
+                    text={item.text}
+                    size={'--font-size-7, 12px'}
+                    color={'--Grey-Spectrum-Coll-Grey-40, #9BA2A9'}
+                  />
+                </div>
+                <div className={'btn-area'}>{item.button}</div>
+              </SwiperSlide>
+            ))}
       </Swiper>
     </SwiperWrap>
   );

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 // 공통으로 사용되는 스타일
 const CommonSkin = css`
   display: flex;
-  //max-width: 80%;
+  //width: calc(100% - 32rem);
   & + .user,
   & + .chat-bot {
     margin-top: 24rem;
@@ -31,9 +31,9 @@ const CommonSkin = css`
   }
 
   > .item {
+    width: 280rem;
     margin-left: 8rem;
     > .text-box {
-      width: 280rem;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -75,6 +75,10 @@ const CommonSkin = css`
         font-weight: var(--font-weight-regular, 400);
         line-height: var(--line-height-4, 20rem); /* 142.857% */
       }
+    }
+
+    .replies-item {
+      margin-top: 16rem;
     }
   }
 `;

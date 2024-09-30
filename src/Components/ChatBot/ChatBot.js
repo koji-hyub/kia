@@ -27,7 +27,25 @@ function AgentWrap({ text, children, agentTooltip, setAgentTooltip, refresh }) {
       </div>
       <div className={'item'}>
         {children ? (
-          children
+          <>
+            <div className={'text-box'} style={{ marginBottom: '8rem' }}>
+              <Text className={'text'} text={text && text} />
+              <div className={'tooltip'}>
+                {refresh ? (
+                  <ButtonIcon icon={<IconRefresh />} blindText={'새로고침'} className={'refresh'} />
+                ) : (
+                  ' '
+                )}
+
+                {agentTooltip && (
+                  <div className={'text'} ref={toolTipRef}>
+                    답변 재생성 요청
+                  </div>
+                )}
+              </div>
+            </div>
+            {children}
+          </>
         ) : (
           <div className={'text-box'}>
             <Text className={'text'} text={text && text} />

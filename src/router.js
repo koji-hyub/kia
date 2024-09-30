@@ -8,6 +8,9 @@ import Test from './Page/Test';
 import CallPopup from './Page/CallPopup';
 import UI_ACB_0001 from './Page/Main/UI_ACB_0001';
 import UI_ACB_0002 from './Page/Main/UI_ACB_0002';
+import UI_ACB_0004 from './Page/Main/UI_ACB_0004';
+import UI_ACB_0005 from './Page/Main/UI_ACB_0005';
+import UI_ACB_000101 from './Page/Main/UI_ACB_000101';
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +45,18 @@ export const router = createBrowserRouter([
       {
         path: '/Main/UI_ACB_0002',
         element: <UI_ACB_0002 />
+      },
+      {
+        path: '/Main/UI_ACB_0004',
+        element: <UI_ACB_0004 />
+      },
+      {
+        path: '/Main/UI_ACB_0005',
+        element: <UI_ACB_0005 />
+      },
+      {
+        path: '/Main/UI_ACB_000101',
+        element: <UI_ACB_000101 />
       }
     ]
   },

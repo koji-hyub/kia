@@ -1,13 +1,8 @@
 import styled, { css } from 'styled-components';
 
 const CommonSkin = css`
-  //height: 530rem;
-  //background: #383838;
-  color: #fff;
   position: relative;
-  //border: 1px solid red;
   margin: 14rem -20px 24rem;
-
   .swiper {
     height: 100%;
     padding: 0 20rem 40rem;
@@ -39,7 +34,6 @@ const CommonSkin = css`
       }
     }
   }
-
   .swiper-pagination {
     .swiper-pagination-bullet {
       height: 8rem;
@@ -55,8 +49,6 @@ const CommonSkin = css`
       }
     }
   }
-
-  //
   .swiper-button-disabled {
     opacity: 0;
   }
@@ -84,6 +76,67 @@ const CommonSkin = css`
   }
   .swiper-button-prev {
     padding-left: 5rem;
+  }
+
+  //***********************************//
+  //*********** 커스텀 스와이프 ***********//
+  //***********************************//
+  // 리스트 아이템
+  .list-item {
+    .title-item {
+      padding-bottom: 12rem;
+      margin-bottom: 12rem;
+      border-bottom: 1rem solid var(--Grey-Spectrum-Coll-Grey-20);
+    }
+    .item-box {
+      .item {
+        margin: 0;
+        li {
+          a {
+            display: flex;
+            align-items: flex-start;
+            color: var(--Color-Spectrum-Neon-Green-Neon-Green-100, #0f2009);
+            padding: 8rem;
+            font-size: var(--font-size-7, 12rem);
+            font-style: normal;
+            font-weight: var(--font-weight-regular, 400);
+            line-height: var(--line-height-8, 18rem); /* 150% */
+
+            &:hover {
+              border-radius: 4rem;
+              background: var(--Color-Spectrum-Neon-Green-Neon-Green-10, #f1f8e9);
+            }
+            .num {
+              margin-right: 4rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 18rem;
+              height: 18rem;
+              padding: 2rem 3rem;
+              border-radius: 50%;
+              color: var(--Primary-Polar-White);
+              background: var(--Primary-Midnight-Black, #05141f);
+
+              /* Title/T14 */
+              font-size: var(--font-size-9);
+              font-weight: var(--font-weight-bold, 600);
+              line-height: var(--line-height-6, 14px); /* 155.556% */
+            }
+            .text {
+              width: calc(100% - 22rem);
+            }
+          }
+        }
+      }
+      .more-btn {
+        margin-top: 16rem;
+        width: 100%;
+        svg {
+          transform: rotate(90deg);
+        }
+      }
+    }
   }
 `;
 

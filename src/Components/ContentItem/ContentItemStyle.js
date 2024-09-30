@@ -23,6 +23,9 @@ const CommonSkin = css`
   .btn.text + .btn-area {
     margin-top: 0;
   }
+  .btn-area + .btn-area {
+    margin-top: 8rem;
+  }
   .btn-area {
     margin-top: 12rem;
     display: flex;
@@ -40,6 +43,9 @@ const CommonSkin = css`
         //flex: 1; /* 두 번째 버튼은 남은 공간을 차지 */
         //min-width: 0; /* 최소 너비는 0으로 설정 */
         width: calc(100% - 88rem);
+      }
+      &:only-child {
+        width: 100%;
       }
     }
   }
