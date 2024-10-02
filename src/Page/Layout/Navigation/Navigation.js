@@ -7,13 +7,19 @@ function Navigation(props) {
   const navigation = [
     { path: '/Guide', menu: '공통가이드' },
     { path: '/', menu: '메인페이지' },
-    { path: 'Main/UI_ACB_0001', menu: 'UI_ACB_0001' },
-    { path: 'Main/UI_ACB_0002', menu: 'UI_ACB_0002' },
-    { path: 'Main/UI_ACB_0004', menu: 'UI_ACB_0004' },
-    { path: 'Main/UI_ACB_0005', menu: 'UI_ACB_0005' },
-    { path: 'Main/UI_ACB_000101', menu: 'UI_ACB_000101' },
+    { path: '/Error_Page', menu: 'Error_Page' },
+    { path: '/Loading_Page', menu: 'Loading_Page' },
+    { path: '/UI_ACB_0001', menu: 'UI_ACB_0001' },
+    { path: '/UI_ACB_0002', menu: 'UI_ACB_0002' },
+    { path: '/UI_ACB_0004', menu: 'UI_ACB_0004' },
+    { path: '/UI_ACB_0005', menu: 'UI_ACB_0005' },
+    { path: '/UI_ACB_0007', menu: 'UI_ACB_0007' },
+    { path: '/UI_ACB_0008', menu: 'UI_ACB_0008' },
+    { path: '/UI_ACB_0009', menu: 'UI_ACB_0009' },
+    { path: '/UI_ACB_000101', menu: 'UI_ACB_000101' },
     { path: '/CallPopup', menu: 'UI 팝업' },
-    { path: '/Test', menu: '테스트' }
+    { path: '/Card_Type', menu: 'Card_Type' },
+    { path: '/Carousel', menu: 'Carousel' }
   ];
 
   const [open, isOpen] = useState(false);

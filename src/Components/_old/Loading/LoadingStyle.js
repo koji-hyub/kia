@@ -1,32 +1,46 @@
 import styled, { css, keyframes } from 'styled-components';
 
-// 애니메이션 정의
-const loadingAnimation = keyframes`
-    0% {
-        transform: rotate(0deg); /* 처음 상태 */
-    }
-    100% {
-        transform: rotate(360deg); /* 끝 상태 */
-    }
-`;
 // 공통 스타일
 const CommonSkin = css`
-  height: 100%;
+  padding: 8rem 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  .loader {
-    border: 3px solid var(--Primary-Midnight-Black);
-    border-top: 3px solid transparent;
-    border-radius: 50%; /* 원형 */
-    width: 24rem; /* 로딩 링의 너비 */
-    height: 24rem; /* 로딩 링의 높이 */
-    animation: ${loadingAnimation} 1.5s linear infinite;
-  }
+`;
+
+// 애니메이션 정의
+const loadingAnimation = keyframes`
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
 `;
 
 // 기본 스킨 스타일 정의
-const BasicSkin = css``;
+const BasicSkin = css`
+  div {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background: #3478fe;
+    animation: ${loadingAnimation} 1.5s infinite ease-in-out;
+
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    & + div {
+      margin-left: 4rem;
+    }
+  }
+`;
 
 // 테마 스킨 스타일 정의
 const ThemeSkin = css``;

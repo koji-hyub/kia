@@ -9,9 +9,7 @@ function HashtagWrap(props) {
   const {} = props;
   return (
     <ImageBox>
-      <span>
-        <IconNoImage />
-      </span>
+      <IconNoImage />
     </ImageBox>
   );
 }

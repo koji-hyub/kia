@@ -6,7 +6,7 @@ const LoadingText = Style(APP_SKIN);
 const text = 'Search...';
 const speed = 150; // 속도 조절을 위한 변수 (ms 단위)
 
-function LoadingWrap(props) {
+function LoadingWrap({ text = 'Search...', props }) {
   const loadingRef = useRef(null); // DOM 참조를 위한 useRef
   const requestRef = useRef(null); // 애니메이션 요청을 추적하기 위한 ref
 
@@ -31,7 +31,7 @@ function LoadingWrap(props) {
 
     // 클린업: 컴포넌트가 언마운트될 때 애니메이션 정지
     return () => cancelAnimationFrame(requestRef.current);
-  }, []);
+  }, [text]);
 
   return (
     <LoadingText>
@@ -42,7 +42,7 @@ function LoadingWrap(props) {
           </div>
         </div>
       </div>
-      <div ref={loadingRef}>Search...</div>
+      <div ref={loadingRef}></div>
     </LoadingText>
   );
 }

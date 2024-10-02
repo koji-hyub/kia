@@ -1,19 +1,18 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-// import IconCirceArrow from '~/assets/images/main/icon_circleArrow.svg';
 
 const CommonSkin = css`
-  //height: calc(100%);
-  padding: 20rem;
-  flex: 1;
-  height: 100%;
-  overflow: auto;
+  .text-box {
+    margin: 12rem 0 12rem;
+  }
 `;
 const BasicSkin = css`
-  /* 미디어 쿼리 정의 */
+  //align-items: flex;
 `;
+
 const ThemeSkin = css``;
 
+// 컴포넌트를 선택하는 함수
 const Style = (type) => {
   switch (type) {
     case 'BasicSkin':
@@ -30,4 +29,5 @@ const Style = (type) => {
       `;
   }
 };
+
 export default Style;

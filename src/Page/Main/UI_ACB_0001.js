@@ -74,6 +74,7 @@ const PubMain = () => {
         </ContentItem>
       </ChatBot>
       <LoadingText />
+      <LoadingText text={'답변 재 생성 중입니다...'} />
       {/*<DateTime />*/}
       <ChangeText text={'챗봇 상담을 종료합니다.'} />
       <DateTime />

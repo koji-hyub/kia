@@ -2,7 +2,7 @@ import React from 'react';
 import Style from '../Heading/HeadingStyle';
 
 const Heading = Style(APP_SKIN);
-function HeadingWrap({ level, title, badge, state, iconLeft, ...rest }) {
+function HeadingWrap({ level, title, badge, state, iconLeft, chip, ...rest }) {
   const HeadingTag = `h${level}`;
   return (
     <Heading as={HeadingTag} level={level} {...rest}>
@@ -10,6 +10,7 @@ function HeadingWrap({ level, title, badge, state, iconLeft, ...rest }) {
         ? title.split('\n').map((item, index) => (
             <React.Fragment key={index}>
               {index === 0 && iconLeft ? <span className={'left-icon'}>{iconLeft}</span> : ''}
+              {index === 0 && chip ? <span className={'chip'}>{chip}</span> : ''}
               <span className={'title'}>{item}</span>
               {index !== title.split('\n').length - 1 && <br />}
               {index === 0 && state && <span className={'state'}>{state}</span>}
