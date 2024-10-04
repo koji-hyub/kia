@@ -2,18 +2,27 @@ import styled, { css } from 'styled-components';
 
 // 공통으로 사용되는 스타일
 const CommonSkin = css`
-  margin-bottom: 16rem;
   border-radius: 4rem;
-  min-height: 169rem;
-  background: var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  border: 1rem solid var(--Grey-Spectrum-Coll-Grey-10, #e7e9ec);
 
-  img {
-    width: 100%;
-    height: 100%;
+  /* Body/B7 */
+
+  padding: 8rem 12rem 8rem;
+  .info {
+    &:before {
+      display: block;
+      content: '※';
+      margin-right: 2rem;
+    }
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    word-break: break-all;
+    color: var(--Grey-Spectrum-Coll-Grey-60, #636b74);
+    font-size: var(--font-size-7, 12rem);
+    font-style: normal;
+    font-weight: var(--font-weight-regular, 400);
+    line-height: var(--line-height-8, 18rem); /* 150% */
   }
 `;
 

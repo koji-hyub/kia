@@ -6,10 +6,10 @@ const CommonSkin = css`
   letter-spacing: -0.33rem;
   display: flex;
   align-items: flex-start;
-  & + & {
-    margin-top: 12rem;
-    margin-bottom: 12rem;
-  }
+  //& + & {
+  //  margin-top: 12rem;
+  //  margin-bottom: 12rem;
+  //}
 
   .left {
     margin-right: 8rem;

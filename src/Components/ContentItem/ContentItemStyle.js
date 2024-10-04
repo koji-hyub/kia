@@ -11,22 +11,16 @@ const CommonSkin = css`
   border-radius: 8rem;
   background: var(--Primary-Polar-White, #fff);
   box-shadow: 4rem 4rem 10rem 0 rgba(5, 20, 31, 0.08);
-  h3 {
+  h2,
+  h3,
+  h4 {
     margin-bottom: 4rem;
   }
 
-  .btn {
-    &.text {
-      width: 100%;
-    }
-  }
-  .btn.text + .btn-area {
-    margin-top: 0;
-  }
-  .btn-area + .btn-area {
-    margin-top: 8rem;
-  }
   .btn-area {
+    & + .btn-area {
+      margin-top: 8rem;
+    }
     margin-top: 12rem;
     display: flex;
     align-items: center;
@@ -48,6 +42,16 @@ const CommonSkin = css`
         width: 100%;
       }
     }
+  }
+
+  //***********************************//
+  //******** item inner custom ********//
+  //***********************************//
+  .sub-text {
+    margin: 8rem 0 12rem;
+  }
+  .content-text {
+    margin: 12rem 0 12rem;
   }
 `;
 const BasicSkin = css``;

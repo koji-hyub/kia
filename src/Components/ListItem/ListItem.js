@@ -12,7 +12,7 @@ function ListItemWrap(props) {
       <ul>
         {data && data.length > 0 ? (
           data.map((item) => (
-            <li key={item.key && item.key}>
+            <li key={item.id && item.id}>
               <p className={'label'}>{item.label ? item.label : ''}</p>
               <p className={'value'}>{item.value ? item.value : ''}</p>
             </li>

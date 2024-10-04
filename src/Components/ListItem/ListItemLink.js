@@ -11,7 +11,7 @@ function ListItemLinkWrap(props) {
     <ListItemLink>
       {data && data.length > 0 ? (
         data.map((item) => (
-          <Link to={item.link ? item.link : '/'}>
+          <Link to={item.link ? item.link : '/'} key={item.id && item.id}>
             <div className={'title'}>
               <p className={'label'}>{item.label ? item.label : 'label'}</p>
               {item.value ? (

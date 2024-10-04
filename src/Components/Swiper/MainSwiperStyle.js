@@ -78,8 +78,13 @@ const CommonSkin = css`
     padding-left: 5rem;
   }
 
+  .btn-area {
+    & + .btn-area {
+      margin-top: 8rem;
+    }
+  }
   //***********************************//
-  //*********** 커스텀 스와이프 ***********//
+  //******** item inner custom ********//
   //***********************************//
   // 리스트 아이템
   .list-item {
@@ -135,6 +140,39 @@ const CommonSkin = css`
         svg {
           transform: rotate(90deg);
         }
+      }
+    }
+  }
+  .sub-text {
+    margin: 8rem 0 12rem;
+  }
+  .content-text {
+    margin: 12rem 0 12rem;
+  }
+
+  .btn-area {
+    & + .btn-area {
+      margin-top: 8rem;
+    }
+    margin-top: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn {
+      &:nth-child(1) {
+        //flex: 0 0 80rem; /* 첫 번째 버튼 고정 크기 */
+        min-width: auto;
+        width: 80rem;
+      }
+
+      &:nth-child(2) {
+        //flex: 1; /* 두 번째 버튼은 남은 공간을 차지 */
+        //min-width: 0; /* 최소 너비는 0으로 설정 */
+        width: calc(100% - 88rem);
+      }
+      &:only-child {
+        width: 100%;
       }
     }
   }

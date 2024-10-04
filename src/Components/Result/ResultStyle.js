@@ -1,14 +1,14 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
 
+// 공통으로 사용되는 스타일
 const CommonSkin = css`
-  .text-box {
-    margin: 12rem 0 12rem;
-  }
+  border-top: 1rem solid var(--Grey-Spectrum-Coll-Grey-20);
+  padding: 16rem 0 16rem;
+  display: flex;
+  justify-content: flex-end;
 `;
-const BasicSkin = css`
-  //align-items: flex;
-`;
+
+const BasicSkin = css``;
 
 const ThemeSkin = css``;
 
